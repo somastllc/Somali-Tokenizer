@@ -1,0 +1,48 @@
+# Rust build output
+/target/
+**/*.rs.bk
+*.pdb
+
+# Corpus data is never tracked in Git. Build or download it from a SomNLP-Corpus
+# release; see docs/TRAINING.md.
+/data/
+*.jsonl
+*.jsonl.gz
+somali_raw_corpus.txt
+eval_holdout.jsonl
+# Small committed test fixtures are the deliberate exception.
+!tests/fixtures/**/*.jsonl
+
+# Tokenizer training artifacts. Released artifacts are tracked deliberately under
+# artifacts/releases/ (see docs/REPRODUCIBILITY.md); everything else is scratch.
+/artifacts/scratch/
+/sweep/
+tokenizer.json
+somali-bpe-*.json
+!artifacts/releases/**/*.json
+
+# Benchmark and experiment output
+/reports/
+benchmark_results*.json
+tokenizer_stats*.json
+*.log
+
+# Python comparison / parity scripts (Phase 7), if used locally
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Editor and OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example

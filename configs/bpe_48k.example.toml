@@ -1,0 +1,119 @@
+# Example tokenizer experiment configuration: Somali ByteLevel BPE, 48k vocabulary.
+#
+# STATUS: specification only. No Rust code reads this file yet; the schema is a
+# Phase 3 deliverable (see PLAN.md). Values below mirror the Python reference
+# implementation in SomNLP-Corpus `tokenizer/` so the first Rust run has a
+# behavioural target. Field names are proposals and may change in Phase 3.
+#
+# Paths are relative to the repository root. Do not commit machine-specific
+# absolute paths, credentials, or corpus files.
+
+# Schema version of this config format, not of the tokenizer artifact.
+config_version = 1
+
+[tokenizer]
+algorithm       = "bpe"        # BPE. Unigram is a future comparison, not a supported value.
+vocab_size      = 48000        # Total vocabulary INCLUDING special tokens and the byte alphabet.
+min_frequency   = 2            # Minimum pair frequency for a merge.
+normalization   = "nfc"        # Unicode NFC. Part of the tokenizer, applied before pre-tokenization.
+pre_tokenizer   = "bytelevel"
+decoder         = "bytelevel"
+post_processor  = "bytelevel"
+
+# ByteLevel parameters are set per component. The asymmetry below is deliberate and is
+# what the reference artifact serializes: `add_prefix_space = false` on the PRE-TOKENIZER
+# is what keeps decode(encode(x)) byte-exact, while the decoder and post-processor were
+# constructed with library defaults. Do not "tidy" these to a single shared value;
+# see docs/TOKENIZER_DESIGN.md section 1.
+
+[tokenizer.pre_tokenizer_options]
+add_prefix_space = false       # Do not enable without re-benchmarking; it breaks the round-trip.
+use_regex        = true        # GPT-2 style pre-tokenization split.
+trim_offsets     = true
+
+[tokenizer.decoder_options]
+add_prefix_space = true        # Library default, as in the reference artifact.
+use_regex        = true
+trim_offsets     = true
+
+[tokenizer.post_processor_options]
+add_prefix_space = true        # Library default, as in the reference artifact.
+use_regex        = true
+trim_offsets     = true        # Affects reported offsets, not token ids.
+
+[tokenizer.alphabet]
+# Seed the vocabulary with all 256 byte symbols. This is what makes an unknown
+# token structurally unreachable. See docs/TOKENIZER_DESIGN.md.
+initial_alphabet = "bytelevel-256"
+
+[tokenizer.special_tokens]
+# Decoder-LM control set. Order is significant: these occupy ids 0..15.
+# Reserved slots exist so chat-template tokens can be added later without
+# resizing an embedding matrix. Changing this list changes the artifact identity.
+tokens = [
+  "<|endoftext|>",
+  "<|pad|>",
+  "<|im_start|>",
+  "<|im_end|>",
+  "<|reserved_0|>",
+  "<|reserved_1|>",
+  "<|reserved_2|>",
+  "<|reserved_3|>",
+  "<|reserved_4|>",
+  "<|reserved_5|>",
+  "<|reserved_6|>",
+  "<|reserved_7|>",
+  "<|reserved_8|>",
+  "<|reserved_9|>",
+  "<|reserved_10|>",
+  "<|reserved_11|>",
+]
+# No unknown token: an empty value means "none". ByteLevel byte coverage makes one
+# unreachable. The Hugging Face export populates its own `unk_token` field with
+# `<|endoftext|>` purely because downstream loaders expect that field to be set.
+unk_token = ""
+
+[corpus]
+# Identity of the corpus release this experiment trains on. Recorded verbatim in
+# the run manifest; the corpus itself is never stored in this repository.
+release        = "somnlp-corpus-2026-08-31-11source"   # example value
+train_text     = "data/somali_raw_corpus.txt"          # one paragraph per line, not one document per line
+eval_holdout   = "data/eval_holdout.jsonl"             # {"id", "source", "text"} per line
+fingerprint    = ""                                    # filled by the prepare step; empty means "not yet verified"
+require_fresh  = true                                  # refuse to train when the fingerprint does not match
+
+[corpus.split]
+# Deterministic, index-free evaluation holdout: hold out a document when
+# blake2b_8(id) % modulus < buckets. 8/1000 = 0.8% of documents.
+strategy = "hash"
+hash     = "blake2b-8"
+modulus  = 1000
+buckets  = 8
+
+[training]
+streaming    = true    # Never load the corpus into memory; stream it.
+batch_size   = 10000   # Lines handed to the trainer per batch.
+show_progress = true
+threads      = 0       # 0 = use all available cores.
+
+[training.sweep]
+# Optional vocabulary sweep. Because BPE merges are greedy, a smaller run's merge
+# list is a prefix of a larger one's, so candidates may be derived by truncation
+# rather than retrained. See docs/TRAINING.md.
+enabled    = false
+sizes      = [16384, 32000, 48000, 65536]
+derive_from_largest = true
+
+[benchmark]
+report_tokens_per_word  = true
+report_bytes_per_token  = true
+report_per_source       = true
+check_roundtrip         = true
+roundtrip_limit         = 100000   # Documents verified for decode(encode(x)) == NFC(x); 0 = all.
+percentiles             = [50, 95]
+compare_baselines       = []       # e.g. ["xlm-roberta-base", "bert-base-uncased"]; requires network.
+
+[output]
+# Where a run writes. Only promoted release artifacts belong in Git.
+artifact_dir = "artifacts/scratch"
+report_dir   = "reports"
