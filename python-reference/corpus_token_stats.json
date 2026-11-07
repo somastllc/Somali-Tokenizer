@@ -1,0 +1,185 @@
+{
+  "corpus": "/home/sharafdin/Documents/Goobo-Labs/SomNLP-Corpus/data/final/final_so.jsonl",
+  "corpus_fingerprint": {
+    "path": "/home/sharafdin/Documents/Goobo-Labs/SomNLP-Corpus/data/final/final_so.jsonl",
+    "size_bytes": 9070052487,
+    "mtime_ns": 1792434410919856817,
+    "edge_sha256": "30858aa20fab193299a358a22c6f7934f84b36b3d84710eb472569b9da9953f2"
+  },
+  "elapsed_seconds": 792.0,
+  "jobs": 6,
+  "roundtrip_stride": 500,
+  "ratio_bin_width": 0.005,
+  "tokenizers": {
+    "v2": {
+      "label": "v2",
+      "documents": 7913008,
+      "words": 826973689,
+      "characters": 5449250269,
+      "bytes": 5480348522,
+      "total_tokens": 1129084663,
+      "corpus_tokens_per_word": 1.3653,
+      "mean_tokens_per_word": 1.3447,
+      "median_tokens_per_word": 1.2775,
+      "p95_tokens_per_word": 1.8325,
+      "p99_tokens_per_word": 2.4025,
+      "bytes_per_token": 4.8538,
+      "characters_per_token": 4.8263,
+      "roundtrip_checked": 15837,
+      "roundtrip_failures": 0,
+      "roundtrip_fidelity": 1.0,
+      "document_length_histogram": {
+        "0-128": 6050800,
+        "128-256": 778542,
+        "256-512": 613654,
+        "512-1024": 300852,
+        "1024-2048": 119425,
+        "2048-4096": 36377,
+        "4096-8192": 10221,
+        "8192+": 3137
+      },
+      "by_source": {
+        "mc4": {
+          "documents": 586110,
+          "words": 214033522,
+          "characters": 1430521581,
+          "bytes": 1443667961,
+          "tokens": 313655232,
+          "token_share": 0.277796,
+          "tokens_per_word": 1.4654,
+          "bytes_per_token": 4.6027
+        },
+        "hplt": {
+          "documents": 554929,
+          "words": 184729346,
+          "characters": 1217190876,
+          "bytes": 1223563053,
+          "tokens": 247476026,
+          "token_share": 0.219183,
+          "tokens_per_word": 1.3397,
+          "bytes_per_token": 4.9442
+        },
+        "fineweb-2": {
+          "documents": 589888,
+          "words": 156978595,
+          "characters": 1036999470,
+          "bytes": 1042602310,
+          "tokens": 208761477,
+          "token_share": 0.184894,
+          "tokens_per_word": 1.3299,
+          "bytes_per_token": 4.9942
+        },
+        "glot": {
+          "documents": 1354751,
+          "words": 63617306,
+          "characters": 417742517,
+          "bytes": 419740555,
+          "tokens": 84989034,
+          "token_share": 0.075273,
+          "tokens_per_word": 1.3359,
+          "bytes_per_token": 4.9388
+        },
+        "nllb": {
+          "documents": 4151034,
+          "words": 62757823,
+          "characters": 401282453,
+          "bytes": 401631379,
+          "tokens": 83017929,
+          "token_share": 0.073527,
+          "tokens_per_word": 1.3228,
+          "bytes_per_token": 4.8379
+        },
+        "madlad": {
+          "documents": 128708,
+          "words": 61837547,
+          "characters": 403914810,
+          "bytes": 405641754,
+          "tokens": 82261565,
+          "token_share": 0.072857,
+          "tokens_per_word": 1.3303,
+          "bytes_per_token": 4.9311
+        },
+        "cc100": {
+          "documents": 296221,
+          "words": 49299863,
+          "characters": 320122627,
+          "bytes": 321512531,
+          "tokens": 61322715,
+          "token_share": 0.054312,
+          "tokens_per_word": 1.2439,
+          "bytes_per_token": 5.243
+        },
+        "finepdfs": {
+          "documents": 20750,
+          "words": 18626664,
+          "characters": 124826860,
+          "bytes": 125186480,
+          "tokens": 27654839,
+          "token_share": 0.024493,
+          "tokens_per_word": 1.4847,
+          "bytes_per_token": 4.5267
+        },
+        "somali-dataset": {
+          "documents": 37263,
+          "words": 5777922,
+          "characters": 37494117,
+          "bytes": 37507721,
+          "tokens": 7969383,
+          "token_share": 0.007058,
+          "tokens_per_word": 1.3793,
+          "bytes_per_token": 4.7065
+        },
+        "somali-web-corpus": {
+          "documents": 121792,
+          "words": 4891698,
+          "characters": 31153402,
+          "bytes": 31237622,
+          "tokens": 6112389,
+          "token_share": 0.005414,
+          "tokens_per_word": 1.2495,
+          "bytes_per_token": 5.1105
+        },
+        "xlsum": {
+          "documents": 5027,
+          "words": 1758807,
+          "characters": 11425311,
+          "bytes": 11426738,
+          "tokens": 2189823,
+          "token_share": 0.001939,
+          "tokens_per_word": 1.2451,
+          "bytes_per_token": 5.2181
+        },
+        "wikipedia": {
+          "documents": 5215,
+          "words": 1120131,
+          "characters": 7440052,
+          "bytes": 7491089,
+          "tokens": 1733899,
+          "token_share": 0.001536,
+          "tokens_per_word": 1.5479,
+          "bytes_per_token": 4.3204
+        },
+        "mt560": {
+          "documents": 49195,
+          "words": 1162745,
+          "characters": 6767400,
+          "bytes": 6767826,
+          "tokens": 1423242,
+          "token_share": 0.001261,
+          "tokens_per_word": 1.224,
+          "bytes_per_token": 4.7552
+        },
+        "opus": {
+          "documents": 12125,
+          "words": 381720,
+          "characters": 2368793,
+          "bytes": 2371503,
+          "tokens": 517110,
+          "token_share": 0.000458,
+          "tokens_per_word": 1.3547,
+          "bytes_per_token": 4.5861
+        }
+      }
+    }
+  }
+}
