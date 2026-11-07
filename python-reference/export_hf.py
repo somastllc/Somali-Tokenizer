@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Promote a trained tokenizer to the shipped v2 artifact plus a transformers-loadable dir.
 
-Writes ``somali-bpe-v2.json`` and a ``v2/`` directory that ``AutoTokenizer.from_pretrained``
-can load directly, so downstream training code needs no bespoke loading path.
+Writes ``artifacts/releases/v2/tokenizer.json`` and the config files beside it, so that
+directory loads with ``AutoTokenizer.from_pretrained`` and downstream training code needs no
+bespoke loading path.
 """
 
 from __future__ import annotations
@@ -74,7 +75,9 @@ def main() -> None:
     logging.info("Promoted %s -> %s (vocab=%d)", source.name, output, vocab_size)
 
     hf_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(source, hf_dir / "tokenizer.json")
+    hf_tokenizer = hf_dir / "tokenizer.json"
+    if hf_tokenizer.resolve() != output.resolve():
+        shutil.copyfile(source, hf_tokenizer)
 
     write_json(
         hf_dir / "special_tokens_map.json",
