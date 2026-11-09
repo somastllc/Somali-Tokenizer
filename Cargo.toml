@@ -1,0 +1,35 @@
+[workspace]
+resolver = "2"
+members = ["crates/somali-tokenizer"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "Apache-2.0"
+repository = "https://github.com/somastllc/Somali-Tokenizer"
+homepage = "https://huggingface.co/somast/somali-bpe-v2"
+
+[workspace.dependencies]
+# Pinned exactly: merge tie-breaking and other unspecified details follow this version,
+# and the parity fixture was generated with the matching Python release (0.21.4).
+tokenizers = { version = "=0.21.4", default-features = false, features = ["onig"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "2"
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+unicode-normalization = "0.1"
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+expect_used = "warn"
+panic = "deny"
+todo = "deny"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

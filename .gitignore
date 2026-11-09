@@ -20,6 +20,8 @@ eval_holdout.jsonl
 tokenizer.json
 somali-bpe-*.json
 !artifacts/releases/**/*.json
+# The crate bundles the v2 release; a test keeps it byte-identical to the release.
+!crates/somali-tokenizer/assets/*.json
 
 # Benchmark and experiment output
 /reports/
