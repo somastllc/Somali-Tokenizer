@@ -1,0 +1,9098 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<|endoftext|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<|pad|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "<|im_start|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "<|im_end|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "<|reserved_0|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 5,
+      "content": "<|reserved_1|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 6,
+      "content": "<|reserved_2|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 7,
+      "content": "<|reserved_3|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 8,
+      "content": "<|reserved_4|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 9,
+      "content": "<|reserved_5|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 10,
+      "content": "<|reserved_6|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 11,
+      "content": "<|reserved_7|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 12,
+      "content": "<|reserved_8|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 13,
+      "content": "<|reserved_9|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 14,
+      "content": "<|reserved_10|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 15,
+      "content": "<|reserved_11|>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": {
+    "type": "NFC"
+  },
+  "pre_tokenizer": {
+    "type": "ByteLevel",
+    "add_prefix_space": false,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "post_processor": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "decoder": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": null,
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "<|endoftext|>": 0,
+      "<|pad|>": 1,
+      "<|im_start|>": 2,
+      "<|im_end|>": 3,
+      "<|reserved_0|>": 4,
+      "<|reserved_1|>": 5,
+      "<|reserved_2|>": 6,
+      "<|reserved_3|>": 7,
+      "<|reserved_4|>": 8,
+      "<|reserved_5|>": 9,
+      "<|reserved_6|>": 10,
+      "<|reserved_7|>": 11,
+      "<|reserved_8|>": 12,
+      "<|reserved_9|>": 13,
+      "<|reserved_10|>": 14,
+      "<|reserved_11|>": 15,
+      "!": 16,
+      "\"": 17,
+      "#": 18,
+      "$": 19,
+      "%": 20,
+      "&": 21,
+      "'": 22,
+      "(": 23,
+      ")": 24,
+      "*": 25,
+      "+": 26,
+      ",": 27,
+      "-": 28,
+      ".": 29,
+      "/": 30,
+      "0": 31,
+      "1": 32,
+      "2": 33,
+      "3": 34,
+      "4": 35,
+      "5": 36,
+      "6": 37,
+      "7": 38,
+      "8": 39,
+      "9": 40,
+      ":": 41,
+      ";": 42,
+      "<": 43,
+      "=": 44,
+      ">": 45,
+      "?": 46,
+      "@": 47,
+      "A": 48,
+      "B": 49,
+      "C": 50,
+      "D": 51,
+      "E": 52,
+      "F": 53,
+      "G": 54,
+      "H": 55,
+      "I": 56,
+      "J": 57,
+      "K": 58,
+      "L": 59,
+      "M": 60,
+      "N": 61,
+      "O": 62,
+      "P": 63,
+      "Q": 64,
+      "R": 65,
+      "S": 66,
+      "T": 67,
+      "U": 68,
+      "V": 69,
+      "W": 70,
+      "X": 71,
+      "Y": 72,
+      "Z": 73,
+      "[": 74,
+      "\\": 75,
+      "]": 76,
+      "^": 77,
+      "_": 78,
+      "`": 79,
+      "a": 80,
+      "b": 81,
+      "c": 82,
+      "d": 83,
+      "e": 84,
+      "f": 85,
+      "g": 86,
+      "h": 87,
+      "i": 88,
+      "j": 89,
+      "k": 90,
+      "l": 91,
+      "m": 92,
+      "n": 93,
+      "o": 94,
+      "p": 95,
+      "q": 96,
+      "r": 97,
+      "s": 98,
+      "t": 99,
+      "u": 100,
+      "v": 101,
+      "w": 102,
+      "x": 103,
+      "y": 104,
+      "z": 105,
+      "{": 106,
+      "|": 107,
+      "}": 108,
+      "~": 109,
+      "¡": 110,
+      "¢": 111,
+      "£": 112,
+      "¤": 113,
+      "¥": 114,
+      "¦": 115,
+      "§": 116,
+      "¨": 117,
+      "©": 118,
+      "ª": 119,
+      "«": 120,
+      "¬": 121,
+      "®": 122,
+      "¯": 123,
+      "°": 124,
+      "±": 125,
+      "²": 126,
+      "³": 127,
+      "´": 128,
+      "µ": 129,
+      "¶": 130,
+      "·": 131,
+      "¸": 132,
+      "¹": 133,
+      "º": 134,
+      "»": 135,
+      "¼": 136,
+      "½": 137,
+      "¾": 138,
+      "¿": 139,
+      "À": 140,
+      "Á": 141,
+      "Â": 142,
+      "Ã": 143,
+      "Ä": 144,
+      "Å": 145,
+      "Æ": 146,
+      "Ç": 147,
+      "È": 148,
+      "É": 149,
+      "Ê": 150,
+      "Ë": 151,
+      "Ì": 152,
+      "Í": 153,
+      "Î": 154,
+      "Ï": 155,
+      "Ð": 156,
+      "Ñ": 157,
+      "Ò": 158,
+      "Ó": 159,
+      "Ô": 160,
+      "Õ": 161,
+      "Ö": 162,
+      "×": 163,
+      "Ø": 164,
+      "Ù": 165,
+      "Ú": 166,
+      "Û": 167,
+      "Ü": 168,
+      "Ý": 169,
+      "Þ": 170,
+      "ß": 171,
+      "à": 172,
+      "á": 173,
+      "â": 174,
+      "ã": 175,
+      "ä": 176,
+      "å": 177,
+      "æ": 178,
+      "ç": 179,
+      "è": 180,
+      "é": 181,
+      "ê": 182,
+      "ë": 183,
+      "ì": 184,
+      "í": 185,
+      "î": 186,
+      "ï": 187,
+      "ð": 188,
+      "ñ": 189,
+      "ò": 190,
+      "ó": 191,
+      "ô": 192,
+      "õ": 193,
+      "ö": 194,
+      "÷": 195,
+      "ø": 196,
+      "ù": 197,
+      "ú": 198,
+      "û": 199,
+      "ü": 200,
+      "ý": 201,
+      "þ": 202,
+      "ÿ": 203,
+      "Ā": 204,
+      "ā": 205,
+      "Ă": 206,
+      "ă": 207,
+      "Ą": 208,
+      "ą": 209,
+      "Ć": 210,
+      "ć": 211,
+      "Ĉ": 212,
+      "ĉ": 213,
+      "Ċ": 214,
+      "ċ": 215,
+      "Č": 216,
+      "č": 217,
+      "Ď": 218,
+      "ď": 219,
+      "Đ": 220,
+      "đ": 221,
+      "Ē": 222,
+      "ē": 223,
+      "Ĕ": 224,
+      "ĕ": 225,
+      "Ė": 226,
+      "ė": 227,
+      "Ę": 228,
+      "ę": 229,
+      "Ě": 230,
+      "ě": 231,
+      "Ĝ": 232,
+      "ĝ": 233,
+      "Ğ": 234,
+      "ğ": 235,
+      "Ġ": 236,
+      "ġ": 237,
+      "Ģ": 238,
+      "ģ": 239,
+      "Ĥ": 240,
+      "ĥ": 241,
+      "Ħ": 242,
+      "ħ": 243,
+      "Ĩ": 244,
+      "ĩ": 245,
+      "Ī": 246,
+      "ī": 247,
+      "Ĭ": 248,
+      "ĭ": 249,
+      "Į": 250,
+      "į": 251,
+      "İ": 252,
+      "ı": 253,
+      "Ĳ": 254,
+      "ĳ": 255,
+      "Ĵ": 256,
+      "ĵ": 257,
+      "Ķ": 258,
+      "ķ": 259,
+      "ĸ": 260,
+      "Ĺ": 261,
+      "ĺ": 262,
+      "Ļ": 263,
+      "ļ": 264,
+      "Ľ": 265,
+      "ľ": 266,
+      "Ŀ": 267,
+      "ŀ": 268,
+      "Ł": 269,
+      "ł": 270,
+      "Ń": 271,
+      "aa": 272,
+      "ay": 273,
+      "ka": 274,
+      "oo": 275,
+      "da": 276,
+      "ee": 277,
+      "la": 278,
+      "ha": 279,
+      "ii": 280,
+      "Ġi": 281,
+      "ar": 282,
+      "Ġs": 283,
+      "Ġw": 284,
+      "Ġd": 285,
+      "uu": 286,
+      "aan": 287,
+      "an": 288,
+      "Ġka": 289,
+      "Ġm": 290,
+      "Ġk": 291,
+      "ax": 292,
+      "Ġa": 293,
+      "ga": 294,
+      "Ġay": 295,
+      "ada": 296,
+      "Ġoo": 297,
+      "ad": 298,
+      "ta": 299,
+      "in": 300,
+      "iy": 301,
+      "Ġku": 302,
+      "Ġla": 303,
+      "Ġb": 304,
+      "ey": 305,
+      "ir": 306,
+      "Ġu": 307,
+      "Ġwax": 308,
+      "yo": 309,
+      "Ġah": 310,
+      "Ġin": 311,
+      "gu": 312,
+      "ĠS": 313,
+      "ĠM": 314,
+      "Ġq": 315,
+      "aal": 316,
+      "al": 317,
+      "Ġee": 318,
+      "id": 319,
+      "aas": 320,
+      "ab": 321,
+      "Ġc": 322,
+      "Ġx": 323,
+      "aad": 324,
+      "Ġda": 325,
+      "Ġg": 326,
+      "Ġiyo": 327,
+      "aar": 328,
+      "Ġh": 329,
+      "na": 330,
+      "is": 331,
+      "ĠC": 332,
+      "as": 333,
+      "Ġl": 334,
+      "Ġayaa": 335,
+      "or": 336,
+      "ĠA": 337,
+      "een": 338,
+      "il": 339,
+      "Ġuu": 340,
+      "Ġt": 341,
+      "Ġha": 342,
+      "Ġj": 343,
+      "Ġdha": 344,
+      "ĠD": 345,
+      "hay": 346,
+      "kii": 347,
+      "sa": 348,
+      "Ġf": 349,
+      "Ġdh": 350,
+      "ĠB": 351,
+      "Ġy": 352,
+      "ma": 353,
+      "iga": 354,
+      "ur": 355,
+      "san": 356,
+      "lka": 357,
+      "Ġsoo": 358,
+      "ĠG": 359,
+      "ĠK": 360,
+      "ag": 361,
+      "aab": 362,
+      "tay": 363,
+      "âĢ": 364,
+      "oom": 365,
+      "Ġsh": 366,
+      "le": 367,
+      "aam": 368,
+      "eey": 369,
+      "ib": 370,
+      "Ġn": 371,
+      "ĠW": 372,
+      "Ġis": 373,
+      "ĠX": 374,
+      "iya": 375,
+      "el": 376,
+      "eeg": 377,
+      "lan": 378,
+      "ig": 379,
+      "er": 380,
+      "..": 381,
+      "iin": 382,
+      "un": 383,
+      "oon": 384,
+      "aala": 385,
+      "Ġlagu": 386,
+      "im": 387,
+      "am": 388,
+      "Ġmar": 389,
+      "Ġwaa": 390,
+      "ed": 391,
+      "ow": 392,
+      "us": 393,
+      "eyn": 394,
+      "Ġr": 395,
+      "Ġga": 396,
+      "eed": 397,
+      "oomaal": 398,
+      "ul": 399,
+      "ĠI": 400,
+      "Ġta": 401,
+      "ĠH": 402,
+      "ac": 403,
+      "Ġugu": 404,
+      "adan": 405,
+      "ĠSoomaal": 406,
+      "Ġloo": 407,
+      "en": 408,
+      "Ġjir": 409,
+      "ob": 410,
+      "Ġsi": 411,
+      "adda": 412,
+      "sha": 413,
+      "ku": 414,
+      "eer": 415,
+      "ba": 416,
+      "to": 417,
+      "Ġmid": 418,
+      "ti": 419,
+      "adax": 420,
+      "sh": 421,
+      "ud": 422,
+      "ĠJ": 423,
+      "Ġwaxaa": 424,
+      "ub": 425,
+      "iis": 426,
+      "Ġhor": 427,
+      "ĠF": 428,
+      "ali": 429,
+      "ooy": 430,
+      "iir": 431,
+      "om": 432,
+      "Ġsheeg": 433,
+      "ih": 434,
+      "Ġ2": 435,
+      "ĠQ": 436,
+      "uur": 437,
+      "on": 438,
+      "ĠL": 439,
+      "Ġaan": 440,
+      "ood": 441,
+      "ĠN": 442,
+      "aq": 443,
+      "Ġwaxa": 444,
+      "Ġkale": 445,
+      "lay": 446,
+      "ĠSoomaaliya": 447,
+      "aha": 448,
+      "maan": 449,
+      "dh": 450,
+      "Ġsha": 451,
+      "ĠR": 452,
+      "ĠT": 453,
+      "land": 454,
+      "aalada": 455,
+      "oor": 456,
+      "Ġar": 457,
+      "mar": 458,
+      "lad": 459,
+      "âĢĻ": 460,
+      "day": 461,
+      "mada": 462,
+      "og": 463,
+      "inka": 464,
+      "ahay": 465,
+      "ish": 466,
+      "ayn": 467,
+      "inta": 468,
+      "Ġbadan": 469,
+      "...": 470,
+      "ays": 471,
+      "aana": 472,
+      "Ġ1": 473,
+      "ĠO": 474,
+      "agaalada": 475,
+      "Ġdoon": 476,
+      "Ġ(": 477,
+      "it": 478,
+      "ĠP": 479,
+      "Ġdad": 480,
+      "uq": 481,
+      "Ġqab": 482,
+      "iida": 483,
+      "Ġdalka": 484,
+      "ol": 485,
+      "eys": 486,
+      "gan": 487,
+      "nka": 488,
+      "oob": 489,
+      "laha": 490,
+      "Ġkala": 491,
+      "Ġhad": 492,
+      "Ġsheegay": 493,
+      "lada": 494,
+      "laa": 495,
+      "ux": 496,
+      "eeda": 497,
+      "Ġwaxay": 498,
+      "aasi": 499,
+      "Ġgu": 500,
+      "Ġinay": 501,
+      "adaxw": 502,
+      "abd": 503,
+      "Ġ20": 504,
+      "Ġaad": 505,
+      "ool": 506,
+      "Ġkuw": 507,
+      "aw": 508,
+      "ri": 509,
+      "ĠU": 510,
+      "oq": 511,
+      "se": 512,
+      "omali": 513,
+      "eh": 514,
+      "ix": 515,
+      "aaf": 516,
+      "Ġiy": 517,
+      "Ġwar": 518,
+      "Ġma": 519,
+      "iyay": 520,
+      "Ġlaga": 521,
+      "dii": 522,
+      "hi": 523,
+      "Ġ,": 524,
+      "aya": 525,
+      "ex": 526,
+      "mb": 527,
+      "uud": 528,
+      "ĠCabd": 529,
+      "tii": 530,
+      "Ġ...": 531,
+      "aanta": 532,
+      "iyaar": 533,
+      "uk": 534,
+      "ayo": 535,
+      "aanka": 536,
+      "eg": 537,
+      "od": 538,
+      "ĠMax": 539,
+      "aalka": 540,
+      "taa": 541,
+      "Ġkar": 542,
+      "ĠMar": 543,
+      "uxuu": 544,
+      "Ġsid": 545,
+      "Ġmagaalada": 546,
+      "Ġgaar": 547,
+      "Ġtahay": 548,
+      "iyo": 549,
+      "ĠSomali": 550,
+      "af": 551,
+      "eel": 552,
+      "naha": 553,
+      "Ġdhac": 554,
+      "ida": 555,
+      "ooda": 556,
+      "eeyay": 557,
+      "ug": 558,
+      "ash": 559,
+      "asha": 560,
+      "Ġgob": 561,
+      "Ġyahay": 562,
+      "Ġleh": 563,
+      "ihiin": 564,
+      "oc": 565,
+      "st": 566,
+      "aran": 567,
+      "unt": 568,
+      "Ġwuxuu": 569,
+      "uul": 570,
+      "Ġqor": 571,
+      "ĠWax": 572,
+      "isho": 573,
+      "Ġ201": 574,
+      "00": 575,
+      "ic": 576,
+      "kh": 577,
+      "ulka": 578,
+      "âŁ": 579,
+      "aada": 580,
+      "Ġdoor": 581,
+      "Ġhal": 582,
+      "Ġad": 583,
+      "do": 584,
+      "aaw": 585,
+      "aax": 586,
+      "Ġdib": 587,
+      "adii": 588,
+      "irka": 589,
+      "Ġahaa": 590,
+      "Ġtir": 591,
+      "ĠMaxam": 592,
+      "disho": 593,
+      "Ġ-": 594,
+      "uuq": 595,
+      "uqdisho": 596,
+      "sad": 597,
+      "maha": 598,
+      "ĠE": 599,
+      "ĠY": 600,
+      "ayaan": 601,
+      "Ġama": 602,
+      "Ġhel": 603,
+      "asiir": 604,
+      "Ġmarkii": 605,
+      "Ġsida": 606,
+      "kaas": 607,
+      "um": 608,
+      "ĠâĢ": 609,
+      "aaq": 610,
+      "Ġfar": 611,
+      "aac": 612,
+      "Ġisa": 613,
+      "arka": 614,
+      "Ġsii": 615,
+      "adaha": 616,
+      "add": 617,
+      "ladda": 618,
+      "adoo": 619,
+      "Ġnoq": 620,
+      "ooyinka": 621,
+      "Wax": 622,
+      "si": 623,
+      "Ġsan": 624,
+      "ĠKu": 625,
+      "Ġdadka": 626,
+      "soo": 627,
+      "aakii": 628,
+      "iib": 629,
+      "Ġhaw": 630,
+      "aj": 631,
+      "at": 632,
+      "olka": 633,
+      "aama": 634,
+      "âĢĿ": 635,
+      "ihii": 636,
+      "can": 637,
+      "iyaas": 638,
+      "Ġbil": 639,
+      "eynaha": 640,
+      "Ġdamb": 641,
+      "Ġyihiin": 642,
+      "tan": 643,
+      "Ġmaanta": 644,
+      "Ġuga": 645,
+      "Ġwaxaan": 646,
+      "Ġinuu": 647,
+      "mo": 648,
+      "ut": 649,
+      "aag": 650,
+      "oox": 651,
+      "ĠSh": 652,
+      "Ġqo": 653,
+      "Ġxir": 654,
+      "Ġdar": 655,
+      "isb": 656,
+      "Ġjira": 657,
+      "adaxweynaha": 658,
+      "eb": 659,
+      "haa": 660,
+      "Ġna": 661,
+      "oog": 662,
+      "han": 663,
+      "Ġsar": 664,
+      "Ġweyn": 665,
+      "gac": 666,
+      "ĠAl": 667,
+      "Ġgab": 668,
+      "Ġgal": 669,
+      "maa": 670,
+      "kan": 671,
+      "oos": 672,
+      "iye": 673,
+      "ĠMuqdisho": 674,
+      "Ġgar": 675,
+      "ĠSomaliland": 676,
+      "ya": 677,
+      "yada": 678,
+      "eesha": 679,
+      "Ġqay": 680,
+      "isay": 681,
+      "Ġgud": 682,
+      "naa": 683,
+      "Ġdeg": 684,
+      "uus": 685,
+      "Ġmaal": 686,
+      "eenka": 687,
+      "ĠDh": 688,
+      "iidamada": 689,
+      "ayd": 690,
+      "Ġmaam": 691,
+      "Ġayuu": 692,
+      "ing": 693,
+      "iyada": 694,
+      "Ġbax": 695,
+      "aasha": 696,
+      "ĠKa": 697,
+      "Ġmark": 698,
+      "untland": 699,
+      "dib": 700,
+      "umar": 701,
+      "aah": 702,
+      "aysa": 703,
+      "Ġdow": 704,
+      "Ġaf": 705,
+      "Ġbar": 706,
+      "Ġbal": 707,
+      "Ġisku": 708,
+      "Ġmarka": 709,
+      "ashada": 710,
+      "hab": 711,
+      "Ġsoc": 712,
+      "Ġab": 713,
+      "Ġqaad": 714,
+      "alka": 715,
+      "Ġxil": 716,
+      "Ġdhan": 717,
+      "Ġdhaw": 718,
+      "Ġfur": 719,
+      "Ġdhig": 720,
+      "Ġisla": 721,
+      "aalam": 722,
+      "tic": 723,
+      "Ġshaq": 724,
+      "ĠOo": 725,
+      "ĠMaxamed": 726,
+      "cab": 727,
+      "Ġ3": 728,
+      "dan": 729,
+      "Ġid": 730,
+      "Ġmu": 731,
+      "Ġwaxaana": 732,
+      "Ġtal": 733,
+      "Ġhore": 734,
+      "shay": 735,
+      "siga": 736,
+      "Ġ.": 737,
+      "Ġwada": 738,
+      "Ġdeeg": 739,
+      "ana": 740,
+      "Ġmadax": 741,
+      "Ġciyaar": 742,
+      "ilm": 743,
+      "ĠIs": 744,
+      "ĠPuntland": 745,
+      "Ġiyadoo": 746,
+      "sta": 747,
+      "Ġ|": 748,
+      "daha": 749,
+      "iix": 750,
+      "Ġwal": 751,
+      "Ġkor": 752,
+      "iyey": 753,
+      "Ġlahaa": 754,
+      "eyb": 755,
+      "Ġahaan": 756,
+      "Ġinta": 757,
+      "Ġqaar": 758,
+      "Ġdan": 759,
+      "kiisa": 760,
+      "maanka": 761,
+      "Ġmagac": 762,
+      "aakiin": 763,
+      "AR": 764,
+      "med": 765,
+      "weyn": 766,
+      "eeb": 767,
+      "iil": 768,
+      "Ġwadan": 769,
+      "gal": 770,
+      "eysa": 771,
+      "Ġxar": 772,
+      "aadka": 773,
+      "ĠAb": 774,
+      "ĠAr": 775,
+      "ĠAx": 776,
+      "ĠWar": 777,
+      "igii": 778,
+      "Ġqayb": 779,
+      "re": 780,
+      "wan": 781,
+      "ayaa": 782,
+      "Ġilaa": 783,
+      "Ġsaar": 784,
+      "Ġsam": 785,
+      "uunka": 786,
+      "Ġkam": 787,
+      "Ġkoox": 788,
+      "Ġam": 789,
+      "iyeed": 790,
+      "Ġlab": 791,
+      "Ġgo": 792,
+      "ĠAf": 793,
+      "Ġtaas": 794,
+      "Ġfi": 795,
+      "iyaha": 796,
+      "Ġkuwa": 797,
+      "Ġtirsan": 798,
+      "ch": 799,
+      "ia": 800,
+      "if": 801,
+      "taan": 802,
+      "ham": 803,
+      "anka": 804,
+      "Ġal": 805,
+      "Ġaq": 806,
+      "aash": 807,
+      "Ġdhaq": 808,
+      "Ġdhin": 809,
+      "Ġdhex": 810,
+      "Ġshirka": 811,
+      "Ġiska": 812,
+      "unta": 813,
+      "ĠIn": 814,
+      "ij": 815,
+      "ro": 816,
+      "uf": 817,
+      "ayay": 818,
+      "oow": 819,
+      "iid": 820,
+      "Ġil": 821,
+      "Ġkal": 822,
+      "Ġkasta": 823,
+      "Ġaw": 824,
+      "eyd": 825,
+      "Ġqar": 826,
+      "Ġqeyb": 827,
+      "abab": 828,
+      "Ġcar": 829,
+      "Ġdag": 830,
+      "agaal": 831,
+      "eeyey": 832,
+      "imada": 833,
+      "Ġloogu": 834,
+      "ĠFar": 835,
+      "âŁ¨": 836,
+      "âŁ©": 837,
+      "aga": 838,
+      "yay": 839,
+      "eesh": 840,
+      "Ġwa": 841,
+      "uux": 842,
+      "Ġmeel": 843,
+      "Ġdab": 844,
+      "Ġhog": 845,
+      "Ġtar": 846,
+      "Ġhab": 847,
+      "Ġnin": 848,
+      "iinta": 849,
+      "eedka": 850,
+      "iiska": 851,
+      "Ġgobolka": 852,
+      "aamac": 853,
+      "Ġqof": 854,
+      "li": 855,
+      "lin": 856,
+      "eeyo": 857,
+      "lab": 858,
+      "Ġdil": 859,
+      "Ġkadib": 860,
+      "Ġmax": 861,
+      "axa": 862,
+      "adka": 863,
+      "Ġkulan": 864,
+      "Ġhada": 865,
+      "url": 866,
+      "ĠGar": 867,
+      "Ġhadlay": 868,
+      "ĠAxmed": 869,
+      "DA": 870,
+      "dda": 871,
+      "ec": 872,
+      "mad": 873,
+      "no": 874,
+      "ter": 875,
+      "Ġ\"": 876,
+      "Ġsiyaas": 877,
+      "Ġkaga": 878,
+      "ina": 879,
+      "Ġkul": 880,
+      "Ġcus": 881,
+      "Ġciida": 882,
+      "aado": 883,
+      "Ġdal": 884,
+      "ĠCiidamada": 885,
+      "ĠGal": 886,
+      "ĠGob": 887,
+      "Ġgacan": 888,
+      "Ġisaga": 889,
+      "IS": 890,
+      "es": 891,
+      "he": 892,
+      "io": 893,
+      "kay": 894,
+      "lo": 895,
+      "ska": 896,
+      "Ġ5": 897,
+      "ĠâŁ¨": 898,
+      "ooc": 899,
+      "iim": 900,
+      "Ġkac": 901,
+      "Ġbad": 902,
+      "Ġbix": 903,
+      "Ġxisb": 904,
+      "Ġdham": 905,
+      "ĠGo": 906,
+      "eeya": 907,
+      "ent": 908,
+      "tion": 909,
+      "ooyin": 910,
+      "dhig": 911,
+      "ĠCabdi": 912,
+      "ukuu": 913,
+      "Ġgobol": 914,
+      "cabka": 915,
+      "AB": 916,
+      "ak": 917,
+      "agu": 918,
+      "dha": 919,
+      "ew": 920,
+      "goo": 921,
+      "kaasi": 922,
+      "madda": 923,
+      "uwan": 924,
+      "yar": 925,
+      "Ġ0": 926,
+      "Ġmas": 927,
+      "iyad": 928,
+      "iyeen": 929,
+      "iri": 930,
+      "Ġcad": 931,
+      "Ġxus": 932,
+      "Ġgan": 933,
+      "asaar": 934,
+      "Ġlaakiin": 935,
+      "Ġtaar": 936,
+      "Ġyim": 937,
+      "urub": 938,
+      "Ġisb": 939,
+      "Ġtag": 940,
+      "shada": 941,
+      "ĠJaamac": 942,
+      "ĠMaray": 943,
+      "Ġsare": 944,
+      "Ġwadanka": 945,
+      "Ġkamid": 946,
+      "ho": 947,
+      "tar": 948,
+      "aaj": 949,
+      "kanka": 950,
+      "ooga": 951,
+      "dar": 952,
+      "iisa": 953,
+      "Ġsax": 954,
+      "Ġsabab": 955,
+      "Ġdii": 956,
+      "uub": 957,
+      "Ġkoob": 958,
+      "Ġbaa": 959,
+      "ĠMas": 960,
+      "Ġguu": 961,
+      "ĠCali": 962,
+      "Ġleey": 963,
+      "oonka": 964,
+      "Ġlooga": 965,
+      "Ġdoonaa": 966,
+      "Ġsidoo": 967,
+      "saday": 968,
+      "ĠâĢľ": 969,
+      "Ġsanad": 970,
+      "Ġcusub": 971,
+      "may": 972,
+      "ni": 973,
+      "tir": 974,
+      "tooy": 975,
+      "wax": 976,
+      "yan": 977,
+      "Ġ4": 978,
+      "ooj": 979,
+      "arg": 980,
+      "Ġsu": 981,
+      "Ġkula": 982,
+      "Ġlahay": 983,
+      "Ġbed": 984,
+      "ĠMuu": 985,
+      "ĠMadaxw": 986,
+      "Ġdheer": 987,
+      "âĢľ": 988,
+      "aamin": 989,
+      "udug": 990,
+      "ome": 991,
+      "mark": 992,
+      "ayso": 993,
+      "ews": 994,
+      "ah": 995,
+      "alan": 996,
+      "maal": 997,
+      "nu": 998,
+      "toob": 999,
+      "Ġiib": 1000,
+      "Ġdir": 1001,
+      "Ġkan": 1002,
+      "Ġmus": 1003,
+      "Ġayay": 1004,
+      "ĠMo": 1005,
+      "ĠMagaalada": 1006,
+      "Ġdaw": 1007,
+      "Ġguul": 1008,
+      "ĠCumar": 1009,
+      "ĠAd": 1010,
+      "Ġjoog": 1011,
+      "ĠDow": 1012,
+      "Ġyar": 1013,
+      "urka": 1014,
+      "ibaan": 1015,
+      "ĠWasiir": 1016,
+      "ĠXas": 1017,
+      "ĠXil": 1018,
+      "imo": 1019,
+      "Ġreer": 1020,
+      "enya": 1021,
+      "Ġjiray": 1022,
+      "dhibaan": 1023,
+      "Ġhadda": 1024,
+      "ukun": 1025,
+      "ĠYurub": 1026,
+      "Ġbalse": 1027,
+      "Ġdeegaanka": 1028,
+      "In": 1029,
+      "cag": 1030,
+      "tee": 1031,
+      "Ġan": 1032,
+      "Ġog": 1033,
+      "aayo": 1034,
+      "har": 1035,
+      "iiq": 1036,
+      "Ġsal": 1037,
+      "Ġwan": 1038,
+      "Ġwad": 1039,
+      "Ġde": 1040,
+      "Ġduwan": 1041,
+      "uun": 1042,
+      "Ġmur": 1043,
+      "Ġmaq": 1044,
+      "Ġmagaal": 1045,
+      "Ġaysan": 1046,
+      "Ġlacag": 1047,
+      "Ġban": 1048,
+      "Ġqaa": 1049,
+      "abad": 1050,
+      "Ġcaalam": 1051,
+      "Ġxaq": 1052,
+      "Ġhub": 1053,
+      "Ġdhax": 1054,
+      "Ġdhow": 1055,
+      "ĠGud": 1056,
+      "eli": 1057,
+      "elin": 1058,
+      "owga": 1059,
+      "ĠSoomaaliyeed": 1060,
+      "sho": 1061,
+      "Ġsheegtay": 1062,
+      "Ġkuwaas": 1063,
+      "awir": 1064,
+      "Ġsidii": 1065,
+      "Ġdambe": 1066,
+      "dane": 1067,
+      "ĠMuuse": 1068,
+      "Home": 1069,
+      "War": 1070,
+      "baab": 1071,
+      "di": 1072,
+      "du": 1073,
+      "go": 1074,
+      "jo": 1075,
+      "kaan": 1076,
+      "kood": 1077,
+      "mi": 1078,
+      "man": 1079,
+      "ra": 1080,
+      "ugu": 1081,
+      "Ġsug": 1082,
+      "Ġdiyaar": 1083,
+      "Ġkeen": 1084,
+      "iyadda": 1085,
+      "eysan": 1086,
+      "Ġwaxuu": 1087,
+      "ĠSal": 1088,
+      "Ġqaab": 1089,
+      "aalin": 1090,
+      "aarla": 1091,
+      "Ġhay": 1092,
+      "ĠDha": 1093,
+      "Ġyiri": 1094,
+      "aabo": 1095,
+      "aamuus": 1096,
+      "ĠXus": 1097,
+      "Ġgalay": 1098,
+      "aca": 1099,
+      "Ġ19": 1100,
+      "Ġgur": 1101,
+      "rimaha": 1102,
+      "odob": 1103,
+      "Ġdhacay": 1104,
+      "000": 1105,
+      "uts": 1106,
+      "maajo": 1107,
+      "Ġgudb": 1108,
+      "Ġdowladda": 1109,
+      "Ġidin": 1110,
+      "Ġkooxda": 1111,
+      "toobiya": 1112,
+      "OL": 1113,
+      "Sid": 1114,
+      "daan": 1115,
+      "hu": 1116,
+      "kaa": 1117,
+      "kooda": 1118,
+      "mudug": 1119,
+      "rin": 1120,
+      "ss": 1121,
+      "yaan": 1122,
+      "yeen": 1123,
+      "yaha": 1124,
+      "ĠÂ": 1125,
+      "iikh": 1126,
+      "Ġak": 1127,
+      "adeed": 1128,
+      "iyiin": 1129,
+      "Ġlaba": 1130,
+      "Ġur": 1131,
+      "ĠMadax": 1132,
+      "idda": 1133,
+      "idhi": 1134,
+      "abar": 1135,
+      "Ġcod": 1136,
+      "aaday": 1137,
+      "Ġgaad": 1138,
+      "Ġtaag": 1139,
+      "ĠBoos": 1140,
+      "ĠKh": 1141,
+      "baha": 1142,
+      "Ġshar": 1143,
+      "Ġshacabka": 1144,
+      "ĠTal": 1145,
+      "ĠCabdul": 1146,
+      "Ġkaro": 1147,
+      "ĠWaxaan": 1148,
+      "Ġmaamulka": 1149,
+      "Ġgacanta": 1150,
+      "tooyada": 1151,
+      "Madaxweynaha": 1152,
+      "bur": 1153,
+      "diga": 1154,
+      "et": 1155,
+      "ge": 1156,
+      "ot": 1157,
+      "sii": 1158,
+      "tu": 1159,
+      "taas": 1160,
+      "teen": 1161,
+      "kar": 1162,
+      "eena": 1163,
+      "Ġwaq": 1164,
+      "Ġwasiir": 1165,
+      "uush": 1166,
+      "Ġada": 1167,
+      "Ġayaan": 1168,
+      "ĠMid": 1169,
+      "aaso": 1170,
+      "Ġcaas": 1171,
+      "aadiga": 1172,
+      "ĠCo": 1173,
+      "Ġjeed": 1174,
+      "ĠBar": 1175,
+      "ĠKenya": 1176,
+      "ĠXisb": 1177,
+      "ĠItoobiya": 1178,
+      "ĠSoomaali": 1179,
+      "ĠQar": 1180,
+      "eyso": 1181,
+      "ĠUgan": 1182,
+      "Ġwareeg": 1183,
+      "ĠCabdir": 1184,
+      "ĠMaxamuud": 1185,
+      "Ġisagoo": 1186,
+      "Ġxiriir": 1187,
+      "Ġmaalin": 1188,
+      "Ġxarunta": 1189,
+      "linyar": 1190,
+      "ĠGobolka": 1191,
+      "ĠGolaha": 1192,
+      "ĠMaraykanka": 1193,
+      "Ġsugan": 1194,
+      "ĠXildhibaan": 1195,
+      "ĠBoosaaso": 1196,
+      "20": 1197,
+      "MG": 1198,
+      "ap": 1199,
+      "huur": 1200,
+      "maar": 1201,
+      "rada": 1202,
+      "ver": 1203,
+      "waan": 1204,
+      "iig": 1205,
+      "Ġmac": 1206,
+      "adh": 1207,
+      "adu": 1208,
+      "Ġlaf": 1209,
+      "ĠMadaxweynaha": 1210,
+      "Ġguud": 1211,
+      "Ġhays": 1212,
+      "iso": 1213,
+      "iska": 1214,
+      "Ġhalka": 1215,
+      "Ġdhamaan": 1216,
+      "Ġdhib": 1217,
+      "Ġyee": 1218,
+      "aabsan": 1219,
+      "aamulka": 1220,
+      "eder": 1221,
+      "Ġras": 1222,
+      "ĠIyo": 1223,
+      "Ġ10": 1224,
+      "Ġqabtay": 1225,
+      "Ġwaxayna": 1226,
+      "aranka": 1227,
+      "ĠâĢĵ": 1228,
+      "Ġqaaday": 1229,
+      "Ġdanb": 1230,
+      "Ġyimid": 1231,
+      "ĠXuseen": 1232,
+      "Ġakka": 1233,
+      "AA": 1234,
+      "AY": 1235,
+      "Shab": 1236,
+      "jin": 1237,
+      "nada": 1238,
+      "nimada": 1239,
+      "tey": 1240,
+      "yey": 1241,
+      "Ġ:": 1242,
+      "Ġweer": 1243,
+      "Ġkasoo": 1244,
+      "Ġmil": 1245,
+      "Ġmuuq": 1246,
+      "Ġkh": 1247,
+      "iyaa": 1248,
+      "Ġkun": 1249,
+      "Ġinaan": 1250,
+      "Ġqaada": 1251,
+      "Ġxu": 1252,
+      "Ġxub": 1253,
+      "ĠBan": 1254,
+      "Ġyidhi": 1255,
+      "Ġshir": 1256,
+      "ibaax": 1257,
+      "Ġnuts": 1258,
+      "Ġistic": 1259,
+      "amhuur": 1260,
+      "ĠLa": 1261,
+      "ĠNews": 1262,
+      "Ġdoono": 1263,
+      "Ġdhacday": 1264,
+      "arans": 1265,
+      "addex": 1266,
+      "Ġnoqon": 1267,
+      "Ġmaamul": 1268,
+      "Ġmarkaana": 1269,
+      "ĠAfri": 1270,
+      "Ġaqoon": 1271,
+      "ĠGalmudug": 1272,
+      "Ġbedel": 1273,
+      "aarlamaanka": 1274,
+      "uushka": 1275,
+      "OM": 1276,
+      "Soomaal": 1277,
+      "baa": 1278,
+      "bix": 1279,
+      "ca": 1280,
+      "esh": 1281,
+      "fur": 1282,
+      "ost": 1283,
+      "ray": 1284,
+      "te": 1285,
+      "tiga": 1286,
+      "Ġ7": 1287,
+      "ĠV": 1288,
+      "eelaha": 1289,
+      "Ġir": 1290,
+      "Ġsiin": 1291,
+      "Ġsaax": 1292,
+      "Ġmud": 1293,
+      "Ġkham": 1294,
+      "galay": 1295,
+      "adal": 1296,
+      "Ġwaxaad": 1297,
+      "Ġahayd": 1298,
+      "ĠSar": 1299,
+      "ĠMu": 1300,
+      "aba": 1301,
+      "Ġcid": 1302,
+      "Ġcel": 1303,
+      "Ġgoor": 1304,
+      "ista": 1305,
+      "ĠAM": 1306,
+      "ĠDaw": 1307,
+      "Ġdhaaf": 1308,
+      "agga": 1309,
+      "aabay": 1310,
+      "aaban": 1311,
+      "eeyeen": 1312,
+      "Ġninka": 1313,
+      "ĠXar": 1314,
+      "eyne": 1315,
+      "ĠHab": 1316,
+      "ĠHarg": 1317,
+      "enmark": 1318,
+      "ĠFeder": 1319,
+      "dhiga": 1320,
+      "aynta": 1321,
+      "laahi": 1322,
+      "Ġkuwo": 1323,
+      "ukaan": 1324,
+      "ĠSomalia": 1325,
+      "asho": 1326,
+      "Ġdoorashada": 1327,
+      "Ġadd": 1328,
+      "aawo": 1329,
+      "umm": 1330,
+      "aagsan": 1331,
+      "Ġafar": 1332,
+      "Ġabuur": 1333,
+      "Ġillaa": 1334,
+      "Ġawood": 1335,
+      "Ġtartan": 1336,
+      "Ġisbit": 1337,
+      "Ġleeyahay": 1338,
+      "ĠXasan": 1339,
+      "ukunka": 1340,
+      "Ġcaalamka": 1341,
+      "Sidoo": 1342,
+      "ĠÂ»": 1343,
+      "Ġtaageer": 1344,
+      "ĠUganda": 1345,
+      "Shabaab": 1346,
+      "Ġweerar": 1347,
+      "Ab": 1348,
+      "EE": 1349,
+      "Muqdisho": 1350,
+      "OO": 1351,
+      "ala": 1352,
+      "bar": 1353,
+      "co": 1354,
+      "deen": 1355,
+      "hin": 1356,
+      "ian": 1357,
+      "keeda": 1358,
+      "miye": 1359,
+      "Ġ9": 1360,
+      "Ġo": 1361,
+      "Ġp": 1362,
+      "Ġer": 1363,
+      "aat": 1364,
+      "oona": 1365,
+      "eef": 1366,
+      "iij": 1367,
+      "iican": 1368,
+      "Ġsaabsan": 1369,
+      "uug": 1370,
+      "Ġmal": 1371,
+      "Ġmeesha": 1372,
+      "gab": 1373,
+      "gada": 1374,
+      "Ġbur": 1375,
+      "Ġbeesha": 1376,
+      "iraan": 1377,
+      "Ġintii": 1378,
+      "Ġqur": 1379,
+      "aale": 1380,
+      "Ġcim": 1381,
+      "Ġciidamada": 1382,
+      "Ġxid": 1383,
+      "Ġxab": 1384,
+      "Ġxukuu": 1385,
+      "ĠCad": 1386,
+      "ĠAm": 1387,
+      "ĠAy": 1388,
+      "Ġdhal": 1389,
+      "Ġdhashay": 1390,
+      "ĠDiyaar": 1391,
+      "Ġful": 1392,
+      "Ġdhim": 1393,
+      "ĠBiix": 1394,
+      "ĠKMG": 1395,
+      "âĢ¦": 1396,
+      "eeye": 1397,
+      "iba": 1398,
+      "Ġnool": 1399,
+      "Ġisaa": 1400,
+      "ĠXub": 1401,
+      "unida": 1402,
+      "aaladda": 1403,
+      "eynta": 1404,
+      "Ġraax": 1405,
+      "Ġtab": 1406,
+      "ĠHor": 1407,
+      "Ġjiro": 1408,
+      "shabaab": 1409,
+      "shir": 1410,
+      "udud": 1411,
+      "ĠJamhuur": 1412,
+      "ĠFarans": 1413,
+      "ĠRuushka": 1414,
+      "Ġarag": 1415,
+      "eysay": 1416,
+      "eystay": 1417,
+      "eedahay": 1418,
+      "aafim": 1419,
+      "diisa": 1420,
+      "Ġaduunka": 1421,
+      "Ġsano": 1422,
+      "Ġhaweenka": 1423,
+      "Ġmuh": 1424,
+      "ĠWararka": 1425,
+      "Ġdhinaca": 1426,
+      "ĠFarmaajo": 1427,
+      "Ġhogaamin": 1428,
+      "ISOM": 1429,
+      "Ġganac": 1430,
+      "Ġbaahan": 1431,
+      "Ġguulay": 1432,
+      "Ġsanadkii": 1433,
+      "Ġxaqiij": 1434,
+      "ĠBiixi": 1435,
+      "ADA": 1436,
+      "BC": 1437,
+      "IN": 1438,
+      "Ku": 1439,
+      "Max": 1440,
+      "Sh": 1441,
+      "ato": 1442,
+      "alad": 1443,
+      "bo": 1444,
+      "bad": 1445,
+      "bac": 1446,
+      "dka": 1447,
+      "ele": 1448,
+      "gaxa": 1449,
+      "maam": 1450,
+      "nd": 1451,
+      "niga": 1452,
+      "ov": 1453,
+      "soom": 1454,
+      "wed": 1455,
+      "Ġ&": 1456,
+      "Ġ6": 1457,
+      "aahi": 1458,
+      "aysan": 1459,
+      "oose": 1460,
+      "ees": 1461,
+      "Ġway": 1462,
+      "Ġwaan": 1463,
+      "Ġwaana": 1464,
+      "Ġmuu": 1465,
+      "Ġmadaxweynaha": 1466,
+      "Ġayna": 1467,
+      "Ġkusoo": 1468,
+      "Ġbul": 1469,
+      "Ġbaaq": 1470,
+      "Ġiney": 1471,
+      "ĠSha": 1472,
+      "ĠSwed": 1473,
+      "Ġqan": 1474,
+      "Ġqal": 1475,
+      "aalo": 1476,
+      "iden": 1477,
+      "Ġcab": 1478,
+      "Ġxulka": 1479,
+      "Ġgoob": 1480,
+      "Ġgaran": 1481,
+      "ĠCadd": 1482,
+      "Ġleedahay": 1483,
+      "Ġtan": 1484,
+      "Ġdhanka": 1485,
+      "Ġdhalinyar": 1486,
+      "Ġfil": 1487,
+      "Ġfiican": 1488,
+      "ĠBaarlamaanka": 1489,
+      "agoo": 1490,
+      "aabaha": 1491,
+      "oomiyaha": 1492,
+      "Ġnoo": 1493,
+      "eynaa": 1494,
+      "Ġgac": 1495,
+      "ĠHan": 1496,
+      "ack": 1497,
+      "iisii": 1498,
+      "Ġhorr": 1499,
+      "ĠRa": 1500,
+      "ĠTr": 1501,
+      "Ġartic": 1502,
+      "Ġarrimaha": 1503,
+      "Ġarrin": 1504,
+      "Ġ13": 1505,
+      "ĠOO": 1506,
+      "Ġdoonaan": 1507,
+      "Ġqaban": 1508,
+      "ixii": 1509,
+      "Ġiyaga": 1510,
+      "diid": 1511,
+      "mber": 1512,
+      "Ġwuxuuna": 1513,
+      "Ġ2012": 1514,
+      "Ġ2019": 1515,
+      "sado": 1516,
+      "ĠEeb": 1517,
+      "Ġfarta": 1518,
+      "Waxaa": 1519,
+      "Ġdambeeyay": 1520,
+      "Ġgaroonka": 1521,
+      "ĠDhex": 1522,
+      "Ġdhigay": 1523,
+      "weyne": 1524,
+      "Ġmasuul": 1525,
+      "Ġtaariikh": 1526,
+      "Ġtagay": 1527,
+      "Ġkooban": 1528,
+      "Ġlahayd": 1529,
+      "ĠDowladda": 1530,
+      "Ġidinku": 1531,
+      "Ġkhammaar": 1532,
+      "ĠAMISOM": 1533,
+      "Ġarticle": 1534,
+      ")-": 1535,
+      ").": 1536,
+      ".âĢĿ": 1537,
+      "10": 1538,
+      "AT": 1539,
+      "Af": 1540,
+      "IR": 1541,
+      "ama": 1542,
+      "alab": 1543,
+      "est": 1544,
+      "hka": 1545,
+      "ik": 1546,
+      "ila": 1547,
+      "igu": 1548,
+      "iver": 1549,
+      "jir": 1550,
+      "jeeda": 1551,
+      "meed": 1552,
+      "pool": 1553,
+      "qab": 1554,
+      "roc": 1555,
+      "soon": 1556,
+      "six": 1557,
+      "yahay": 1558,
+      "Ġ$": 1559,
+      "Ġ/": 1560,
+      "Ġor": 1561,
+      "aaga": 1562,
+      "aagan": 1563,
+      "ayax": 1564,
+      "ayaasha": 1565,
+      "ark": 1566,
+      "Ġsaam": 1567,
+      "Ġsuuq": 1568,
+      "Ġsawir": 1569,
+      "Ġweli": 1570,
+      "aano": 1571,
+      "aanadaha": 1572,
+      "Ġmadaxw": 1573,
+      "Ġkha": 1574,
+      "Ġkic": 1575,
+      "Ġaska": 1576,
+      "Ġkuma": 1577,
+      "Ġbeen": 1578,
+      "Ġbac": 1579,
+      "Ġboq": 1580,
+      "ĠShab": 1581,
+      "aalinta": 1582,
+      "Ġcud": 1583,
+      "Ġcaafim": 1584,
+      "Ġxal": 1585,
+      "Ġxag": 1586,
+      "Ġgool": 1587,
+      "Ġhow": 1588,
+      "isha": 1589,
+      "ĠCroc": 1590,
+      "ĠAh": 1591,
+      "ĠAadan": 1592,
+      "Ġtaasi": 1593,
+      "Ġjec": 1594,
+      "Ġjooga": 1595,
+      "hayeenka": 1596,
+      "Ġfudud": 1597,
+      "ĠBal": 1598,
+      "ĠBag": 1599,
+      "ĠBiden": 1600,
+      "Ġyaal": 1601,
+      "mah": 1602,
+      "mail": 1603,
+      "ĠKul": 1604,
+      "eeyaan": 1605,
+      "Ġnooc": 1606,
+      "aalaha": 1607,
+      "ame": 1608,
+      "amed": 1609,
+      "ĠHel": 1610,
+      "Ġjirin": 1611,
+      "ĠJu": 1612,
+      "iiso": 1613,
+      "Ġhory": 1614,
+      "ĠQor": 1615,
+      "uurta": 1616,
+      "ahan": 1617,
+      "ĠRo": 1618,
+      "Ġarkay": 1619,
+      "Ġhaddii": 1620,
+      "ĠUN": 1621,
+      "Ġkara": 1622,
+      "eelle": 1623,
+      "Ġqoray": 1624,
+      "ĠWaxaa": 1625,
+      "ĠWaxay": 1626,
+      "Ġ2013": 1627,
+      "Ġ2018": 1628,
+      "aawac": 1629,
+      "Ġnoqo": 1630,
+      "Ġwaxaanu": 1631,
+      "maayo": 1632,
+      "inge": 1633,
+      "Ġxilli": 1634,
+      "Ġtall": 1635,
+      "Ġwalba": 1636,
+      "ĠAbuu": 1637,
+      "Ġlabada": 1638,
+      "Ġdhintay": 1639,
+      "Ġshirkadaha": 1640,
+      "Ġkaliya": 1641,
+      "Ġxisbiga": 1642,
+      "Ġsababta": 1643,
+      "Ġdiiday": 1644,
+      "ĠMount": 1645,
+      "Ġwanaagsan": 1646,
+      "Ġbandhig": 1647,
+      "Ġqaatay": 1648,
+      "Ġdhowr": 1649,
+      "Ġguriga": 1650,
+      "ĠKhaanadaha": 1651,
+      "Ġadag": 1652,
+      "Ġisticmaal": 1653,
+      "ĠAfrika": 1654,
+      "ĠFederaalka": 1655,
+      "ummii": 1656,
+      "ĠDiyaaradaha": 1657,
+      "Ġtababar": 1658,
+      "iverpool": 1659,
+      "ĠCrocs": 1660,
+      "19": 1661,
+      "AN": 1662,
+      "AW": 1663,
+      "Ar": 1664,
+      "Dh": 1665,
+      "HA": 1666,
+      "KA": 1667,
+      "Si": 1668,
+      "UU": 1669,
+      "bnu": 1670,
+      "caar": 1671,
+      "gii": 1672,
+      "gar": 1673,
+      "hel": 1674,
+      "iq": 1675,
+      "ilada": 1676,
+      "nimo": 1677,
+      "tti": 1678,
+      "up": 1679,
+      "yl": 1680,
+      "yaabaha": 1681,
+      "Ġ)": 1682,
+      "Ġaas": 1683,
+      "Ġon": 1684,
+      "aay": 1685,
+      "dadka": 1686,
+      "eeq": 1687,
+      "eex": 1688,
+      "eekh": 1689,
+      "lar": 1690,
+      "lalka": 1691,
+      "arm": 1692,
+      "ary": 1693,
+      "Ġsomali": 1694,
+      "Ġsaf": 1695,
+      "Ġwadda": 1696,
+      "Ġwixii": 1697,
+      "Ġdoona": 1698,
+      "uusa": 1699,
+      "ania": 1700,
+      "Ġkuu": 1701,
+      "inho": 1702,
+      "iyaan": 1703,
+      "iyaadka": 1704,
+      "Ġlasoo": 1705,
+      "Ġbaar": 1706,
+      "Ġbiir": 1707,
+      "Ġahayn": 1708,
+      "ĠSuuq": 1709,
+      "ĠMan": 1710,
+      "ĠMaanta": 1711,
+      "Ġeed": 1712,
+      "Ġeeg": 1713,
+      "Ġeego": 1714,
+      "idu": 1715,
+      "idaam": 1716,
+      "Ġcul": 1717,
+      "Ġxas": 1718,
+      "Ġxig": 1719,
+      "Ġxoog": 1720,
+      "Ġgoo": 1721,
+      "Ġhir": 1722,
+      "Ġhoos": 1723,
+      "ismaayo": 1724,
+      "ĠCar": 1725,
+      "Ġtob": 1726,
+      "Ġhan": 1727,
+      "ĠDag": 1728,
+      "Ġfog": 1729,
+      "Ġdhulka": 1730,
+      "Ġdhaawac": 1731,
+      "Ġyaq": 1732,
+      "ĠKismaayo": 1733,
+      "Ġshaac": 1734,
+      "eeyn": 1735,
+      "ibo": 1736,
+      "ĠWaa": 1737,
+      "ĠXukuu": 1738,
+      "ĠXaaj": 1739,
+      "unaas": 1740,
+      "Ġmarkaas": 1741,
+      "Ġwaayo": 1742,
+      "Ġrab": 1743,
+      "Ġraac": 1744,
+      "Ġrukunka": 1745,
+      "ulku": 1746,
+      "Ġjirtay": 1747,
+      "shan": 1748,
+      "ĠJack": 1749,
+      "ubin": 1750,
+      "ooyiga": 1751,
+      "Ġsheegeen": 1752,
+      "ihi": 1753,
+      "Ġark": 1754,
+      "aysku": 1755,
+      "Ġ18": 1756,
+      "ity": 1757,
+      "ĠPen": 1758,
+      "iidamo": 1759,
+      "oobay": 1760,
+      "Ġgudaha": 1761,
+      "ooliska": 1762,
+      "Ġiyagoo": 1763,
+      "Ġkartaa": 1764,
+      "ashadii": 1765,
+      "Ġadk": 1766,
+      "Ġadeeg": 1767,
+      "ump": 1768,
+      "Ġnoqdo": 1769,
+      "Ġnaq": 1770,
+      "Ġgalb": 1771,
+      "Ġdowlad": 1772,
+      "Ġdeegaan": 1773,
+      "Ġmadaxda": 1774,
+      "Ġmadaxtooyada": 1775,
+      "ilmi": 1776,
+      "ilmaam": 1777,
+      "Ġgolaha": 1778,
+      "Ġtaasoo": 1779,
+      "Ġdhaqanka": 1780,
+      "ijee": 1781,
+      "Ġcarar": 1782,
+      "Ġdagaal": 1783,
+      "Ġhogaam": 1784,
+      "Ġkulanka": 1785,
+      "Ġhadal": 1786,
+      "Ġ50": 1787,
+      "Ġdiiwaan": 1788,
+      "Ġansix": 1789,
+      "Ġmaqan": 1790,
+      "ĠXildhibaanada": 1791,
+      "Ġmilyan": 1792,
+      "eshiis": 1793,
+      "Ġirr": 1794,
+      "ĠFaransiiska": 1795,
+      "Ġmuhiim": 1796,
+      "ĠHaninge": 1797,
+      "ĠXaaji": 1798,
+      "),": 1799,
+      "Dow": 1800,
+      "Far": 1801,
+      "Oo": 1802,
+      "Pre": 1803,
+      "TAY": 1804,
+      "ataa": 1805,
+      "bal": 1806,
+      "cad": 1807,
+      "dhay": 1808,
+      "der": 1809,
+      "ember": 1810,
+      "gent": 1811,
+      "laam": 1812,
+      "ns": 1813,
+      "nay": 1814,
+      "naan": 1815,
+      "naam": 1816,
+      "op": 1817,
+      "ona": 1818,
+      "olada": 1819,
+      "th": 1820,
+      "too": 1821,
+      "thi": 1822,
+      "tooda": 1823,
+      "vio": 1824,
+      "vania": 1825,
+      "Ġ8": 1826,
+      "Ġii": 1827,
+      "aaka": 1828,
+      "ayey": 1829,
+      "ooq": 1830,
+      "iif": 1831,
+      "Ġsaddex": 1832,
+      "Ġwel": 1833,
+      "Ġwasaar": 1834,
+      "Ġduq": 1835,
+      "Ġkoon": 1836,
+      "axmaan": 1837,
+      "Ġas": 1838,
+      "gad": 1839,
+      "tahay": 1840,
+      "int": 1841,
+      "Ġbuu": 1842,
+      "Ġbish": 1843,
+      "Ġbisha": 1844,
+      "eyda": 1845,
+      "eyaasha": 1846,
+      "iraaq": 1847,
+      "Ġinaad": 1848,
+      "ĠSp": 1849,
+      "ĠSoo": 1850,
+      "ĠSan": 1851,
+      "ĠSam": 1852,
+      "ĠMad": 1853,
+      "ĠMac": 1854,
+      "Ġqaranka": 1855,
+      "idd": 1856,
+      "iday": 1857,
+      "Ġcun": 1858,
+      "Ġxan": 1859,
+      "Ġxooj": 1860,
+      "Ġgel": 1861,
+      "Ġheer": 1862,
+      "isa": 1863,
+      "ĠCilmi": 1864,
+      "Ġlaab": 1865,
+      "ili": 1866,
+      "Ġuuna": 1867,
+      "Ġjooj": 1868,
+      "ĠDH": 1869,
+      "ĠDr": 1870,
+      "kiis": 1871,
+      "sam": 1872,
+      "satay": 1873,
+      "Ġdhuf": 1874,
+      "ĠBur": 1875,
+      "ĠBeesha": 1876,
+      "ĠBooc": 1877,
+      "Ġyaab": 1878,
+      "ĠGuud": 1879,
+      "aabka": 1880,
+      "Ġshee": 1881,
+      "Ġshish": 1882,
+      "ĠWadda": 1883,
+      "eria": 1884,
+      "Ġrun": 1885,
+      "Ġreeb": 1886,
+      "ĠHaw": 1887,
+      "Ġjireen": 1888,
+      "iise": 1889,
+      "iisu": 1890,
+      "Ġ25": 1891,
+      "ĠLe": 1892,
+      "ĠRab": 1893,
+      "ĠTar": 1894,
+      "aysaa": 1895,
+      "Ġ14": 1896,
+      "itir": 1897,
+      "olo": 1898,
+      "Ġ200": 1899,
+      "Ġkarin": 1900,
+      "ĠMarka": 1901,
+      "Ġsidaas": 1902,
+      "Ġgaaray": 1903,
+      "ashooyinka": 1904,
+      "Ġqorsh": 1905,
+      "Ġ2017": 1906,
+      "Ġhalkaas": 1907,
+      "Ġtiro": 1908,
+      "sadaan": 1909,
+      "Ġheli": 1910,
+      "Ġnoqday": 1911,
+      "Waxaan": 1912,
+      "ĠKulan": 1913,
+      "Ġhaween": 1914,
+      "utinho": 1915,
+      "Ġqoy": 1916,
+      "Ġxirsi": 1917,
+      "Ġgaleen": 1918,
+      "ĠKala": 1919,
+      "Ġmarkuu": 1920,
+      "Ġdowlada": 1921,
+      "Ġsocda": 1922,
+      "Ġdhawaaq": 1923,
+      "Ġidinka": 1924,
+      "Ġmudane": 1925,
+      "Ġwaliba": 1926,
+      "Ġmagacaabo": 1927,
+      "eeshiyaadka": 1928,
+      "Ġkulmay": 1929,
+      "Ġciidam": 1930,
+      "Ġkacsan": 1931,
+      "Ġdhammaan": 1932,
+      "ooyinkii": 1933,
+      "Ġgobollada": 1934,
+      "Ġgant": 1935,
+      "Ġsaxiix": 1936,
+      "ĠMasar": 1937,
+      "Ġleeyihiin": 1938,
+      "Ġlahayn": 1939,
+      "Wararka": 1940,
+      "ugust": 1941,
+      "burg": 1942,
+      "Ġdhibaat": 1943,
+      "Ġdanbe": 1944,
+      "Ġxuku": 1945,
+      "Soomaali": 1946,
+      "ĠMudane": 1947,
+      "ĠDawladda": 1948,
+      "Ġadduunka": 1949,
+      "Ġtartanka": 1950,
+      "Ġraaxo": 1951,
+      "ĠSweden": 1952,
+      "ĠTrump": 1953,
+      "ĠEebe": 1954,
+      "alabka": 1955,
+      "Ġsuuqa": 1956,
+      "Ġboqor": 1957,
+      "ĠKulmiye": 1958,
+      "ylvania": 1959,
+      "ĠPenns": 1960,
+      "ijeele": 1961,
+      "Previo": 1962,
+      "gentina": 1963,
+      "naamij": 1964,
+      "Ġkoonfur": 1965,
+      "ĠBoocame": 1966,
+      "ĠPennsylvania": 1967,
+      "Previous": 1968,
+      "!!": 1969,
+      "12": 1970,
+      "Bar": 1971,
+      "Hal": 1972,
+      "Madaxw": 1973,
+      "Maalin": 1974,
+      "Maamulka": 1975,
+      "Qaamuus": 1976,
+      "SH": 1977,
+      "ban": 1978,
+      "baad": 1979,
+      "baar": 1980,
+      "ci": 1981,
+      "cw": 1982,
+      "ek": 1983,
+      "eal": 1984,
+      "ff": 1985,
+      "fon": 1986,
+      "gis": 1987,
+      "haar": 1988,
+      "kin": 1989,
+      "lu": 1990,
+      "lim": 1991,
+      "meer": 1992,
+      "ment": 1993,
+      "niin": 1994,
+      "nood": 1995,
+      "stay": 1996,
+      "ty": 1997,
+      "tin": 1998,
+      "taasi": 1999
+    },
+    "merges": [
+      [
+        "a",
+        "a"
+      ],
+      [
+        "a",
+        "y"
+      ],
+      [
+        "k",
+        "a"
+      ],
+      [
+        "o",
+        "o"
+      ],
+      [
+        "d",
+        "a"
+      ],
+      [
+        "e",
+        "e"
+      ],
+      [
+        "l",
+        "a"
+      ],
+      [
+        "h",
+        "a"
+      ],
+      [
+        "i",
+        "i"
+      ],
+      [
+        "Ġ",
+        "i"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "Ġ",
+        "s"
+      ],
+      [
+        "Ġ",
+        "w"
+      ],
+      [
+        "Ġ",
+        "d"
+      ],
+      [
+        "u",
+        "u"
+      ],
+      [
+        "aa",
+        "n"
+      ],
+      [
+        "a",
+        "n"
+      ],
+      [
+        "Ġ",
+        "ka"
+      ],
+      [
+        "Ġ",
+        "m"
+      ],
+      [
+        "Ġ",
+        "k"
+      ],
+      [
+        "a",
+        "x"
+      ],
+      [
+        "Ġ",
+        "a"
+      ],
+      [
+        "g",
+        "a"
+      ],
+      [
+        "Ġ",
+        "ay"
+      ],
+      [
+        "a",
+        "da"
+      ],
+      [
+        "Ġ",
+        "oo"
+      ],
+      [
+        "a",
+        "d"
+      ],
+      [
+        "t",
+        "a"
+      ],
+      [
+        "i",
+        "n"
+      ],
+      [
+        "i",
+        "y"
+      ],
+      [
+        "Ġk",
+        "u"
+      ],
+      [
+        "Ġ",
+        "la"
+      ],
+      [
+        "Ġ",
+        "b"
+      ],
+      [
+        "e",
+        "y"
+      ],
+      [
+        "i",
+        "r"
+      ],
+      [
+        "Ġ",
+        "u"
+      ],
+      [
+        "Ġw",
+        "ax"
+      ],
+      [
+        "y",
+        "o"
+      ],
+      [
+        "Ġa",
+        "h"
+      ],
+      [
+        "Ġi",
+        "n"
+      ],
+      [
+        "g",
+        "u"
+      ],
+      [
+        "Ġ",
+        "S"
+      ],
+      [
+        "Ġ",
+        "M"
+      ],
+      [
+        "Ġ",
+        "q"
+      ],
+      [
+        "aa",
+        "l"
+      ],
+      [
+        "a",
+        "l"
+      ],
+      [
+        "Ġ",
+        "ee"
+      ],
+      [
+        "i",
+        "d"
+      ],
+      [
+        "aa",
+        "s"
+      ],
+      [
+        "a",
+        "b"
+      ],
+      [
+        "Ġ",
+        "c"
+      ],
+      [
+        "Ġ",
+        "x"
+      ],
+      [
+        "aa",
+        "d"
+      ],
+      [
+        "Ġ",
+        "da"
+      ],
+      [
+        "Ġ",
+        "g"
+      ],
+      [
+        "Ġi",
+        "yo"
+      ],
+      [
+        "aa",
+        "r"
+      ],
+      [
+        "Ġ",
+        "h"
+      ],
+      [
+        "n",
+        "a"
+      ],
+      [
+        "i",
+        "s"
+      ],
+      [
+        "Ġ",
+        "C"
+      ],
+      [
+        "a",
+        "s"
+      ],
+      [
+        "Ġ",
+        "l"
+      ],
+      [
+        "Ġay",
+        "aa"
+      ],
+      [
+        "o",
+        "r"
+      ],
+      [
+        "Ġ",
+        "A"
+      ],
+      [
+        "ee",
+        "n"
+      ],
+      [
+        "i",
+        "l"
+      ],
+      [
+        "Ġ",
+        "uu"
+      ],
+      [
+        "Ġ",
+        "t"
+      ],
+      [
+        "Ġ",
+        "ha"
+      ],
+      [
+        "Ġ",
+        "j"
+      ],
+      [
+        "Ġd",
+        "ha"
+      ],
+      [
+        "Ġ",
+        "D"
+      ],
+      [
+        "h",
+        "ay"
+      ],
+      [
+        "k",
+        "ii"
+      ],
+      [
+        "s",
+        "a"
+      ],
+      [
+        "Ġ",
+        "f"
+      ],
+      [
+        "Ġd",
+        "h"
+      ],
+      [
+        "Ġ",
+        "B"
+      ],
+      [
+        "Ġ",
+        "y"
+      ],
+      [
+        "m",
+        "a"
+      ],
+      [
+        "i",
+        "ga"
+      ],
+      [
+        "u",
+        "r"
+      ],
+      [
+        "s",
+        "an"
+      ],
+      [
+        "l",
+        "ka"
+      ],
+      [
+        "Ġs",
+        "oo"
+      ],
+      [
+        "Ġ",
+        "G"
+      ],
+      [
+        "Ġ",
+        "K"
+      ],
+      [
+        "a",
+        "g"
+      ],
+      [
+        "aa",
+        "b"
+      ],
+      [
+        "t",
+        "ay"
+      ],
+      [
+        "â",
+        "Ģ"
+      ],
+      [
+        "oo",
+        "m"
+      ],
+      [
+        "Ġs",
+        "h"
+      ],
+      [
+        "l",
+        "e"
+      ],
+      [
+        "aa",
+        "m"
+      ],
+      [
+        "ee",
+        "y"
+      ],
+      [
+        "i",
+        "b"
+      ],
+      [
+        "Ġ",
+        "n"
+      ],
+      [
+        "Ġ",
+        "W"
+      ],
+      [
+        "Ġi",
+        "s"
+      ],
+      [
+        "Ġ",
+        "X"
+      ],
+      [
+        "iy",
+        "a"
+      ],
+      [
+        "e",
+        "l"
+      ],
+      [
+        "ee",
+        "g"
+      ],
+      [
+        "la",
+        "n"
+      ],
+      [
+        "i",
+        "g"
+      ],
+      [
+        "e",
+        "r"
+      ],
+      [
+        ".",
+        "."
+      ],
+      [
+        "ii",
+        "n"
+      ],
+      [
+        "u",
+        "n"
+      ],
+      [
+        "oo",
+        "n"
+      ],
+      [
+        "aa",
+        "la"
+      ],
+      [
+        "Ġla",
+        "gu"
+      ],
+      [
+        "i",
+        "m"
+      ],
+      [
+        "a",
+        "m"
+      ],
+      [
+        "Ġm",
+        "ar"
+      ],
+      [
+        "Ġw",
+        "aa"
+      ],
+      [
+        "e",
+        "d"
+      ],
+      [
+        "o",
+        "w"
+      ],
+      [
+        "u",
+        "s"
+      ],
+      [
+        "ey",
+        "n"
+      ],
+      [
+        "Ġ",
+        "r"
+      ],
+      [
+        "Ġ",
+        "ga"
+      ],
+      [
+        "ee",
+        "d"
+      ],
+      [
+        "oom",
+        "aal"
+      ],
+      [
+        "u",
+        "l"
+      ],
+      [
+        "Ġ",
+        "I"
+      ],
+      [
+        "Ġ",
+        "ta"
+      ],
+      [
+        "Ġ",
+        "H"
+      ],
+      [
+        "a",
+        "c"
+      ],
+      [
+        "Ġu",
+        "gu"
+      ],
+      [
+        "ada",
+        "n"
+      ],
+      [
+        "ĠS",
+        "oomaal"
+      ],
+      [
+        "Ġl",
+        "oo"
+      ],
+      [
+        "e",
+        "n"
+      ],
+      [
+        "Ġj",
+        "ir"
+      ],
+      [
+        "o",
+        "b"
+      ],
+      [
+        "Ġs",
+        "i"
+      ],
+      [
+        "ad",
+        "da"
+      ],
+      [
+        "s",
+        "ha"
+      ],
+      [
+        "k",
+        "u"
+      ],
+      [
+        "ee",
+        "r"
+      ],
+      [
+        "b",
+        "a"
+      ],
+      [
+        "t",
+        "o"
+      ],
+      [
+        "Ġm",
+        "id"
+      ],
+      [
+        "t",
+        "i"
+      ],
+      [
+        "ada",
+        "x"
+      ],
+      [
+        "s",
+        "h"
+      ],
+      [
+        "u",
+        "d"
+      ],
+      [
+        "Ġ",
+        "J"
+      ],
+      [
+        "Ġwax",
+        "aa"
+      ],
+      [
+        "u",
+        "b"
+      ],
+      [
+        "ii",
+        "s"
+      ],
+      [
+        "Ġh",
+        "or"
+      ],
+      [
+        "Ġ",
+        "F"
+      ],
+      [
+        "al",
+        "i"
+      ],
+      [
+        "oo",
+        "y"
+      ],
+      [
+        "ii",
+        "r"
+      ],
+      [
+        "o",
+        "m"
+      ],
+      [
+        "Ġsh",
+        "eeg"
+      ],
+      [
+        "i",
+        "h"
+      ],
+      [
+        "Ġ",
+        "2"
+      ],
+      [
+        "Ġ",
+        "Q"
+      ],
+      [
+        "uu",
+        "r"
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "Ġ",
+        "L"
+      ],
+      [
+        "Ġ",
+        "aan"
+      ],
+      [
+        "oo",
+        "d"
+      ],
+      [
+        "Ġ",
+        "N"
+      ],
+      [
+        "a",
+        "q"
+      ],
+      [
+        "Ġwax",
+        "a"
+      ],
+      [
+        "Ġka",
+        "le"
+      ],
+      [
+        "l",
+        "ay"
+      ],
+      [
+        "ĠSoomaal",
+        "iya"
+      ],
+      [
+        "a",
+        "ha"
+      ],
+      [
+        "m",
+        "aan"
+      ],
+      [
+        "d",
+        "h"
+      ],
+      [
+        "Ġs",
+        "ha"
+      ],
+      [
+        "Ġ",
+        "R"
+      ],
+      [
+        "Ġ",
+        "T"
+      ],
+      [
+        "lan",
+        "d"
+      ],
+      [
+        "aala",
+        "da"
+      ],
+      [
+        "oo",
+        "r"
+      ],
+      [
+        "Ġ",
+        "ar"
+      ],
+      [
+        "m",
+        "ar"
+      ],
+      [
+        "la",
+        "d"
+      ],
+      [
+        "âĢ",
+        "Ļ"
+      ],
+      [
+        "d",
+        "ay"
+      ],
+      [
+        "m",
+        "ada"
+      ],
+      [
+        "o",
+        "g"
+      ],
+      [
+        "in",
+        "ka"
+      ],
+      [
+        "a",
+        "hay"
+      ],
+      [
+        "is",
+        "h"
+      ],
+      [
+        "ay",
+        "n"
+      ],
+      [
+        "in",
+        "ta"
+      ],
+      [
+        "Ġb",
+        "adan"
+      ],
+      [
+        "..",
+        "."
+      ],
+      [
+        "ay",
+        "s"
+      ],
+      [
+        "aan",
+        "a"
+      ],
+      [
+        "Ġ",
+        "1"
+      ],
+      [
+        "Ġ",
+        "O"
+      ],
+      [
+        "ag",
+        "aalada"
+      ],
+      [
+        "Ġd",
+        "oon"
+      ],
+      [
+        "Ġ",
+        "("
+      ],
+      [
+        "i",
+        "t"
+      ],
+      [
+        "Ġ",
+        "P"
+      ],
+      [
+        "Ġda",
+        "d"
+      ],
+      [
+        "u",
+        "q"
+      ],
+      [
+        "Ġq",
+        "ab"
+      ],
+      [
+        "ii",
+        "da"
+      ],
+      [
+        "Ġda",
+        "lka"
+      ],
+      [
+        "o",
+        "l"
+      ],
+      [
+        "ey",
+        "s"
+      ],
+      [
+        "g",
+        "an"
+      ],
+      [
+        "n",
+        "ka"
+      ],
+      [
+        "oo",
+        "b"
+      ],
+      [
+        "la",
+        "ha"
+      ],
+      [
+        "Ġka",
+        "la"
+      ],
+      [
+        "Ġha",
+        "d"
+      ],
+      [
+        "Ġsheeg",
+        "ay"
+      ],
+      [
+        "la",
+        "da"
+      ],
+      [
+        "l",
+        "aa"
+      ],
+      [
+        "u",
+        "x"
+      ],
+      [
+        "ee",
+        "da"
+      ],
+      [
+        "Ġwax",
+        "ay"
+      ],
+      [
+        "aas",
+        "i"
+      ],
+      [
+        "Ġ",
+        "gu"
+      ],
+      [
+        "Ġin",
+        "ay"
+      ],
+      [
+        "adax",
+        "w"
+      ],
+      [
+        "ab",
+        "d"
+      ],
+      [
+        "Ġ2",
+        "0"
+      ],
+      [
+        "Ġ",
+        "aad"
+      ],
+      [
+        "oo",
+        "l"
+      ],
+      [
+        "Ġku",
+        "w"
+      ],
+      [
+        "a",
+        "w"
+      ],
+      [
+        "r",
+        "i"
+      ],
+      [
+        "Ġ",
+        "U"
+      ],
+      [
+        "o",
+        "q"
+      ],
+      [
+        "s",
+        "e"
+      ],
+      [
+        "om",
+        "ali"
+      ],
+      [
+        "e",
+        "h"
+      ],
+      [
+        "i",
+        "x"
+      ],
+      [
+        "aa",
+        "f"
+      ],
+      [
+        "Ġi",
+        "y"
+      ],
+      [
+        "Ġw",
+        "ar"
+      ],
+      [
+        "Ġm",
+        "a"
+      ],
+      [
+        "iy",
+        "ay"
+      ],
+      [
+        "Ġla",
+        "ga"
+      ],
+      [
+        "d",
+        "ii"
+      ],
+      [
+        "h",
+        "i"
+      ],
+      [
+        "Ġ",
+        ","
+      ],
+      [
+        "ay",
+        "a"
+      ],
+      [
+        "e",
+        "x"
+      ],
+      [
+        "m",
+        "b"
+      ],
+      [
+        "uu",
+        "d"
+      ],
+      [
+        "ĠC",
+        "abd"
+      ],
+      [
+        "t",
+        "ii"
+      ],
+      [
+        "Ġ",
+        "..."
+      ],
+      [
+        "aan",
+        "ta"
+      ],
+      [
+        "iy",
+        "aar"
+      ],
+      [
+        "u",
+        "k"
+      ],
+      [
+        "ay",
+        "o"
+      ],
+      [
+        "aan",
+        "ka"
+      ],
+      [
+        "e",
+        "g"
+      ],
+      [
+        "o",
+        "d"
+      ],
+      [
+        "ĠM",
+        "ax"
+      ],
+      [
+        "aal",
+        "ka"
+      ],
+      [
+        "t",
+        "aa"
+      ],
+      [
+        "Ġka",
+        "r"
+      ],
+      [
+        "ĠM",
+        "ar"
+      ],
+      [
+        "ux",
+        "uu"
+      ],
+      [
+        "Ġs",
+        "id"
+      ],
+      [
+        "Ġm",
+        "agaalada"
+      ],
+      [
+        "Ġg",
+        "aar"
+      ],
+      [
+        "Ġta",
+        "hay"
+      ],
+      [
+        "iy",
+        "o"
+      ],
+      [
+        "ĠS",
+        "omali"
+      ],
+      [
+        "a",
+        "f"
+      ],
+      [
+        "ee",
+        "l"
+      ],
+      [
+        "na",
+        "ha"
+      ],
+      [
+        "Ġdha",
+        "c"
+      ],
+      [
+        "i",
+        "da"
+      ],
+      [
+        "oo",
+        "da"
+      ],
+      [
+        "eey",
+        "ay"
+      ],
+      [
+        "u",
+        "g"
+      ],
+      [
+        "as",
+        "h"
+      ],
+      [
+        "as",
+        "ha"
+      ],
+      [
+        "Ġg",
+        "ob"
+      ],
+      [
+        "Ġy",
+        "ahay"
+      ],
+      [
+        "Ġl",
+        "eh"
+      ],
+      [
+        "ih",
+        "iin"
+      ],
+      [
+        "o",
+        "c"
+      ],
+      [
+        "s",
+        "t"
+      ],
+      [
+        "ar",
+        "an"
+      ],
+      [
+        "un",
+        "t"
+      ],
+      [
+        "Ġw",
+        "uxuu"
+      ],
+      [
+        "uu",
+        "l"
+      ],
+      [
+        "Ġq",
+        "or"
+      ],
+      [
+        "ĠW",
+        "ax"
+      ],
+      [
+        "ish",
+        "o"
+      ],
+      [
+        "Ġ20",
+        "1"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "i",
+        "c"
+      ],
+      [
+        "k",
+        "h"
+      ],
+      [
+        "u",
+        "lka"
+      ],
+      [
+        "â",
+        "Ł"
+      ],
+      [
+        "aa",
+        "da"
+      ],
+      [
+        "Ġd",
+        "oor"
+      ],
+      [
+        "Ġha",
+        "l"
+      ],
+      [
+        "Ġa",
+        "d"
+      ],
+      [
+        "d",
+        "o"
+      ],
+      [
+        "aa",
+        "w"
+      ],
+      [
+        "aa",
+        "x"
+      ],
+      [
+        "Ġd",
+        "ib"
+      ],
+      [
+        "ad",
+        "ii"
+      ],
+      [
+        "ir",
+        "ka"
+      ],
+      [
+        "Ġah",
+        "aa"
+      ],
+      [
+        "Ġt",
+        "ir"
+      ],
+      [
+        "ĠMax",
+        "am"
+      ],
+      [
+        "d",
+        "isho"
+      ],
+      [
+        "Ġ",
+        "-"
+      ],
+      [
+        "uu",
+        "q"
+      ],
+      [
+        "uq",
+        "disho"
+      ],
+      [
+        "s",
+        "ad"
+      ],
+      [
+        "ma",
+        "ha"
+      ],
+      [
+        "Ġ",
+        "E"
+      ],
+      [
+        "Ġ",
+        "Y"
+      ],
+      [
+        "ay",
+        "aan"
+      ],
+      [
+        "Ġa",
+        "ma"
+      ],
+      [
+        "Ġh",
+        "el"
+      ],
+      [
+        "as",
+        "iir"
+      ],
+      [
+        "Ġmar",
+        "kii"
+      ],
+      [
+        "Ġsi",
+        "da"
+      ],
+      [
+        "k",
+        "aas"
+      ],
+      [
+        "u",
+        "m"
+      ],
+      [
+        "Ġ",
+        "âĢ"
+      ],
+      [
+        "aa",
+        "q"
+      ],
+      [
+        "Ġf",
+        "ar"
+      ],
+      [
+        "aa",
+        "c"
+      ],
+      [
+        "Ġi",
+        "sa"
+      ],
+      [
+        "ar",
+        "ka"
+      ],
+      [
+        "Ġs",
+        "ii"
+      ],
+      [
+        "ada",
+        "ha"
+      ],
+      [
+        "ad",
+        "d"
+      ],
+      [
+        "lad",
+        "da"
+      ],
+      [
+        "ad",
+        "oo"
+      ],
+      [
+        "Ġn",
+        "oq"
+      ],
+      [
+        "ooy",
+        "inka"
+      ],
+      [
+        "W",
+        "ax"
+      ],
+      [
+        "s",
+        "i"
+      ],
+      [
+        "Ġs",
+        "an"
+      ],
+      [
+        "ĠK",
+        "u"
+      ],
+      [
+        "Ġdad",
+        "ka"
+      ],
+      [
+        "s",
+        "oo"
+      ],
+      [
+        "aa",
+        "kii"
+      ],
+      [
+        "ii",
+        "b"
+      ],
+      [
+        "Ġha",
+        "w"
+      ],
+      [
+        "a",
+        "j"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "o",
+        "lka"
+      ],
+      [
+        "aa",
+        "ma"
+      ],
+      [
+        "âĢ",
+        "Ŀ"
+      ],
+      [
+        "ih",
+        "ii"
+      ],
+      [
+        "c",
+        "an"
+      ],
+      [
+        "iy",
+        "aas"
+      ],
+      [
+        "Ġb",
+        "il"
+      ],
+      [
+        "ey",
+        "naha"
+      ],
+      [
+        "Ġda",
+        "mb"
+      ],
+      [
+        "Ġy",
+        "ihiin"
+      ],
+      [
+        "t",
+        "an"
+      ],
+      [
+        "Ġm",
+        "aanta"
+      ],
+      [
+        "Ġu",
+        "ga"
+      ],
+      [
+        "Ġwax",
+        "aan"
+      ],
+      [
+        "Ġin",
+        "uu"
+      ],
+      [
+        "m",
+        "o"
+      ],
+      [
+        "u",
+        "t"
+      ],
+      [
+        "aa",
+        "g"
+      ],
+      [
+        "oo",
+        "x"
+      ],
+      [
+        "ĠS",
+        "h"
+      ],
+      [
+        "Ġq",
+        "o"
+      ],
+      [
+        "Ġx",
+        "ir"
+      ],
+      [
+        "Ġda",
+        "r"
+      ],
+      [
+        "is",
+        "b"
+      ],
+      [
+        "Ġjir",
+        "a"
+      ],
+      [
+        "adaxw",
+        "eynaha"
+      ],
+      [
+        "e",
+        "b"
+      ],
+      [
+        "h",
+        "aa"
+      ],
+      [
+        "Ġ",
+        "na"
+      ],
+      [
+        "oo",
+        "g"
+      ],
+      [
+        "ha",
+        "n"
+      ],
+      [
+        "Ġs",
+        "ar"
+      ],
+      [
+        "Ġw",
+        "eyn"
+      ],
+      [
+        "ga",
+        "c"
+      ],
+      [
+        "ĠA",
+        "l"
+      ],
+      [
+        "Ġga",
+        "b"
+      ],
+      [
+        "Ġga",
+        "l"
+      ],
+      [
+        "m",
+        "aa"
+      ],
+      [
+        "ka",
+        "n"
+      ],
+      [
+        "oo",
+        "s"
+      ],
+      [
+        "iy",
+        "e"
+      ],
+      [
+        "ĠM",
+        "uqdisho"
+      ],
+      [
+        "Ġg",
+        "ar"
+      ],
+      [
+        "ĠSomali",
+        "land"
+      ],
+      [
+        "y",
+        "a"
+      ],
+      [
+        "y",
+        "ada"
+      ],
+      [
+        "ee",
+        "sha"
+      ],
+      [
+        "Ġq",
+        "ay"
+      ],
+      [
+        "is",
+        "ay"
+      ],
+      [
+        "Ġgu",
+        "d"
+      ],
+      [
+        "n",
+        "aa"
+      ],
+      [
+        "Ġd",
+        "eg"
+      ],
+      [
+        "uu",
+        "s"
+      ],
+      [
+        "Ġm",
+        "aal"
+      ],
+      [
+        "een",
+        "ka"
+      ],
+      [
+        "ĠD",
+        "h"
+      ],
+      [
+        "iida",
+        "mada"
+      ],
+      [
+        "ay",
+        "d"
+      ],
+      [
+        "Ġm",
+        "aam"
+      ],
+      [
+        "Ġay",
+        "uu"
+      ],
+      [
+        "in",
+        "g"
+      ],
+      [
+        "iy",
+        "ada"
+      ],
+      [
+        "Ġb",
+        "ax"
+      ],
+      [
+        "aas",
+        "ha"
+      ],
+      [
+        "ĠK",
+        "a"
+      ],
+      [
+        "Ġmar",
+        "k"
+      ],
+      [
+        "unt",
+        "land"
+      ],
+      [
+        "d",
+        "ib"
+      ],
+      [
+        "u",
+        "mar"
+      ],
+      [
+        "aa",
+        "h"
+      ],
+      [
+        "ay",
+        "sa"
+      ],
+      [
+        "Ġd",
+        "ow"
+      ],
+      [
+        "Ġa",
+        "f"
+      ],
+      [
+        "Ġb",
+        "ar"
+      ],
+      [
+        "Ġb",
+        "al"
+      ],
+      [
+        "Ġis",
+        "ku"
+      ],
+      [
+        "Ġmar",
+        "ka"
+      ],
+      [
+        "asha",
+        "da"
+      ],
+      [
+        "ha",
+        "b"
+      ],
+      [
+        "Ġs",
+        "oc"
+      ],
+      [
+        "Ġa",
+        "b"
+      ],
+      [
+        "Ġq",
+        "aad"
+      ],
+      [
+        "al",
+        "ka"
+      ],
+      [
+        "Ġx",
+        "il"
+      ],
+      [
+        "Ġdha",
+        "n"
+      ],
+      [
+        "Ġdha",
+        "w"
+      ],
+      [
+        "Ġf",
+        "ur"
+      ],
+      [
+        "Ġdh",
+        "ig"
+      ],
+      [
+        "Ġis",
+        "la"
+      ],
+      [
+        "aala",
+        "m"
+      ],
+      [
+        "ti",
+        "c"
+      ],
+      [
+        "Ġsha",
+        "q"
+      ],
+      [
+        "ĠO",
+        "o"
+      ],
+      [
+        "ĠMaxam",
+        "ed"
+      ],
+      [
+        "c",
+        "ab"
+      ],
+      [
+        "Ġ",
+        "3"
+      ],
+      [
+        "da",
+        "n"
+      ],
+      [
+        "Ġi",
+        "d"
+      ],
+      [
+        "Ġm",
+        "u"
+      ],
+      [
+        "Ġwax",
+        "aana"
+      ],
+      [
+        "Ġta",
+        "l"
+      ],
+      [
+        "Ġhor",
+        "e"
+      ],
+      [
+        "s",
+        "hay"
+      ],
+      [
+        "s",
+        "iga"
+      ],
+      [
+        "Ġ",
+        "."
+      ],
+      [
+        "Ġw",
+        "ada"
+      ],
+      [
+        "Ġd",
+        "eeg"
+      ],
+      [
+        "an",
+        "a"
+      ],
+      [
+        "Ġm",
+        "adax"
+      ],
+      [
+        "Ġc",
+        "iyaar"
+      ],
+      [
+        "il",
+        "m"
+      ],
+      [
+        "ĠI",
+        "s"
+      ],
+      [
+        "ĠP",
+        "untland"
+      ],
+      [
+        "Ġiy",
+        "adoo"
+      ],
+      [
+        "s",
+        "ta"
+      ],
+      [
+        "Ġ",
+        "|"
+      ],
+      [
+        "da",
+        "ha"
+      ],
+      [
+        "ii",
+        "x"
+      ],
+      [
+        "Ġw",
+        "al"
+      ],
+      [
+        "Ġk",
+        "or"
+      ],
+      [
+        "iy",
+        "ey"
+      ],
+      [
+        "Ġla",
+        "haa"
+      ],
+      [
+        "ey",
+        "b"
+      ],
+      [
+        "Ġah",
+        "aan"
+      ],
+      [
+        "Ġin",
+        "ta"
+      ],
+      [
+        "Ġq",
+        "aar"
+      ],
+      [
+        "Ġda",
+        "n"
+      ],
+      [
+        "kii",
+        "sa"
+      ],
+      [
+        "maan",
+        "ka"
+      ],
+      [
+        "Ġma",
+        "gac"
+      ],
+      [
+        "aakii",
+        "n"
+      ],
+      [
+        "A",
+        "R"
+      ],
+      [
+        "m",
+        "ed"
+      ],
+      [
+        "w",
+        "eyn"
+      ],
+      [
+        "ee",
+        "b"
+      ],
+      [
+        "ii",
+        "l"
+      ],
+      [
+        "Ġw",
+        "adan"
+      ],
+      [
+        "ga",
+        "l"
+      ],
+      [
+        "ey",
+        "sa"
+      ],
+      [
+        "Ġx",
+        "ar"
+      ],
+      [
+        "aad",
+        "ka"
+      ],
+      [
+        "ĠA",
+        "b"
+      ],
+      [
+        "ĠA",
+        "r"
+      ],
+      [
+        "ĠA",
+        "x"
+      ],
+      [
+        "ĠW",
+        "ar"
+      ],
+      [
+        "ig",
+        "ii"
+      ],
+      [
+        "Ġqay",
+        "b"
+      ],
+      [
+        "r",
+        "e"
+      ],
+      [
+        "w",
+        "an"
+      ],
+      [
+        "ay",
+        "aa"
+      ],
+      [
+        "Ġi",
+        "laa"
+      ],
+      [
+        "Ġs",
+        "aar"
+      ],
+      [
+        "Ġs",
+        "am"
+      ],
+      [
+        "uu",
+        "nka"
+      ],
+      [
+        "Ġka",
+        "m"
+      ],
+      [
+        "Ġk",
+        "oox"
+      ],
+      [
+        "Ġa",
+        "m"
+      ],
+      [
+        "iy",
+        "eed"
+      ],
+      [
+        "Ġla",
+        "b"
+      ],
+      [
+        "Ġg",
+        "o"
+      ],
+      [
+        "ĠA",
+        "f"
+      ],
+      [
+        "Ġt",
+        "aas"
+      ],
+      [
+        "Ġf",
+        "i"
+      ],
+      [
+        "iya",
+        "ha"
+      ],
+      [
+        "Ġkuw",
+        "a"
+      ],
+      [
+        "Ġtir",
+        "san"
+      ],
+      [
+        "c",
+        "h"
+      ],
+      [
+        "i",
+        "a"
+      ],
+      [
+        "i",
+        "f"
+      ],
+      [
+        "t",
+        "aan"
+      ],
+      [
+        "ha",
+        "m"
+      ],
+      [
+        "an",
+        "ka"
+      ],
+      [
+        "Ġa",
+        "l"
+      ],
+      [
+        "Ġa",
+        "q"
+      ],
+      [
+        "aas",
+        "h"
+      ],
+      [
+        "Ġdha",
+        "q"
+      ],
+      [
+        "Ġdh",
+        "in"
+      ],
+      [
+        "Ġdh",
+        "ex"
+      ],
+      [
+        "Ġsh",
+        "irka"
+      ],
+      [
+        "Ġis",
+        "ka"
+      ],
+      [
+        "un",
+        "ta"
+      ],
+      [
+        "ĠI",
+        "n"
+      ],
+      [
+        "i",
+        "j"
+      ],
+      [
+        "r",
+        "o"
+      ],
+      [
+        "u",
+        "f"
+      ],
+      [
+        "ay",
+        "ay"
+      ],
+      [
+        "oo",
+        "w"
+      ],
+      [
+        "ii",
+        "d"
+      ],
+      [
+        "Ġi",
+        "l"
+      ],
+      [
+        "Ġka",
+        "l"
+      ],
+      [
+        "Ġka",
+        "sta"
+      ],
+      [
+        "Ġa",
+        "w"
+      ],
+      [
+        "ey",
+        "d"
+      ],
+      [
+        "Ġq",
+        "ar"
+      ],
+      [
+        "Ġq",
+        "eyb"
+      ],
+      [
+        "ab",
+        "ab"
+      ],
+      [
+        "Ġc",
+        "ar"
+      ],
+      [
+        "Ġda",
+        "g"
+      ],
+      [
+        "ag",
+        "aal"
+      ],
+      [
+        "eey",
+        "ey"
+      ],
+      [
+        "im",
+        "ada"
+      ],
+      [
+        "Ġloo",
+        "gu"
+      ],
+      [
+        "ĠF",
+        "ar"
+      ],
+      [
+        "âŁ",
+        "¨"
+      ],
+      [
+        "âŁ",
+        "©"
+      ],
+      [
+        "a",
+        "ga"
+      ],
+      [
+        "y",
+        "ay"
+      ],
+      [
+        "ee",
+        "sh"
+      ],
+      [
+        "Ġw",
+        "a"
+      ],
+      [
+        "uu",
+        "x"
+      ],
+      [
+        "Ġm",
+        "eel"
+      ],
+      [
+        "Ġda",
+        "b"
+      ],
+      [
+        "Ġh",
+        "og"
+      ],
+      [
+        "Ġt",
+        "ar"
+      ],
+      [
+        "Ġha",
+        "b"
+      ],
+      [
+        "Ġn",
+        "in"
+      ],
+      [
+        "iin",
+        "ta"
+      ],
+      [
+        "eed",
+        "ka"
+      ],
+      [
+        "iis",
+        "ka"
+      ],
+      [
+        "Ġgob",
+        "olka"
+      ],
+      [
+        "aama",
+        "c"
+      ],
+      [
+        "Ġqo",
+        "f"
+      ],
+      [
+        "l",
+        "i"
+      ],
+      [
+        "l",
+        "in"
+      ],
+      [
+        "ee",
+        "yo"
+      ],
+      [
+        "la",
+        "b"
+      ],
+      [
+        "Ġd",
+        "il"
+      ],
+      [
+        "Ġka",
+        "dib"
+      ],
+      [
+        "Ġm",
+        "ax"
+      ],
+      [
+        "ax",
+        "a"
+      ],
+      [
+        "ad",
+        "ka"
+      ],
+      [
+        "Ġku",
+        "lan"
+      ],
+      [
+        "Ġha",
+        "da"
+      ],
+      [
+        "ur",
+        "l"
+      ],
+      [
+        "ĠG",
+        "ar"
+      ],
+      [
+        "Ġhad",
+        "lay"
+      ],
+      [
+        "ĠAx",
+        "med"
+      ],
+      [
+        "D",
+        "A"
+      ],
+      [
+        "d",
+        "da"
+      ],
+      [
+        "e",
+        "c"
+      ],
+      [
+        "m",
+        "ad"
+      ],
+      [
+        "n",
+        "o"
+      ],
+      [
+        "t",
+        "er"
+      ],
+      [
+        "Ġ",
+        "\""
+      ],
+      [
+        "Ġs",
+        "iyaas"
+      ],
+      [
+        "Ġka",
+        "ga"
+      ],
+      [
+        "in",
+        "a"
+      ],
+      [
+        "Ġku",
+        "l"
+      ],
+      [
+        "Ġc",
+        "us"
+      ],
+      [
+        "Ġc",
+        "iida"
+      ],
+      [
+        "aad",
+        "o"
+      ],
+      [
+        "Ġda",
+        "l"
+      ],
+      [
+        "ĠC",
+        "iidamada"
+      ],
+      [
+        "ĠG",
+        "al"
+      ],
+      [
+        "ĠG",
+        "ob"
+      ],
+      [
+        "Ġga",
+        "can"
+      ],
+      [
+        "Ġisa",
+        "ga"
+      ],
+      [
+        "I",
+        "S"
+      ],
+      [
+        "e",
+        "s"
+      ],
+      [
+        "h",
+        "e"
+      ],
+      [
+        "i",
+        "o"
+      ],
+      [
+        "k",
+        "ay"
+      ],
+      [
+        "l",
+        "o"
+      ],
+      [
+        "s",
+        "ka"
+      ],
+      [
+        "Ġ",
+        "5"
+      ],
+      [
+        "Ġ",
+        "âŁ¨"
+      ],
+      [
+        "oo",
+        "c"
+      ],
+      [
+        "ii",
+        "m"
+      ],
+      [
+        "Ġka",
+        "c"
+      ],
+      [
+        "Ġb",
+        "ad"
+      ],
+      [
+        "Ġb",
+        "ix"
+      ],
+      [
+        "Ġx",
+        "isb"
+      ],
+      [
+        "Ġdha",
+        "m"
+      ],
+      [
+        "ĠG",
+        "o"
+      ],
+      [
+        "eey",
+        "a"
+      ],
+      [
+        "en",
+        "t"
+      ],
+      [
+        "ti",
+        "on"
+      ],
+      [
+        "ooy",
+        "in"
+      ],
+      [
+        "dh",
+        "ig"
+      ],
+      [
+        "ĠCabd",
+        "i"
+      ],
+      [
+        "uk",
+        "uu"
+      ],
+      [
+        "Ġgob",
+        "ol"
+      ],
+      [
+        "cab",
+        "ka"
+      ],
+      [
+        "A",
+        "B"
+      ],
+      [
+        "a",
+        "k"
+      ],
+      [
+        "a",
+        "gu"
+      ],
+      [
+        "d",
+        "ha"
+      ],
+      [
+        "e",
+        "w"
+      ],
+      [
+        "g",
+        "oo"
+      ],
+      [
+        "k",
+        "aasi"
+      ],
+      [
+        "m",
+        "adda"
+      ],
+      [
+        "u",
+        "wan"
+      ],
+      [
+        "y",
+        "ar"
+      ],
+      [
+        "Ġ",
+        "0"
+      ],
+      [
+        "Ġm",
+        "as"
+      ],
+      [
+        "iy",
+        "ad"
+      ],
+      [
+        "iy",
+        "een"
+      ],
+      [
+        "ir",
+        "i"
+      ],
+      [
+        "Ġc",
+        "ad"
+      ],
+      [
+        "Ġx",
+        "us"
+      ],
+      [
+        "Ġg",
+        "an"
+      ],
+      [
+        "as",
+        "aar"
+      ],
+      [
+        "Ġl",
+        "aakiin"
+      ],
+      [
+        "Ġt",
+        "aar"
+      ],
+      [
+        "Ġy",
+        "im"
+      ],
+      [
+        "ur",
+        "ub"
+      ],
+      [
+        "Ġis",
+        "b"
+      ],
+      [
+        "Ġta",
+        "g"
+      ],
+      [
+        "sha",
+        "da"
+      ],
+      [
+        "ĠJ",
+        "aamac"
+      ],
+      [
+        "ĠMar",
+        "ay"
+      ],
+      [
+        "Ġsar",
+        "e"
+      ],
+      [
+        "Ġwadan",
+        "ka"
+      ],
+      [
+        "Ġkam",
+        "id"
+      ],
+      [
+        "h",
+        "o"
+      ],
+      [
+        "t",
+        "ar"
+      ],
+      [
+        "aa",
+        "j"
+      ],
+      [
+        "ka",
+        "nka"
+      ],
+      [
+        "oo",
+        "ga"
+      ],
+      [
+        "da",
+        "r"
+      ],
+      [
+        "ii",
+        "sa"
+      ],
+      [
+        "Ġs",
+        "ax"
+      ],
+      [
+        "Ġs",
+        "abab"
+      ],
+      [
+        "Ġd",
+        "ii"
+      ],
+      [
+        "uu",
+        "b"
+      ],
+      [
+        "Ġk",
+        "oob"
+      ],
+      [
+        "Ġb",
+        "aa"
+      ],
+      [
+        "ĠM",
+        "as"
+      ],
+      [
+        "Ġg",
+        "uu"
+      ],
+      [
+        "ĠC",
+        "ali"
+      ],
+      [
+        "Ġl",
+        "eey"
+      ],
+      [
+        "oon",
+        "ka"
+      ],
+      [
+        "Ġloo",
+        "ga"
+      ],
+      [
+        "Ġdoon",
+        "aa"
+      ],
+      [
+        "Ġsid",
+        "oo"
+      ],
+      [
+        "sad",
+        "ay"
+      ],
+      [
+        "ĠâĢ",
+        "ľ"
+      ],
+      [
+        "Ġsan",
+        "ad"
+      ],
+      [
+        "Ġcus",
+        "ub"
+      ],
+      [
+        "m",
+        "ay"
+      ],
+      [
+        "n",
+        "i"
+      ],
+      [
+        "t",
+        "ir"
+      ],
+      [
+        "t",
+        "ooy"
+      ],
+      [
+        "w",
+        "ax"
+      ],
+      [
+        "y",
+        "an"
+      ],
+      [
+        "Ġ",
+        "4"
+      ],
+      [
+        "oo",
+        "j"
+      ],
+      [
+        "ar",
+        "g"
+      ],
+      [
+        "Ġs",
+        "u"
+      ],
+      [
+        "Ġku",
+        "la"
+      ],
+      [
+        "Ġla",
+        "hay"
+      ],
+      [
+        "Ġb",
+        "ed"
+      ],
+      [
+        "ĠM",
+        "uu"
+      ],
+      [
+        "ĠM",
+        "adaxw"
+      ],
+      [
+        "Ġdh",
+        "eer"
+      ],
+      [
+        "âĢ",
+        "ľ"
+      ],
+      [
+        "aam",
+        "in"
+      ],
+      [
+        "ud",
+        "ug"
+      ],
+      [
+        "om",
+        "e"
+      ],
+      [
+        "mar",
+        "k"
+      ],
+      [
+        "ays",
+        "o"
+      ],
+      [
+        "ew",
+        "s"
+      ],
+      [
+        "a",
+        "h"
+      ],
+      [
+        "a",
+        "lan"
+      ],
+      [
+        "m",
+        "aal"
+      ],
+      [
+        "n",
+        "u"
+      ],
+      [
+        "t",
+        "oob"
+      ],
+      [
+        "Ġ",
+        "iib"
+      ],
+      [
+        "Ġd",
+        "ir"
+      ],
+      [
+        "Ġka",
+        "n"
+      ],
+      [
+        "Ġm",
+        "us"
+      ],
+      [
+        "Ġay",
+        "ay"
+      ],
+      [
+        "ĠM",
+        "o"
+      ],
+      [
+        "ĠM",
+        "agaalada"
+      ],
+      [
+        "Ġda",
+        "w"
+      ],
+      [
+        "Ġg",
+        "uul"
+      ],
+      [
+        "ĠC",
+        "umar"
+      ],
+      [
+        "ĠA",
+        "d"
+      ],
+      [
+        "Ġj",
+        "oog"
+      ],
+      [
+        "ĠD",
+        "ow"
+      ],
+      [
+        "Ġy",
+        "ar"
+      ],
+      [
+        "ur",
+        "ka"
+      ],
+      [
+        "ib",
+        "aan"
+      ],
+      [
+        "ĠW",
+        "asiir"
+      ],
+      [
+        "ĠX",
+        "as"
+      ],
+      [
+        "ĠX",
+        "il"
+      ],
+      [
+        "im",
+        "o"
+      ],
+      [
+        "Ġr",
+        "eer"
+      ],
+      [
+        "en",
+        "ya"
+      ],
+      [
+        "Ġjir",
+        "ay"
+      ],
+      [
+        "dh",
+        "ibaan"
+      ],
+      [
+        "Ġhad",
+        "da"
+      ],
+      [
+        "uk",
+        "un"
+      ],
+      [
+        "ĠY",
+        "urub"
+      ],
+      [
+        "Ġbal",
+        "se"
+      ],
+      [
+        "Ġdeeg",
+        "aanka"
+      ],
+      [
+        "I",
+        "n"
+      ],
+      [
+        "c",
+        "ag"
+      ],
+      [
+        "t",
+        "ee"
+      ],
+      [
+        "Ġ",
+        "an"
+      ],
+      [
+        "Ġ",
+        "og"
+      ],
+      [
+        "aa",
+        "yo"
+      ],
+      [
+        "ha",
+        "r"
+      ],
+      [
+        "ii",
+        "q"
+      ],
+      [
+        "Ġs",
+        "al"
+      ],
+      [
+        "Ġw",
+        "an"
+      ],
+      [
+        "Ġw",
+        "ad"
+      ],
+      [
+        "Ġd",
+        "e"
+      ],
+      [
+        "Ġd",
+        "uwan"
+      ],
+      [
+        "uu",
+        "n"
+      ],
+      [
+        "Ġm",
+        "ur"
+      ],
+      [
+        "Ġm",
+        "aq"
+      ],
+      [
+        "Ġm",
+        "agaal"
+      ],
+      [
+        "Ġay",
+        "san"
+      ],
+      [
+        "Ġla",
+        "cag"
+      ],
+      [
+        "Ġb",
+        "an"
+      ],
+      [
+        "Ġq",
+        "aa"
+      ],
+      [
+        "ab",
+        "ad"
+      ],
+      [
+        "Ġc",
+        "aalam"
+      ],
+      [
+        "Ġx",
+        "aq"
+      ],
+      [
+        "Ġh",
+        "ub"
+      ],
+      [
+        "Ġdha",
+        "x"
+      ],
+      [
+        "Ġdh",
+        "ow"
+      ],
+      [
+        "ĠG",
+        "ud"
+      ],
+      [
+        "el",
+        "i"
+      ],
+      [
+        "el",
+        "in"
+      ],
+      [
+        "ow",
+        "ga"
+      ],
+      [
+        "ĠSoomaal",
+        "iyeed"
+      ],
+      [
+        "sh",
+        "o"
+      ],
+      [
+        "Ġsheeg",
+        "tay"
+      ],
+      [
+        "Ġkuw",
+        "aas"
+      ],
+      [
+        "aw",
+        "ir"
+      ],
+      [
+        "Ġsid",
+        "ii"
+      ],
+      [
+        "Ġdamb",
+        "e"
+      ],
+      [
+        "dan",
+        "e"
+      ],
+      [
+        "ĠMuu",
+        "se"
+      ],
+      [
+        "H",
+        "ome"
+      ],
+      [
+        "W",
+        "ar"
+      ],
+      [
+        "b",
+        "aab"
+      ],
+      [
+        "d",
+        "i"
+      ],
+      [
+        "d",
+        "u"
+      ],
+      [
+        "g",
+        "o"
+      ],
+      [
+        "j",
+        "o"
+      ],
+      [
+        "k",
+        "aan"
+      ],
+      [
+        "k",
+        "ood"
+      ],
+      [
+        "m",
+        "i"
+      ],
+      [
+        "m",
+        "an"
+      ],
+      [
+        "r",
+        "a"
+      ],
+      [
+        "u",
+        "gu"
+      ],
+      [
+        "Ġs",
+        "ug"
+      ],
+      [
+        "Ġd",
+        "iyaar"
+      ],
+      [
+        "Ġk",
+        "een"
+      ],
+      [
+        "iy",
+        "adda"
+      ],
+      [
+        "ey",
+        "san"
+      ],
+      [
+        "Ġwax",
+        "uu"
+      ],
+      [
+        "ĠS",
+        "al"
+      ],
+      [
+        "Ġq",
+        "aab"
+      ],
+      [
+        "aal",
+        "in"
+      ],
+      [
+        "aar",
+        "la"
+      ],
+      [
+        "Ġh",
+        "ay"
+      ],
+      [
+        "ĠD",
+        "ha"
+      ],
+      [
+        "Ġy",
+        "iri"
+      ],
+      [
+        "aab",
+        "o"
+      ],
+      [
+        "aam",
+        "uus"
+      ],
+      [
+        "ĠX",
+        "us"
+      ],
+      [
+        "Ġga",
+        "lay"
+      ],
+      [
+        "ac",
+        "a"
+      ],
+      [
+        "Ġ1",
+        "9"
+      ],
+      [
+        "Ġgu",
+        "r"
+      ],
+      [
+        "ri",
+        "maha"
+      ],
+      [
+        "od",
+        "ob"
+      ],
+      [
+        "Ġdhac",
+        "ay"
+      ],
+      [
+        "00",
+        "0"
+      ],
+      [
+        "ut",
+        "s"
+      ],
+      [
+        "maa",
+        "jo"
+      ],
+      [
+        "Ġgud",
+        "b"
+      ],
+      [
+        "Ġdow",
+        "ladda"
+      ],
+      [
+        "Ġid",
+        "in"
+      ],
+      [
+        "Ġkoox",
+        "da"
+      ],
+      [
+        "toob",
+        "iya"
+      ],
+      [
+        "O",
+        "L"
+      ],
+      [
+        "S",
+        "id"
+      ],
+      [
+        "d",
+        "aan"
+      ],
+      [
+        "h",
+        "u"
+      ],
+      [
+        "k",
+        "aa"
+      ],
+      [
+        "k",
+        "ooda"
+      ],
+      [
+        "m",
+        "udug"
+      ],
+      [
+        "r",
+        "in"
+      ],
+      [
+        "s",
+        "s"
+      ],
+      [
+        "y",
+        "aan"
+      ],
+      [
+        "y",
+        "een"
+      ],
+      [
+        "y",
+        "aha"
+      ],
+      [
+        "Ġ",
+        "Â"
+      ],
+      [
+        "ii",
+        "kh"
+      ],
+      [
+        "Ġa",
+        "k"
+      ],
+      [
+        "ad",
+        "eed"
+      ],
+      [
+        "iy",
+        "iin"
+      ],
+      [
+        "Ġla",
+        "ba"
+      ],
+      [
+        "Ġu",
+        "r"
+      ],
+      [
+        "ĠM",
+        "adax"
+      ],
+      [
+        "id",
+        "da"
+      ],
+      [
+        "id",
+        "hi"
+      ],
+      [
+        "ab",
+        "ar"
+      ],
+      [
+        "Ġc",
+        "od"
+      ],
+      [
+        "aad",
+        "ay"
+      ],
+      [
+        "Ġg",
+        "aad"
+      ],
+      [
+        "Ġt",
+        "aag"
+      ],
+      [
+        "ĠB",
+        "oos"
+      ],
+      [
+        "ĠK",
+        "h"
+      ],
+      [
+        "ba",
+        "ha"
+      ],
+      [
+        "Ġsha",
+        "r"
+      ],
+      [
+        "Ġsha",
+        "cabka"
+      ],
+      [
+        "ĠT",
+        "al"
+      ],
+      [
+        "ĠCabd",
+        "ul"
+      ],
+      [
+        "Ġkar",
+        "o"
+      ],
+      [
+        "ĠWax",
+        "aan"
+      ],
+      [
+        "Ġmaam",
+        "ulka"
+      ],
+      [
+        "Ġgacan",
+        "ta"
+      ],
+      [
+        "tooy",
+        "ada"
+      ],
+      [
+        "M",
+        "adaxweynaha"
+      ],
+      [
+        "b",
+        "ur"
+      ],
+      [
+        "d",
+        "iga"
+      ],
+      [
+        "e",
+        "t"
+      ],
+      [
+        "g",
+        "e"
+      ],
+      [
+        "o",
+        "t"
+      ],
+      [
+        "s",
+        "ii"
+      ],
+      [
+        "t",
+        "u"
+      ],
+      [
+        "t",
+        "aas"
+      ],
+      [
+        "t",
+        "een"
+      ],
+      [
+        "ka",
+        "r"
+      ],
+      [
+        "ee",
+        "na"
+      ],
+      [
+        "Ġw",
+        "aq"
+      ],
+      [
+        "Ġw",
+        "asiir"
+      ],
+      [
+        "uu",
+        "sh"
+      ],
+      [
+        "Ġa",
+        "da"
+      ],
+      [
+        "Ġay",
+        "aan"
+      ],
+      [
+        "ĠM",
+        "id"
+      ],
+      [
+        "aas",
+        "o"
+      ],
+      [
+        "Ġc",
+        "aas"
+      ],
+      [
+        "aad",
+        "iga"
+      ],
+      [
+        "ĠC",
+        "o"
+      ],
+      [
+        "Ġj",
+        "eed"
+      ],
+      [
+        "ĠB",
+        "ar"
+      ],
+      [
+        "ĠK",
+        "enya"
+      ],
+      [
+        "ĠX",
+        "isb"
+      ],
+      [
+        "ĠI",
+        "toobiya"
+      ],
+      [
+        "ĠSoomaal",
+        "i"
+      ],
+      [
+        "ĠQ",
+        "ar"
+      ],
+      [
+        "eys",
+        "o"
+      ],
+      [
+        "ĠU",
+        "gan"
+      ],
+      [
+        "Ġwar",
+        "eeg"
+      ],
+      [
+        "ĠCabd",
+        "ir"
+      ],
+      [
+        "ĠMaxam",
+        "uud"
+      ],
+      [
+        "Ġisa",
+        "goo"
+      ],
+      [
+        "Ġxir",
+        "iir"
+      ],
+      [
+        "Ġmaal",
+        "in"
+      ],
+      [
+        "Ġxar",
+        "unta"
+      ],
+      [
+        "lin",
+        "yar"
+      ],
+      [
+        "ĠGob",
+        "olka"
+      ],
+      [
+        "ĠGo",
+        "laha"
+      ],
+      [
+        "ĠMaray",
+        "kanka"
+      ],
+      [
+        "Ġsu",
+        "gan"
+      ],
+      [
+        "ĠXil",
+        "dhibaan"
+      ],
+      [
+        "ĠBoos",
+        "aaso"
+      ],
+      [
+        "2",
+        "0"
+      ],
+      [
+        "M",
+        "G"
+      ],
+      [
+        "a",
+        "p"
+      ],
+      [
+        "h",
+        "uur"
+      ],
+      [
+        "m",
+        "aar"
+      ],
+      [
+        "r",
+        "ada"
+      ],
+      [
+        "v",
+        "er"
+      ],
+      [
+        "w",
+        "aan"
+      ],
+      [
+        "ii",
+        "g"
+      ],
+      [
+        "Ġm",
+        "ac"
+      ],
+      [
+        "ad",
+        "h"
+      ],
+      [
+        "ad",
+        "u"
+      ],
+      [
+        "Ġla",
+        "f"
+      ],
+      [
+        "ĠM",
+        "adaxweynaha"
+      ],
+      [
+        "Ġg",
+        "uud"
+      ],
+      [
+        "Ġh",
+        "ays"
+      ],
+      [
+        "is",
+        "o"
+      ],
+      [
+        "is",
+        "ka"
+      ],
+      [
+        "Ġha",
+        "lka"
+      ],
+      [
+        "Ġdha",
+        "maan"
+      ],
+      [
+        "Ġdh",
+        "ib"
+      ],
+      [
+        "Ġy",
+        "ee"
+      ],
+      [
+        "aab",
+        "san"
+      ],
+      [
+        "aam",
+        "ulka"
+      ],
+      [
+        "ed",
+        "er"
+      ],
+      [
+        "Ġr",
+        "as"
+      ],
+      [
+        "ĠI",
+        "yo"
+      ],
+      [
+        "Ġ1",
+        "0"
+      ],
+      [
+        "Ġqab",
+        "tay"
+      ],
+      [
+        "Ġwaxay",
+        "na"
+      ],
+      [
+        "aran",
+        "ka"
+      ],
+      [
+        "ĠâĢ",
+        "ĵ"
+      ],
+      [
+        "Ġqaad",
+        "ay"
+      ],
+      [
+        "Ġdan",
+        "b"
+      ],
+      [
+        "Ġyim",
+        "id"
+      ],
+      [
+        "ĠXus",
+        "een"
+      ],
+      [
+        "Ġak",
+        "ka"
+      ],
+      [
+        "A",
+        "A"
+      ],
+      [
+        "A",
+        "Y"
+      ],
+      [
+        "S",
+        "hab"
+      ],
+      [
+        "j",
+        "in"
+      ],
+      [
+        "n",
+        "ada"
+      ],
+      [
+        "n",
+        "imada"
+      ],
+      [
+        "t",
+        "ey"
+      ],
+      [
+        "y",
+        "ey"
+      ],
+      [
+        "Ġ",
+        ":"
+      ],
+      [
+        "Ġw",
+        "eer"
+      ],
+      [
+        "Ġka",
+        "soo"
+      ],
+      [
+        "Ġm",
+        "il"
+      ],
+      [
+        "Ġm",
+        "uuq"
+      ],
+      [
+        "Ġk",
+        "h"
+      ],
+      [
+        "iy",
+        "aa"
+      ],
+      [
+        "Ġku",
+        "n"
+      ],
+      [
+        "Ġin",
+        "aan"
+      ],
+      [
+        "Ġq",
+        "aada"
+      ],
+      [
+        "Ġx",
+        "u"
+      ],
+      [
+        "Ġx",
+        "ub"
+      ],
+      [
+        "ĠB",
+        "an"
+      ],
+      [
+        "Ġy",
+        "idhi"
+      ],
+      [
+        "Ġsh",
+        "ir"
+      ],
+      [
+        "ib",
+        "aax"
+      ],
+      [
+        "Ġn",
+        "uts"
+      ],
+      [
+        "Ġis",
+        "tic"
+      ],
+      [
+        "am",
+        "huur"
+      ],
+      [
+        "ĠL",
+        "a"
+      ],
+      [
+        "ĠN",
+        "ews"
+      ],
+      [
+        "Ġdoon",
+        "o"
+      ],
+      [
+        "Ġdhac",
+        "day"
+      ],
+      [
+        "aran",
+        "s"
+      ],
+      [
+        "add",
+        "ex"
+      ],
+      [
+        "Ġnoq",
+        "on"
+      ],
+      [
+        "Ġmaam",
+        "ul"
+      ],
+      [
+        "Ġmark",
+        "aana"
+      ],
+      [
+        "ĠAf",
+        "ri"
+      ],
+      [
+        "Ġaq",
+        "oon"
+      ],
+      [
+        "ĠGal",
+        "mudug"
+      ],
+      [
+        "Ġbed",
+        "el"
+      ],
+      [
+        "aarla",
+        "maanka"
+      ],
+      [
+        "uush",
+        "ka"
+      ],
+      [
+        "O",
+        "M"
+      ],
+      [
+        "S",
+        "oomaal"
+      ],
+      [
+        "b",
+        "aa"
+      ],
+      [
+        "b",
+        "ix"
+      ],
+      [
+        "c",
+        "a"
+      ],
+      [
+        "e",
+        "sh"
+      ],
+      [
+        "f",
+        "ur"
+      ],
+      [
+        "o",
+        "st"
+      ],
+      [
+        "r",
+        "ay"
+      ],
+      [
+        "t",
+        "e"
+      ],
+      [
+        "t",
+        "iga"
+      ],
+      [
+        "Ġ",
+        "7"
+      ],
+      [
+        "Ġ",
+        "V"
+      ],
+      [
+        "ee",
+        "laha"
+      ],
+      [
+        "Ġi",
+        "r"
+      ],
+      [
+        "Ġs",
+        "iin"
+      ],
+      [
+        "Ġs",
+        "aax"
+      ],
+      [
+        "Ġm",
+        "ud"
+      ],
+      [
+        "Ġk",
+        "ham"
+      ],
+      [
+        "ga",
+        "lay"
+      ],
+      [
+        "ada",
+        "l"
+      ],
+      [
+        "Ġwax",
+        "aad"
+      ],
+      [
+        "Ġah",
+        "ayd"
+      ],
+      [
+        "ĠS",
+        "ar"
+      ],
+      [
+        "ĠM",
+        "u"
+      ],
+      [
+        "ab",
+        "a"
+      ],
+      [
+        "Ġc",
+        "id"
+      ],
+      [
+        "Ġc",
+        "el"
+      ],
+      [
+        "Ġg",
+        "oor"
+      ],
+      [
+        "is",
+        "ta"
+      ],
+      [
+        "ĠA",
+        "M"
+      ],
+      [
+        "ĠD",
+        "aw"
+      ],
+      [
+        "Ġdh",
+        "aaf"
+      ],
+      [
+        "ag",
+        "ga"
+      ],
+      [
+        "aab",
+        "ay"
+      ],
+      [
+        "aab",
+        "an"
+      ],
+      [
+        "eey",
+        "een"
+      ],
+      [
+        "Ġn",
+        "inka"
+      ],
+      [
+        "ĠX",
+        "ar"
+      ],
+      [
+        "eyn",
+        "e"
+      ],
+      [
+        "ĠH",
+        "ab"
+      ],
+      [
+        "ĠH",
+        "arg"
+      ],
+      [
+        "en",
+        "mark"
+      ],
+      [
+        "ĠF",
+        "eder"
+      ],
+      [
+        "dh",
+        "iga"
+      ],
+      [
+        "ayn",
+        "ta"
+      ],
+      [
+        "laa",
+        "hi"
+      ],
+      [
+        "Ġkuw",
+        "o"
+      ],
+      [
+        "uk",
+        "aan"
+      ],
+      [
+        "ĠSomali",
+        "a"
+      ],
+      [
+        "ash",
+        "o"
+      ],
+      [
+        "Ġdoor",
+        "ashada"
+      ],
+      [
+        "Ġad",
+        "d"
+      ],
+      [
+        "aaw",
+        "o"
+      ],
+      [
+        "um",
+        "m"
+      ],
+      [
+        "aag",
+        "san"
+      ],
+      [
+        "Ġaf",
+        "ar"
+      ],
+      [
+        "Ġab",
+        "uur"
+      ],
+      [
+        "Ġil",
+        "laa"
+      ],
+      [
+        "Ġaw",
+        "ood"
+      ],
+      [
+        "Ġtar",
+        "tan"
+      ],
+      [
+        "Ġisb",
+        "it"
+      ],
+      [
+        "Ġleey",
+        "ahay"
+      ],
+      [
+        "ĠXas",
+        "an"
+      ],
+      [
+        "ukun",
+        "ka"
+      ],
+      [
+        "Ġcaalam",
+        "ka"
+      ],
+      [
+        "Sid",
+        "oo"
+      ],
+      [
+        "ĠÂ",
+        "»"
+      ],
+      [
+        "Ġtaag",
+        "eer"
+      ],
+      [
+        "ĠUgan",
+        "da"
+      ],
+      [
+        "Shab",
+        "aab"
+      ],
+      [
+        "Ġweer",
+        "ar"
+      ],
+      [
+        "A",
+        "b"
+      ],
+      [
+        "E",
+        "E"
+      ],
+      [
+        "M",
+        "uqdisho"
+      ],
+      [
+        "O",
+        "O"
+      ],
+      [
+        "a",
+        "la"
+      ],
+      [
+        "b",
+        "ar"
+      ],
+      [
+        "c",
+        "o"
+      ],
+      [
+        "d",
+        "een"
+      ],
+      [
+        "h",
+        "in"
+      ],
+      [
+        "i",
+        "an"
+      ],
+      [
+        "k",
+        "eeda"
+      ],
+      [
+        "m",
+        "iye"
+      ],
+      [
+        "Ġ",
+        "9"
+      ],
+      [
+        "Ġ",
+        "o"
+      ],
+      [
+        "Ġ",
+        "p"
+      ],
+      [
+        "Ġ",
+        "er"
+      ],
+      [
+        "aa",
+        "t"
+      ],
+      [
+        "oo",
+        "na"
+      ],
+      [
+        "ee",
+        "f"
+      ],
+      [
+        "ii",
+        "j"
+      ],
+      [
+        "ii",
+        "can"
+      ],
+      [
+        "Ġs",
+        "aabsan"
+      ],
+      [
+        "uu",
+        "g"
+      ],
+      [
+        "Ġm",
+        "al"
+      ],
+      [
+        "Ġm",
+        "eesha"
+      ],
+      [
+        "ga",
+        "b"
+      ],
+      [
+        "ga",
+        "da"
+      ],
+      [
+        "Ġb",
+        "ur"
+      ],
+      [
+        "Ġb",
+        "eesha"
+      ],
+      [
+        "ir",
+        "aan"
+      ],
+      [
+        "Ġin",
+        "tii"
+      ],
+      [
+        "Ġq",
+        "ur"
+      ],
+      [
+        "aal",
+        "e"
+      ],
+      [
+        "Ġc",
+        "im"
+      ],
+      [
+        "Ġc",
+        "iidamada"
+      ],
+      [
+        "Ġx",
+        "id"
+      ],
+      [
+        "Ġx",
+        "ab"
+      ],
+      [
+        "Ġx",
+        "ukuu"
+      ],
+      [
+        "ĠC",
+        "ad"
+      ],
+      [
+        "ĠA",
+        "m"
+      ],
+      [
+        "ĠA",
+        "y"
+      ],
+      [
+        "Ġdha",
+        "l"
+      ],
+      [
+        "Ġdha",
+        "shay"
+      ],
+      [
+        "ĠD",
+        "iyaar"
+      ],
+      [
+        "Ġf",
+        "ul"
+      ],
+      [
+        "Ġdh",
+        "im"
+      ],
+      [
+        "ĠB",
+        "iix"
+      ],
+      [
+        "ĠK",
+        "MG"
+      ],
+      [
+        "âĢ",
+        "¦"
+      ],
+      [
+        "eey",
+        "e"
+      ],
+      [
+        "ib",
+        "a"
+      ],
+      [
+        "Ġn",
+        "ool"
+      ],
+      [
+        "Ġis",
+        "aa"
+      ],
+      [
+        "ĠX",
+        "ub"
+      ],
+      [
+        "un",
+        "ida"
+      ],
+      [
+        "aala",
+        "dda"
+      ],
+      [
+        "eyn",
+        "ta"
+      ],
+      [
+        "Ġr",
+        "aax"
+      ],
+      [
+        "Ġta",
+        "b"
+      ],
+      [
+        "ĠH",
+        "or"
+      ],
+      [
+        "Ġjir",
+        "o"
+      ],
+      [
+        "sha",
+        "baab"
+      ],
+      [
+        "sh",
+        "ir"
+      ],
+      [
+        "ud",
+        "ud"
+      ],
+      [
+        "ĠJ",
+        "amhuur"
+      ],
+      [
+        "ĠF",
+        "arans"
+      ],
+      [
+        "ĠR",
+        "uushka"
+      ],
+      [
+        "Ġar",
+        "ag"
+      ],
+      [
+        "eys",
+        "ay"
+      ],
+      [
+        "eys",
+        "tay"
+      ],
+      [
+        "eeda",
+        "hay"
+      ],
+      [
+        "aaf",
+        "im"
+      ],
+      [
+        "dii",
+        "sa"
+      ],
+      [
+        "Ġad",
+        "uunka"
+      ],
+      [
+        "Ġsan",
+        "o"
+      ],
+      [
+        "Ġhaw",
+        "eenka"
+      ],
+      [
+        "Ġmu",
+        "h"
+      ],
+      [
+        "ĠWar",
+        "arka"
+      ],
+      [
+        "Ġdhin",
+        "aca"
+      ],
+      [
+        "ĠFar",
+        "maajo"
+      ],
+      [
+        "Ġhog",
+        "aamin"
+      ],
+      [
+        "IS",
+        "OM"
+      ],
+      [
+        "Ġgan",
+        "ac"
+      ],
+      [
+        "Ġbaa",
+        "han"
+      ],
+      [
+        "Ġguu",
+        "lay"
+      ],
+      [
+        "Ġsanad",
+        "kii"
+      ],
+      [
+        "Ġxaq",
+        "iij"
+      ],
+      [
+        "ĠBiix",
+        "i"
+      ],
+      [
+        "A",
+        "DA"
+      ],
+      [
+        "B",
+        "C"
+      ],
+      [
+        "I",
+        "N"
+      ],
+      [
+        "K",
+        "u"
+      ],
+      [
+        "M",
+        "ax"
+      ],
+      [
+        "S",
+        "h"
+      ],
+      [
+        "a",
+        "to"
+      ],
+      [
+        "a",
+        "lad"
+      ],
+      [
+        "b",
+        "o"
+      ],
+      [
+        "b",
+        "ad"
+      ],
+      [
+        "b",
+        "ac"
+      ],
+      [
+        "d",
+        "ka"
+      ],
+      [
+        "e",
+        "le"
+      ],
+      [
+        "g",
+        "axa"
+      ],
+      [
+        "m",
+        "aam"
+      ],
+      [
+        "n",
+        "d"
+      ],
+      [
+        "n",
+        "iga"
+      ],
+      [
+        "o",
+        "v"
+      ],
+      [
+        "s",
+        "oom"
+      ],
+      [
+        "w",
+        "ed"
+      ],
+      [
+        "Ġ",
+        "&"
+      ],
+      [
+        "Ġ",
+        "6"
+      ],
+      [
+        "aa",
+        "hi"
+      ],
+      [
+        "ay",
+        "san"
+      ],
+      [
+        "oo",
+        "se"
+      ],
+      [
+        "ee",
+        "s"
+      ],
+      [
+        "Ġw",
+        "ay"
+      ],
+      [
+        "Ġw",
+        "aan"
+      ],
+      [
+        "Ġw",
+        "aana"
+      ],
+      [
+        "Ġm",
+        "uu"
+      ],
+      [
+        "Ġm",
+        "adaxweynaha"
+      ],
+      [
+        "Ġay",
+        "na"
+      ],
+      [
+        "Ġku",
+        "soo"
+      ],
+      [
+        "Ġb",
+        "ul"
+      ],
+      [
+        "Ġb",
+        "aaq"
+      ],
+      [
+        "Ġin",
+        "ey"
+      ],
+      [
+        "ĠS",
+        "ha"
+      ],
+      [
+        "ĠS",
+        "wed"
+      ],
+      [
+        "Ġq",
+        "an"
+      ],
+      [
+        "Ġq",
+        "al"
+      ],
+      [
+        "aal",
+        "o"
+      ],
+      [
+        "id",
+        "en"
+      ],
+      [
+        "Ġc",
+        "ab"
+      ],
+      [
+        "Ġx",
+        "ulka"
+      ],
+      [
+        "Ġg",
+        "oob"
+      ],
+      [
+        "Ġg",
+        "aran"
+      ],
+      [
+        "ĠC",
+        "add"
+      ],
+      [
+        "Ġl",
+        "eedahay"
+      ],
+      [
+        "Ġt",
+        "an"
+      ],
+      [
+        "Ġdha",
+        "nka"
+      ],
+      [
+        "Ġdha",
+        "linyar"
+      ],
+      [
+        "Ġf",
+        "il"
+      ],
+      [
+        "Ġf",
+        "iican"
+      ],
+      [
+        "ĠB",
+        "aarlamaanka"
+      ],
+      [
+        "ag",
+        "oo"
+      ],
+      [
+        "aab",
+        "aha"
+      ],
+      [
+        "oom",
+        "iyaha"
+      ],
+      [
+        "Ġn",
+        "oo"
+      ],
+      [
+        "eyn",
+        "aa"
+      ],
+      [
+        "Ġga",
+        "c"
+      ],
+      [
+        "ĠH",
+        "an"
+      ],
+      [
+        "ac",
+        "k"
+      ],
+      [
+        "iis",
+        "ii"
+      ],
+      [
+        "Ġhor",
+        "r"
+      ],
+      [
+        "ĠR",
+        "a"
+      ],
+      [
+        "ĠT",
+        "r"
+      ],
+      [
+        "Ġar",
+        "tic"
+      ],
+      [
+        "Ġar",
+        "rimaha"
+      ],
+      [
+        "Ġar",
+        "rin"
+      ],
+      [
+        "Ġ1",
+        "3"
+      ],
+      [
+        "ĠO",
+        "O"
+      ],
+      [
+        "Ġdoon",
+        "aan"
+      ],
+      [
+        "Ġqab",
+        "an"
+      ],
+      [
+        "ix",
+        "ii"
+      ],
+      [
+        "Ġiy",
+        "aga"
+      ],
+      [
+        "dii",
+        "d"
+      ],
+      [
+        "mb",
+        "er"
+      ],
+      [
+        "Ġwuxuu",
+        "na"
+      ],
+      [
+        "Ġ201",
+        "2"
+      ],
+      [
+        "Ġ201",
+        "9"
+      ],
+      [
+        "sad",
+        "o"
+      ],
+      [
+        "ĠE",
+        "eb"
+      ],
+      [
+        "Ġfar",
+        "ta"
+      ],
+      [
+        "Wax",
+        "aa"
+      ],
+      [
+        "Ġdamb",
+        "eeyay"
+      ],
+      [
+        "Ġgar",
+        "oonka"
+      ],
+      [
+        "ĠDh",
+        "ex"
+      ],
+      [
+        "Ġdhig",
+        "ay"
+      ],
+      [
+        "weyn",
+        "e"
+      ],
+      [
+        "Ġmas",
+        "uul"
+      ],
+      [
+        "Ġtaar",
+        "iikh"
+      ],
+      [
+        "Ġtag",
+        "ay"
+      ],
+      [
+        "Ġkoob",
+        "an"
+      ],
+      [
+        "Ġlahay",
+        "d"
+      ],
+      [
+        "ĠDow",
+        "ladda"
+      ],
+      [
+        "Ġidin",
+        "ku"
+      ],
+      [
+        "Ġkham",
+        "maar"
+      ],
+      [
+        "ĠAM",
+        "ISOM"
+      ],
+      [
+        "Ġartic",
+        "le"
+      ],
+      [
+        ")",
+        "-"
+      ],
+      [
+        ")",
+        "."
+      ],
+      [
+        ".",
+        "âĢĿ"
+      ],
+      [
+        "1",
+        "0"
+      ],
+      [
+        "A",
+        "T"
+      ],
+      [
+        "A",
+        "f"
+      ],
+      [
+        "I",
+        "R"
+      ],
+      [
+        "a",
+        "ma"
+      ],
+      [
+        "a",
+        "lab"
+      ],
+      [
+        "e",
+        "st"
+      ],
+      [
+        "h",
+        "ka"
+      ],
+      [
+        "i",
+        "k"
+      ],
+      [
+        "i",
+        "la"
+      ],
+      [
+        "i",
+        "gu"
+      ],
+      [
+        "i",
+        "ver"
+      ],
+      [
+        "j",
+        "ir"
+      ],
+      [
+        "j",
+        "eeda"
+      ],
+      [
+        "m",
+        "eed"
+      ],
+      [
+        "p",
+        "ool"
+      ],
+      [
+        "q",
+        "ab"
+      ],
+      [
+        "r",
+        "oc"
+      ],
+      [
+        "s",
+        "oon"
+      ],
+      [
+        "s",
+        "ix"
+      ],
+      [
+        "y",
+        "ahay"
+      ],
+      [
+        "Ġ",
+        "$"
+      ],
+      [
+        "Ġ",
+        "/"
+      ],
+      [
+        "Ġ",
+        "or"
+      ],
+      [
+        "aa",
+        "ga"
+      ],
+      [
+        "aa",
+        "gan"
+      ],
+      [
+        "ay",
+        "ax"
+      ],
+      [
+        "ay",
+        "aasha"
+      ],
+      [
+        "ar",
+        "k"
+      ],
+      [
+        "Ġs",
+        "aam"
+      ],
+      [
+        "Ġs",
+        "uuq"
+      ],
+      [
+        "Ġs",
+        "awir"
+      ],
+      [
+        "Ġw",
+        "eli"
+      ],
+      [
+        "aan",
+        "o"
+      ],
+      [
+        "aan",
+        "adaha"
+      ],
+      [
+        "Ġm",
+        "adaxw"
+      ],
+      [
+        "Ġk",
+        "ha"
+      ],
+      [
+        "Ġk",
+        "ic"
+      ],
+      [
+        "Ġa",
+        "ska"
+      ],
+      [
+        "Ġku",
+        "ma"
+      ],
+      [
+        "Ġb",
+        "een"
+      ],
+      [
+        "Ġb",
+        "ac"
+      ],
+      [
+        "Ġb",
+        "oq"
+      ],
+      [
+        "ĠS",
+        "hab"
+      ],
+      [
+        "aal",
+        "inta"
+      ],
+      [
+        "Ġc",
+        "ud"
+      ],
+      [
+        "Ġc",
+        "aafim"
+      ],
+      [
+        "Ġx",
+        "al"
+      ],
+      [
+        "Ġx",
+        "ag"
+      ],
+      [
+        "Ġg",
+        "ool"
+      ],
+      [
+        "Ġh",
+        "ow"
+      ],
+      [
+        "is",
+        "ha"
+      ],
+      [
+        "ĠC",
+        "roc"
+      ],
+      [
+        "ĠA",
+        "h"
+      ],
+      [
+        "ĠA",
+        "adan"
+      ],
+      [
+        "Ġt",
+        "aasi"
+      ],
+      [
+        "Ġj",
+        "ec"
+      ],
+      [
+        "Ġj",
+        "ooga"
+      ],
+      [
+        "hay",
+        "eenka"
+      ],
+      [
+        "Ġf",
+        "udud"
+      ],
+      [
+        "ĠB",
+        "al"
+      ],
+      [
+        "ĠB",
+        "ag"
+      ],
+      [
+        "ĠB",
+        "iden"
+      ],
+      [
+        "Ġy",
+        "aal"
+      ],
+      [
+        "ma",
+        "h"
+      ],
+      [
+        "ma",
+        "il"
+      ],
+      [
+        "ĠK",
+        "ul"
+      ],
+      [
+        "eey",
+        "aan"
+      ],
+      [
+        "Ġn",
+        "ooc"
+      ],
+      [
+        "aala",
+        "ha"
+      ],
+      [
+        "am",
+        "e"
+      ],
+      [
+        "am",
+        "ed"
+      ],
+      [
+        "ĠH",
+        "el"
+      ],
+      [
+        "Ġjir",
+        "in"
+      ],
+      [
+        "ĠJ",
+        "u"
+      ],
+      [
+        "iis",
+        "o"
+      ],
+      [
+        "Ġhor",
+        "y"
+      ],
+      [
+        "ĠQ",
+        "or"
+      ],
+      [
+        "uur",
+        "ta"
+      ],
+      [
+        "aha",
+        "n"
+      ],
+      [
+        "ĠR",
+        "o"
+      ],
+      [
+        "Ġar",
+        "kay"
+      ],
+      [
+        "Ġhad",
+        "dii"
+      ],
+      [
+        "ĠU",
+        "N"
+      ],
+      [
+        "Ġkar",
+        "a"
+      ],
+      [
+        "eel",
+        "le"
+      ],
+      [
+        "Ġqor",
+        "ay"
+      ],
+      [
+        "ĠWax",
+        "aa"
+      ],
+      [
+        "ĠWax",
+        "ay"
+      ],
+      [
+        "Ġ201",
+        "3"
+      ],
+      [
+        "Ġ201",
+        "8"
+      ],
+      [
+        "aaw",
+        "ac"
+      ],
+      [
+        "Ġnoq",
+        "o"
+      ],
+      [
+        "Ġwaxaan",
+        "u"
+      ],
+      [
+        "maa",
+        "yo"
+      ],
+      [
+        "ing",
+        "e"
+      ],
+      [
+        "Ġxil",
+        "li"
+      ],
+      [
+        "Ġtal",
+        "l"
+      ],
+      [
+        "Ġwal",
+        "ba"
+      ],
+      [
+        "ĠAb",
+        "uu"
+      ],
+      [
+        "Ġlab",
+        "ada"
+      ],
+      [
+        "Ġdhin",
+        "tay"
+      ],
+      [
+        "Ġshirka",
+        "daha"
+      ],
+      [
+        "Ġkal",
+        "iya"
+      ],
+      [
+        "Ġxisb",
+        "iga"
+      ],
+      [
+        "Ġsabab",
+        "ta"
+      ],
+      [
+        "Ġdii",
+        "day"
+      ],
+      [
+        "ĠMo",
+        "unt"
+      ],
+      [
+        "Ġwan",
+        "aagsan"
+      ],
+      [
+        "Ġban",
+        "dhig"
+      ],
+      [
+        "Ġqaa",
+        "tay"
+      ],
+      [
+        "Ġdhow",
+        "r"
+      ],
+      [
+        "Ġgur",
+        "iga"
+      ],
+      [
+        "ĠKh",
+        "aanadaha"
+      ],
+      [
+        "Ġada",
+        "g"
+      ],
+      [
+        "Ġistic",
+        "maal"
+      ],
+      [
+        "ĠAfri",
+        "ka"
+      ],
+      [
+        "ĠFeder",
+        "aalka"
+      ],
+      [
+        "umm",
+        "ii"
+      ],
+      [
+        "ĠDiyaar",
+        "adaha"
+      ],
+      [
+        "Ġtab",
+        "abar"
+      ],
+      [
+        "iver",
+        "pool"
+      ],
+      [
+        "ĠCroc",
+        "s"
+      ],
+      [
+        "1",
+        "9"
+      ],
+      [
+        "A",
+        "N"
+      ],
+      [
+        "A",
+        "W"
+      ],
+      [
+        "A",
+        "r"
+      ],
+      [
+        "D",
+        "h"
+      ],
+      [
+        "H",
+        "A"
+      ],
+      [
+        "K",
+        "A"
+      ],
+      [
+        "S",
+        "i"
+      ],
+      [
+        "U",
+        "U"
+      ],
+      [
+        "b",
+        "nu"
+      ],
+      [
+        "c",
+        "aar"
+      ],
+      [
+        "g",
+        "ii"
+      ],
+      [
+        "g",
+        "ar"
+      ],
+      [
+        "h",
+        "el"
+      ],
+      [
+        "i",
+        "q"
+      ],
+      [
+        "i",
+        "lada"
+      ],
+      [
+        "n",
+        "imo"
+      ],
+      [
+        "t",
+        "ti"
+      ],
+      [
+        "u",
+        "p"
+      ],
+      [
+        "y",
+        "l"
+      ],
+      [
+        "y",
+        "aabaha"
+      ],
+      [
+        "Ġ",
+        ")"
+      ],
+      [
+        "Ġ",
+        "aas"
+      ],
+      [
+        "Ġ",
+        "on"
+      ],
+      [
+        "aa",
+        "y"
+      ],
+      [
+        "da",
+        "dka"
+      ],
+      [
+        "ee",
+        "q"
+      ],
+      [
+        "ee",
+        "x"
+      ],
+      [
+        "ee",
+        "kh"
+      ],
+      [
+        "la",
+        "r"
+      ],
+      [
+        "la",
+        "lka"
+      ],
+      [
+        "ar",
+        "m"
+      ],
+      [
+        "ar",
+        "y"
+      ],
+      [
+        "Ġs",
+        "omali"
+      ],
+      [
+        "Ġs",
+        "af"
+      ],
+      [
+        "Ġw",
+        "adda"
+      ],
+      [
+        "Ġw",
+        "ixii"
+      ],
+      [
+        "Ġd",
+        "oona"
+      ],
+      [
+        "uu",
+        "sa"
+      ],
+      [
+        "an",
+        "ia"
+      ],
+      [
+        "Ġk",
+        "uu"
+      ],
+      [
+        "in",
+        "ho"
+      ],
+      [
+        "iy",
+        "aan"
+      ],
+      [
+        "iy",
+        "aadka"
+      ],
+      [
+        "Ġla",
+        "soo"
+      ],
+      [
+        "Ġb",
+        "aar"
+      ],
+      [
+        "Ġb",
+        "iir"
+      ],
+      [
+        "Ġah",
+        "ayn"
+      ],
+      [
+        "ĠS",
+        "uuq"
+      ],
+      [
+        "ĠM",
+        "an"
+      ],
+      [
+        "ĠM",
+        "aanta"
+      ],
+      [
+        "Ġee",
+        "d"
+      ],
+      [
+        "Ġee",
+        "g"
+      ],
+      [
+        "Ġee",
+        "go"
+      ],
+      [
+        "id",
+        "u"
+      ],
+      [
+        "id",
+        "aam"
+      ],
+      [
+        "Ġc",
+        "ul"
+      ],
+      [
+        "Ġx",
+        "as"
+      ],
+      [
+        "Ġx",
+        "ig"
+      ],
+      [
+        "Ġx",
+        "oog"
+      ],
+      [
+        "Ġg",
+        "oo"
+      ],
+      [
+        "Ġh",
+        "ir"
+      ],
+      [
+        "Ġh",
+        "oos"
+      ],
+      [
+        "is",
+        "maayo"
+      ],
+      [
+        "ĠC",
+        "ar"
+      ],
+      [
+        "Ġt",
+        "ob"
+      ],
+      [
+        "Ġha",
+        "n"
+      ],
+      [
+        "ĠD",
+        "ag"
+      ],
+      [
+        "Ġf",
+        "og"
+      ],
+      [
+        "Ġdh",
+        "ulka"
+      ],
+      [
+        "Ġdh",
+        "aawac"
+      ],
+      [
+        "Ġy",
+        "aq"
+      ],
+      [
+        "ĠK",
+        "ismaayo"
+      ],
+      [
+        "Ġsh",
+        "aac"
+      ],
+      [
+        "eey",
+        "n"
+      ],
+      [
+        "ib",
+        "o"
+      ],
+      [
+        "ĠW",
+        "aa"
+      ],
+      [
+        "ĠX",
+        "ukuu"
+      ],
+      [
+        "ĠX",
+        "aaj"
+      ],
+      [
+        "un",
+        "aas"
+      ],
+      [
+        "Ġmar",
+        "kaas"
+      ],
+      [
+        "Ġwaa",
+        "yo"
+      ],
+      [
+        "Ġr",
+        "ab"
+      ],
+      [
+        "Ġr",
+        "aac"
+      ],
+      [
+        "Ġr",
+        "ukunka"
+      ],
+      [
+        "ul",
+        "ku"
+      ],
+      [
+        "Ġjir",
+        "tay"
+      ],
+      [
+        "sha",
+        "n"
+      ],
+      [
+        "ĠJ",
+        "ack"
+      ],
+      [
+        "ub",
+        "in"
+      ],
+      [
+        "ooy",
+        "iga"
+      ],
+      [
+        "Ġsheeg",
+        "een"
+      ],
+      [
+        "ih",
+        "i"
+      ],
+      [
+        "Ġar",
+        "k"
+      ],
+      [
+        "ays",
+        "ku"
+      ],
+      [
+        "Ġ1",
+        "8"
+      ],
+      [
+        "it",
+        "y"
+      ],
+      [
+        "ĠP",
+        "en"
+      ],
+      [
+        "iida",
+        "mo"
+      ],
+      [
+        "oob",
+        "ay"
+      ],
+      [
+        "Ġgu",
+        "daha"
+      ],
+      [
+        "ool",
+        "iska"
+      ],
+      [
+        "Ġiy",
+        "agoo"
+      ],
+      [
+        "Ġkar",
+        "taa"
+      ],
+      [
+        "asha",
+        "dii"
+      ],
+      [
+        "Ġad",
+        "k"
+      ],
+      [
+        "Ġad",
+        "eeg"
+      ],
+      [
+        "um",
+        "p"
+      ],
+      [
+        "Ġnoq",
+        "do"
+      ],
+      [
+        "Ġna",
+        "q"
+      ],
+      [
+        "Ġgal",
+        "b"
+      ],
+      [
+        "Ġdow",
+        "lad"
+      ],
+      [
+        "Ġdeeg",
+        "aan"
+      ],
+      [
+        "Ġmadax",
+        "da"
+      ],
+      [
+        "Ġmadax",
+        "tooyada"
+      ],
+      [
+        "ilm",
+        "i"
+      ],
+      [
+        "ilm",
+        "aam"
+      ],
+      [
+        "Ġgo",
+        "laha"
+      ],
+      [
+        "Ġtaas",
+        "oo"
+      ],
+      [
+        "Ġdhaq",
+        "anka"
+      ],
+      [
+        "ij",
+        "ee"
+      ],
+      [
+        "Ġcar",
+        "ar"
+      ],
+      [
+        "Ġdag",
+        "aal"
+      ],
+      [
+        "Ġhog",
+        "aam"
+      ],
+      [
+        "Ġkulan",
+        "ka"
+      ],
+      [
+        "Ġhada",
+        "l"
+      ],
+      [
+        "Ġ5",
+        "0"
+      ],
+      [
+        "Ġdii",
+        "waan"
+      ],
+      [
+        "Ġan",
+        "six"
+      ],
+      [
+        "Ġmaq",
+        "an"
+      ],
+      [
+        "ĠXildhibaan",
+        "ada"
+      ],
+      [
+        "Ġmil",
+        "yan"
+      ],
+      [
+        "esh",
+        "iis"
+      ],
+      [
+        "Ġir",
+        "r"
+      ],
+      [
+        "ĠFarans",
+        "iiska"
+      ],
+      [
+        "Ġmuh",
+        "iim"
+      ],
+      [
+        "ĠHan",
+        "inge"
+      ],
+      [
+        "ĠXaaj",
+        "i"
+      ],
+      [
+        ")",
+        ","
+      ],
+      [
+        "D",
+        "ow"
+      ],
+      [
+        "F",
+        "ar"
+      ],
+      [
+        "O",
+        "o"
+      ],
+      [
+        "P",
+        "re"
+      ],
+      [
+        "T",
+        "AY"
+      ],
+      [
+        "a",
+        "taa"
+      ],
+      [
+        "b",
+        "al"
+      ],
+      [
+        "c",
+        "ad"
+      ],
+      [
+        "d",
+        "hay"
+      ],
+      [
+        "d",
+        "er"
+      ],
+      [
+        "e",
+        "mber"
+      ],
+      [
+        "g",
+        "ent"
+      ],
+      [
+        "l",
+        "aam"
+      ],
+      [
+        "n",
+        "s"
+      ],
+      [
+        "n",
+        "ay"
+      ],
+      [
+        "n",
+        "aan"
+      ],
+      [
+        "n",
+        "aam"
+      ],
+      [
+        "o",
+        "p"
+      ],
+      [
+        "o",
+        "na"
+      ],
+      [
+        "o",
+        "lada"
+      ],
+      [
+        "t",
+        "h"
+      ],
+      [
+        "t",
+        "oo"
+      ],
+      [
+        "t",
+        "hi"
+      ],
+      [
+        "t",
+        "ooda"
+      ],
+      [
+        "v",
+        "io"
+      ],
+      [
+        "v",
+        "ania"
+      ],
+      [
+        "Ġ",
+        "8"
+      ],
+      [
+        "Ġ",
+        "ii"
+      ],
+      [
+        "aa",
+        "ka"
+      ],
+      [
+        "ay",
+        "ey"
+      ],
+      [
+        "oo",
+        "q"
+      ],
+      [
+        "ii",
+        "f"
+      ],
+      [
+        "Ġs",
+        "addex"
+      ],
+      [
+        "Ġw",
+        "el"
+      ],
+      [
+        "Ġw",
+        "asaar"
+      ],
+      [
+        "Ġd",
+        "uq"
+      ],
+      [
+        "Ġk",
+        "oon"
+      ],
+      [
+        "ax",
+        "maan"
+      ],
+      [
+        "Ġa",
+        "s"
+      ],
+      [
+        "ga",
+        "d"
+      ],
+      [
+        "ta",
+        "hay"
+      ],
+      [
+        "in",
+        "t"
+      ],
+      [
+        "Ġb",
+        "uu"
+      ],
+      [
+        "Ġb",
+        "ish"
+      ],
+      [
+        "Ġb",
+        "isha"
+      ],
+      [
+        "ey",
+        "da"
+      ],
+      [
+        "ey",
+        "aasha"
+      ],
+      [
+        "ir",
+        "aaq"
+      ],
+      [
+        "Ġin",
+        "aad"
+      ],
+      [
+        "ĠS",
+        "p"
+      ],
+      [
+        "ĠS",
+        "oo"
+      ],
+      [
+        "ĠS",
+        "an"
+      ],
+      [
+        "ĠS",
+        "am"
+      ],
+      [
+        "ĠM",
+        "ad"
+      ],
+      [
+        "ĠM",
+        "ac"
+      ],
+      [
+        "Ġq",
+        "aranka"
+      ],
+      [
+        "id",
+        "d"
+      ],
+      [
+        "id",
+        "ay"
+      ],
+      [
+        "Ġc",
+        "un"
+      ],
+      [
+        "Ġx",
+        "an"
+      ],
+      [
+        "Ġx",
+        "ooj"
+      ],
+      [
+        "Ġg",
+        "el"
+      ],
+      [
+        "Ġh",
+        "eer"
+      ],
+      [
+        "is",
+        "a"
+      ],
+      [
+        "ĠC",
+        "ilmi"
+      ],
+      [
+        "Ġl",
+        "aab"
+      ],
+      [
+        "il",
+        "i"
+      ],
+      [
+        "Ġuu",
+        "na"
+      ],
+      [
+        "Ġj",
+        "ooj"
+      ],
+      [
+        "ĠD",
+        "H"
+      ],
+      [
+        "ĠD",
+        "r"
+      ],
+      [
+        "kii",
+        "s"
+      ],
+      [
+        "sa",
+        "m"
+      ],
+      [
+        "sa",
+        "tay"
+      ],
+      [
+        "Ġdh",
+        "uf"
+      ],
+      [
+        "ĠB",
+        "ur"
+      ],
+      [
+        "ĠB",
+        "eesha"
+      ],
+      [
+        "ĠB",
+        "ooc"
+      ],
+      [
+        "Ġy",
+        "aab"
+      ],
+      [
+        "ĠG",
+        "uud"
+      ],
+      [
+        "aab",
+        "ka"
+      ],
+      [
+        "Ġsh",
+        "ee"
+      ],
+      [
+        "Ġsh",
+        "ish"
+      ],
+      [
+        "ĠW",
+        "adda"
+      ],
+      [
+        "er",
+        "ia"
+      ],
+      [
+        "Ġr",
+        "un"
+      ],
+      [
+        "Ġr",
+        "eeb"
+      ],
+      [
+        "ĠH",
+        "aw"
+      ],
+      [
+        "Ġjir",
+        "een"
+      ],
+      [
+        "iis",
+        "e"
+      ],
+      [
+        "iis",
+        "u"
+      ],
+      [
+        "Ġ2",
+        "5"
+      ],
+      [
+        "ĠL",
+        "e"
+      ],
+      [
+        "ĠR",
+        "ab"
+      ],
+      [
+        "ĠT",
+        "ar"
+      ],
+      [
+        "ays",
+        "aa"
+      ],
+      [
+        "Ġ1",
+        "4"
+      ],
+      [
+        "it",
+        "ir"
+      ],
+      [
+        "ol",
+        "o"
+      ],
+      [
+        "Ġ20",
+        "0"
+      ],
+      [
+        "Ġkar",
+        "in"
+      ],
+      [
+        "ĠMar",
+        "ka"
+      ],
+      [
+        "Ġsid",
+        "aas"
+      ],
+      [
+        "Ġgaar",
+        "ay"
+      ],
+      [
+        "ash",
+        "ooyinka"
+      ],
+      [
+        "Ġqor",
+        "sh"
+      ],
+      [
+        "Ġ201",
+        "7"
+      ],
+      [
+        "Ġhal",
+        "kaas"
+      ],
+      [
+        "Ġtir",
+        "o"
+      ],
+      [
+        "sad",
+        "aan"
+      ],
+      [
+        "Ġhel",
+        "i"
+      ],
+      [
+        "Ġnoq",
+        "day"
+      ],
+      [
+        "Wax",
+        "aan"
+      ],
+      [
+        "ĠKu",
+        "lan"
+      ],
+      [
+        "Ġhaw",
+        "een"
+      ],
+      [
+        "ut",
+        "inho"
+      ],
+      [
+        "Ġqo",
+        "y"
+      ],
+      [
+        "Ġxir",
+        "si"
+      ],
+      [
+        "Ġgal",
+        "een"
+      ],
+      [
+        "ĠKa",
+        "la"
+      ],
+      [
+        "Ġmark",
+        "uu"
+      ],
+      [
+        "Ġdow",
+        "lada"
+      ],
+      [
+        "Ġsoc",
+        "da"
+      ],
+      [
+        "Ġdhaw",
+        "aaq"
+      ],
+      [
+        "Ġid",
+        "inka"
+      ],
+      [
+        "Ġmu",
+        "dane"
+      ],
+      [
+        "Ġwal",
+        "iba"
+      ],
+      [
+        "Ġmagac",
+        "aabo"
+      ],
+      [
+        "eesh",
+        "iyaadka"
+      ],
+      [
+        "Ġkul",
+        "may"
+      ],
+      [
+        "Ġciida",
+        "m"
+      ],
+      [
+        "Ġkac",
+        "san"
+      ],
+      [
+        "Ġdham",
+        "maan"
+      ],
+      [
+        "ooyin",
+        "kii"
+      ],
+      [
+        "Ġgobol",
+        "lada"
+      ],
+      [
+        "Ġgan",
+        "t"
+      ],
+      [
+        "Ġsax",
+        "iix"
+      ],
+      [
+        "ĠMas",
+        "ar"
+      ],
+      [
+        "Ġleey",
+        "ihiin"
+      ],
+      [
+        "Ġlahay",
+        "n"
+      ],
+      [
+        "War",
+        "arka"
+      ],
+      [
+        "ugu",
+        "st"
+      ],
+      [
+        "bur",
+        "g"
+      ],
+      [
+        "Ġdhib",
+        "aat"
+      ],
+      [
+        "Ġdanb",
+        "e"
+      ],
+      [
+        "Ġxu",
+        "ku"
+      ],
+      [
+        "Soomaal",
+        "i"
+      ],
+      [
+        "ĠMu",
+        "dane"
+      ],
+      [
+        "ĠDaw",
+        "ladda"
+      ],
+      [
+        "Ġadd",
+        "uunka"
+      ],
+      [
+        "Ġtartan",
+        "ka"
+      ],
+      [
+        "Ġraax",
+        "o"
+      ],
+      [
+        "ĠSwed",
+        "en"
+      ],
+      [
+        "ĠTr",
+        "ump"
+      ],
+      [
+        "ĠEeb",
+        "e"
+      ],
+      [
+        "alab",
+        "ka"
+      ],
+      [
+        "Ġsuuq",
+        "a"
+      ],
+      [
+        "Ġboq",
+        "or"
+      ],
+      [
+        "ĠKul",
+        "miye"
+      ],
+      [
+        "yl",
+        "vania"
+      ],
+      [
+        "ĠPen",
+        "ns"
+      ],
+      [
+        "ijee",
+        "le"
+      ],
+      [
+        "Pre",
+        "vio"
+      ],
+      [
+        "gent",
+        "ina"
+      ],
+      [
+        "naam",
+        "ij"
+      ],
+      [
+        "Ġkoon",
+        "fur"
+      ],
+      [
+        "ĠBooc",
+        "ame"
+      ],
+      [
+        "ĠPenns",
+        "ylvania"
+      ],
+      [
+        "Previo",
+        "us"
+      ],
+      [
+        "!",
+        "!"
+      ],
+      [
+        "1",
+        "2"
+      ],
+      [
+        "B",
+        "ar"
+      ],
+      [
+        "H",
+        "al"
+      ],
+      [
+        "M",
+        "adaxw"
+      ],
+      [
+        "M",
+        "aalin"
+      ],
+      [
+        "M",
+        "aamulka"
+      ],
+      [
+        "Q",
+        "aamuus"
+      ],
+      [
+        "S",
+        "H"
+      ],
+      [
+        "b",
+        "an"
+      ],
+      [
+        "b",
+        "aad"
+      ],
+      [
+        "b",
+        "aar"
+      ],
+      [
+        "c",
+        "i"
+      ],
+      [
+        "c",
+        "w"
+      ],
+      [
+        "e",
+        "k"
+      ],
+      [
+        "e",
+        "al"
+      ],
+      [
+        "f",
+        "f"
+      ],
+      [
+        "f",
+        "on"
+      ],
+      [
+        "g",
+        "is"
+      ],
+      [
+        "h",
+        "aar"
+      ],
+      [
+        "k",
+        "in"
+      ],
+      [
+        "l",
+        "u"
+      ],
+      [
+        "l",
+        "im"
+      ],
+      [
+        "m",
+        "eer"
+      ],
+      [
+        "m",
+        "ent"
+      ],
+      [
+        "n",
+        "iin"
+      ],
+      [
+        "n",
+        "ood"
+      ],
+      [
+        "s",
+        "tay"
+      ],
+      [
+        "t",
+        "y"
+      ],
+      [
+        "t",
+        "in"
+      ],
+      [
+        "t",
+        "aasi"
+      ]
+    ]
+  }
+}

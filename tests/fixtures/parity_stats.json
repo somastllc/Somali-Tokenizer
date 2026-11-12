@@ -1,0 +1,346 @@
+{
+  "roundtrip_stride": 500,
+  "ratio_bin_width": 0.005,
+  "tokenizers": {
+    "v1": {
+      "label": "v1",
+      "documents": 213,
+      "words": 27073,
+      "characters": 178445,
+      "bytes": 179074,
+      "total_tokens": 37853,
+      "corpus_tokens_per_word": 1.3982,
+      "mean_tokens_per_word": 1.4339,
+      "median_tokens_per_word": 1.3225,
+      "p95_tokens_per_word": 1.9125,
+      "p99_tokens_per_word": 4.8025,
+      "bytes_per_token": 4.7308,
+      "characters_per_token": 4.7142,
+      "roundtrip_checked": 4,
+      "roundtrip_failures": 4,
+      "roundtrip_fidelity": 0.0,
+      "document_length_histogram": {
+        "0-128": 109,
+        "128-256": 35,
+        "256-512": 66,
+        "512-1024": 3,
+        "1024-2048": 0,
+        "2048-4096": 0,
+        "4096-8192": 0,
+        "8192+": 0
+      },
+      "by_source": {
+        "mc4": {
+          "documents": 30,
+          "words": 6917,
+          "characters": 45766,
+          "bytes": 45972,
+          "tokens": 9765,
+          "token_share": 0.257972,
+          "tokens_per_word": 1.4117,
+          "bytes_per_token": 4.7078
+        },
+        "hplt": {
+          "documents": 30,
+          "words": 6282,
+          "characters": 41663,
+          "bytes": 41826,
+          "tokens": 8319,
+          "token_share": 0.219771,
+          "tokens_per_word": 1.3243,
+          "bytes_per_token": 5.0278
+        },
+        "madlad": {
+          "documents": 20,
+          "words": 5504,
+          "characters": 36109,
+          "bytes": 36235,
+          "tokens": 7241,
+          "token_share": 0.191293,
+          "tokens_per_word": 1.3156,
+          "bytes_per_token": 5.0041
+        },
+        "wikipedia": {
+          "documents": 10,
+          "words": 2137,
+          "characters": 14573,
+          "bytes": 14622,
+          "tokens": 3274,
+          "token_share": 0.086492,
+          "tokens_per_word": 1.5321,
+          "bytes_per_token": 4.4661
+        },
+        "cc100": {
+          "documents": 20,
+          "words": 2441,
+          "characters": 15796,
+          "bytes": 15863,
+          "tokens": 3093,
+          "token_share": 0.081711,
+          "tokens_per_word": 1.2671,
+          "bytes_per_token": 5.1287
+        },
+        "xlsum": {
+          "documents": 10,
+          "words": 1322,
+          "characters": 8424,
+          "bytes": 8428,
+          "tokens": 1703,
+          "token_share": 0.04499,
+          "tokens_per_word": 1.2882,
+          "bytes_per_token": 4.9489
+        },
+        "heldout": {
+          "documents": 3,
+          "words": 300,
+          "characters": 2397,
+          "bytes": 2397,
+          "tokens": 1440,
+          "token_share": 0.038042,
+          "tokens_per_word": 4.8,
+          "bytes_per_token": 1.6646
+        },
+        "nllb": {
+          "documents": 40,
+          "words": 514,
+          "characters": 3282,
+          "bytes": 3282,
+          "tokens": 753,
+          "token_share": 0.019893,
+          "tokens_per_word": 1.465,
+          "bytes_per_token": 4.3586
+        },
+        "opus": {
+          "documents": 10,
+          "words": 389,
+          "characters": 2392,
+          "bytes": 2392,
+          "tokens": 554,
+          "token_share": 0.014636,
+          "tokens_per_word": 1.4242,
+          "bytes_per_token": 4.3177
+        },
+        "glot": {
+          "documents": 10,
+          "words": 417,
+          "characters": 2737,
+          "bytes": 2745,
+          "tokens": 545,
+          "token_share": 0.014398,
+          "tokens_per_word": 1.307,
+          "bytes_per_token": 5.0367
+        },
+        "somali-web-corpus": {
+          "documents": 10,
+          "words": 402,
+          "characters": 2483,
+          "bytes": 2483,
+          "tokens": 496,
+          "token_share": 0.013103,
+          "tokens_per_word": 1.2338,
+          "bytes_per_token": 5.006
+        },
+        "mt560": {
+          "documents": 10,
+          "words": 194,
+          "characters": 1123,
+          "bytes": 1123,
+          "tokens": 260,
+          "token_share": 0.006869,
+          "tokens_per_word": 1.3402,
+          "bytes_per_token": 4.3192
+        },
+        "quran": {
+          "documents": 5,
+          "words": 148,
+          "characters": 958,
+          "bytes": 964,
+          "tokens": 242,
+          "token_share": 0.006393,
+          "tokens_per_word": 1.6351,
+          "bytes_per_token": 3.9835
+        },
+        "quran-tanzil": {
+          "documents": 5,
+          "words": 106,
+          "characters": 742,
+          "bytes": 742,
+          "tokens": 168,
+          "token_share": 0.004438,
+          "tokens_per_word": 1.5849,
+          "bytes_per_token": 4.4167
+        }
+      }
+    },
+    "v2": {
+      "label": "v2",
+      "documents": 213,
+      "words": 27073,
+      "characters": 178445,
+      "bytes": 179074,
+      "total_tokens": 37420,
+      "corpus_tokens_per_word": 1.3822,
+      "mean_tokens_per_word": 1.3991,
+      "median_tokens_per_word": 1.2925,
+      "p95_tokens_per_word": 1.8775,
+      "p99_tokens_per_word": 4.8025,
+      "bytes_per_token": 4.7855,
+      "characters_per_token": 4.7687,
+      "roundtrip_checked": 4,
+      "roundtrip_failures": 0,
+      "roundtrip_fidelity": 1.0,
+      "document_length_histogram": {
+        "0-128": 109,
+        "128-256": 36,
+        "256-512": 64,
+        "512-1024": 4,
+        "1024-2048": 0,
+        "2048-4096": 0,
+        "4096-8192": 0,
+        "8192+": 0
+      },
+      "by_source": {
+        "mc4": {
+          "documents": 30,
+          "words": 6917,
+          "characters": 45766,
+          "bytes": 45972,
+          "tokens": 9608,
+          "token_share": 0.256761,
+          "tokens_per_word": 1.389,
+          "bytes_per_token": 4.7848
+        },
+        "hplt": {
+          "documents": 30,
+          "words": 6282,
+          "characters": 41663,
+          "bytes": 41826,
+          "tokens": 8311,
+          "token_share": 0.2221,
+          "tokens_per_word": 1.323,
+          "bytes_per_token": 5.0326
+        },
+        "madlad": {
+          "documents": 20,
+          "words": 5504,
+          "characters": 36109,
+          "bytes": 36235,
+          "tokens": 7206,
+          "token_share": 0.192571,
+          "tokens_per_word": 1.3092,
+          "bytes_per_token": 5.0284
+        },
+        "wikipedia": {
+          "documents": 10,
+          "words": 2137,
+          "characters": 14573,
+          "bytes": 14622,
+          "tokens": 3359,
+          "token_share": 0.089765,
+          "tokens_per_word": 1.5718,
+          "bytes_per_token": 4.3531
+        },
+        "cc100": {
+          "documents": 20,
+          "words": 2441,
+          "characters": 15796,
+          "bytes": 15863,
+          "tokens": 2980,
+          "token_share": 0.079637,
+          "tokens_per_word": 1.2208,
+          "bytes_per_token": 5.3232
+        },
+        "xlsum": {
+          "documents": 10,
+          "words": 1322,
+          "characters": 8424,
+          "bytes": 8428,
+          "tokens": 1624,
+          "token_share": 0.043399,
+          "tokens_per_word": 1.2284,
+          "bytes_per_token": 5.1897
+        },
+        "heldout": {
+          "documents": 3,
+          "words": 300,
+          "characters": 2397,
+          "bytes": 2397,
+          "tokens": 1440,
+          "token_share": 0.038482,
+          "tokens_per_word": 4.8,
+          "bytes_per_token": 1.6646
+        },
+        "nllb": {
+          "documents": 40,
+          "words": 514,
+          "characters": 3282,
+          "bytes": 3282,
+          "tokens": 723,
+          "token_share": 0.019321,
+          "tokens_per_word": 1.4066,
+          "bytes_per_token": 4.5394
+        },
+        "opus": {
+          "documents": 10,
+          "words": 389,
+          "characters": 2392,
+          "bytes": 2392,
+          "tokens": 528,
+          "token_share": 0.01411,
+          "tokens_per_word": 1.3573,
+          "bytes_per_token": 4.5303
+        },
+        "glot": {
+          "documents": 10,
+          "words": 417,
+          "characters": 2737,
+          "bytes": 2745,
+          "tokens": 527,
+          "token_share": 0.014083,
+          "tokens_per_word": 1.2638,
+          "bytes_per_token": 5.2087
+        },
+        "somali-web-corpus": {
+          "documents": 10,
+          "words": 402,
+          "characters": 2483,
+          "bytes": 2483,
+          "tokens": 486,
+          "token_share": 0.012988,
+          "tokens_per_word": 1.209,
+          "bytes_per_token": 5.1091
+        },
+        "mt560": {
+          "documents": 10,
+          "words": 194,
+          "characters": 1123,
+          "bytes": 1123,
+          "tokens": 239,
+          "token_share": 0.006387,
+          "tokens_per_word": 1.232,
+          "bytes_per_token": 4.6987
+        },
+        "quran": {
+          "documents": 5,
+          "words": 148,
+          "characters": 958,
+          "bytes": 964,
+          "tokens": 229,
+          "token_share": 0.00612,
+          "tokens_per_word": 1.5473,
+          "bytes_per_token": 4.2096
+        },
+        "quran-tanzil": {
+          "documents": 5,
+          "words": 106,
+          "characters": 742,
+          "bytes": 742,
+          "tokens": 160,
+          "token_share": 0.004276,
+          "tokens_per_word": 1.5094,
+          "bytes_per_token": 4.6375
+        }
+      }
+    }
+  }
+}

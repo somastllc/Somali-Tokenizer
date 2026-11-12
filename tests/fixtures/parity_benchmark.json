@@ -1,0 +1,65 @@
+{
+  "documents_scored": 210,
+  "roundtrip_limit": 100000,
+  "tokenizers": {
+    "v1": {
+      "label": "v1",
+      "documents": 210,
+      "mean_tokens_per_word": 1.3857,
+      "median_tokens_per_word": 1.3211,
+      "p95_tokens_per_word": 1.7692,
+      "corpus_tokens_per_word": 1.3601,
+      "bytes_per_token": 4.852,
+      "total_tokens": 36413,
+      "roundtrip_checked": 210,
+      "roundtrip_failures": 210,
+      "roundtrip_fidelity": 0.0,
+      "unk_documents": 0,
+      "by_source_tokens_per_word": {
+        "mc4": 1.4117,
+        "hplt": 1.3243,
+        "madlad": 1.3156,
+        "cc100": 1.2671,
+        "wikipedia": 1.5321,
+        "xlsum": 1.2882,
+        "nllb": 1.465,
+        "glot": 1.307,
+        "somali-web-corpus": 1.2338,
+        "opus": 1.4242,
+        "mt560": 1.3402,
+        "quran": 1.6351,
+        "quran-tanzil": 1.5849
+      }
+    },
+    "v2": {
+      "label": "v2",
+      "documents": 210,
+      "mean_tokens_per_word": 1.3504,
+      "median_tokens_per_word": 1.2857,
+      "p95_tokens_per_word": 1.7857,
+      "corpus_tokens_per_word": 1.3439,
+      "bytes_per_token": 4.9104,
+      "total_tokens": 35980,
+      "roundtrip_checked": 210,
+      "roundtrip_failures": 0,
+      "roundtrip_fidelity": 1.0,
+      "unk_documents": 0,
+      "by_source_tokens_per_word": {
+        "mc4": 1.389,
+        "hplt": 1.323,
+        "madlad": 1.3092,
+        "cc100": 1.2208,
+        "wikipedia": 1.5718,
+        "xlsum": 1.2284,
+        "nllb": 1.4066,
+        "glot": 1.2638,
+        "somali-web-corpus": 1.209,
+        "opus": 1.3573,
+        "mt560": 1.232,
+        "quran": 1.5473,
+        "quran-tanzil": 1.5094
+      }
+    }
+  },
+  "baselines": {}
+}

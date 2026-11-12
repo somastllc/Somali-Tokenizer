@@ -19,9 +19,14 @@
 //! # }
 //! ```
 
+pub mod benchmark;
 pub mod contract;
+pub mod corpus;
 mod error;
+mod metrics;
+pub mod stats;
 mod tokenizer;
+pub mod training;
 
 pub use error::{Error, Result};
 pub use tokenizer::{Encoding, SomaliTokenizer, HUB_REPO_V2};

@@ -14,7 +14,7 @@ categories = ["text-processing"]
 [features]
 default = ["cli"]
 # Command-line binary.
-cli = ["dep:clap", "dep:anyhow"]
+cli = ["dep:clap", "dep:anyhow", "tokenizers/progressbar"]
 # Load artifacts from the Hugging Face Hub.
 http = ["tokenizers/http"]
 
@@ -23,6 +23,8 @@ tokenizers.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 thiserror.workspace = true
+blake2.workspace = true
+sha2.workspace = true
 clap = { workspace = true, optional = true }
 anyhow = { workspace = true, optional = true }
 
