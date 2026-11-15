@@ -1,0 +1,20 @@
+[package]
+name = "somali-tokenizer-python"
+description = "Python bindings for the somali-tokenizer crate"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[lib]
+name = "_somali_tokenizer"
+crate-type = ["cdylib"]
+
+[dependencies]
+somali-tokenizer = { path = "../../crates/somali-tokenizer", default-features = false, features = ["http"] }
+pyo3 = { version = "0.30", features = ["abi3-py39"] }
+
+[lints]
+workspace = true

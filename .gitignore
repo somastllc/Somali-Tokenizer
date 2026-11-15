@@ -29,6 +29,13 @@ benchmark_results*.json
 tokenizer_stats*.json
 *.log
 
+# Python extension build output (maturin develop / build)
+*.so
+*.pyd
+*.dylib
+/dist/
+bindings/python/dist/
+
 # Python comparison / parity scripts (Phase 7), if used locally
 .venv/
 __pycache__/

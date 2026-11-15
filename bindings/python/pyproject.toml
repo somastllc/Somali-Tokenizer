@@ -1,0 +1,43 @@
+[build-system]
+requires = ["maturin>=1.7,<2"]
+build-backend = "maturin"
+
+[project]
+name = "somali-tokenizer"
+description = "Somali ByteLevel BPE tokenizer, implemented in Rust"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+keywords = ["tokenizer", "somali", "bpe", "nlp", "huggingface"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: Somali",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Rust",
+    "Topic :: Text Processing :: Linguistic",
+]
+dynamic = ["version"]
+
+[project.optional-dependencies]
+test = ["pytest>=8", "transformers>=4.40"]
+
+[project.urls]
+Repository = "https://github.com/somastllc/Somali-Tokenizer"
+"Hugging Face" = "https://huggingface.co/somast/somali-bpe-v2"
+
+[tool.maturin]
+python-source = "python"
+module-name = "somali_tokenizer._somali_tokenizer"
+features = ["pyo3/extension-module"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
