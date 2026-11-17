@@ -2,9 +2,20 @@
 
 Conventions for the Rust implementation.
 
-**Status.** Specification. This repository contains no Rust code, no `Cargo.toml`, and no
-build target. The `cargo` commands below will start working in Phase 2 of
-[../PLAN.md](../PLAN.md); they are documented now so the project starts under them.
+**Status.** In force. The workspace is `crates/somali-tokenizer` (library and CLI) and
+`bindings/python` (the Python extension). Edition 2021, `max_width = 100`, MSRV 1.85 for
+the default features; the `http` feature (Hub downloads, used by the Python package) needs
+1.88.
+
+Python package, from `bindings/python/`:
+
+```bash
+uv venv && . .venv/bin/activate
+uv pip install maturin pytest transformers
+maturin develop          # builds the extension into the virtual environment
+cargo build              # the CLI parity test needs target/debug/somali-tokenizer
+pytest
+```
 
 ---
 
@@ -166,14 +177,15 @@ mechanics:
 
 ## 7. Working with the Python reference
 
-The reference implementation lives in
-[SomNLP-Corpus](https://github.com/goobolabs/SomNLP-Corpus) under `tokenizer/`. It is the
-behavioural target through Phase 7.
+The reference implementation lives in `python-reference/`, imported from
+[Somali NLP Corpus](https://github.com/somastllc/somali-nlp-corpus) with its history. It is
+the behavioural target.
 
-- **Do not modify it from this repository.** Changes there are proposed upstream.
-- A local Python environment may be useful for parity work (Phase 7), running both
-  implementations on the same input and diffing token ids. Keep it out of version control;
-  `.gitignore` already excludes virtual environments and caches.
+- **Change it only to keep it runnable** (paths, pinned versions). Its behaviour is the
+  specification the Rust code is tested against.
+- `python-reference/make_parity_fixture.py` regenerates `tests/fixtures/`. Run it only when
+  an artifact, a reference script, or the pinned `tokenizers` version changes, and commit
+  the fixtures with the change that required them.
 - When this project's documentation and the reference disagree, the reference is
   authoritative about what *is*, and this repository's documents are authoritative about
   what *should be*. Reconcile explicitly; do not let both stand.

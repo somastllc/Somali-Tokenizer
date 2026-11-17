@@ -2,6 +2,7 @@
 name = "somali-tokenizer-python"
 description = "Python bindings for the somali-tokenizer crate"
 version.workspace = true
+authors.workspace = true
 edition.workspace = true
 rust-version.workspace = true
 license.workspace = true

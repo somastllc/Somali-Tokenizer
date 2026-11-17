@@ -13,7 +13,20 @@ P1 spec ─▶ P2 bootstrap ─▶ P3 config ─▶ P4 training ─▶ P5 encode
                      P10 release ◀─ P9 HF interop ◀─ P8 API/CLI ◀─ P7 parity ◀─┘
 ```
 
-**Current phase: Phase 1.**
+**Current phase: Phase 10 (release engineering).** Status by phase:
+
+| Phase | Status | Where |
+|-------|--------|-------|
+| P1 spec | Done | `docs/`, this file |
+| P2 bootstrap | Done | workspace `Cargo.toml`, `rustfmt.toml`, `clippy.toml`, CI |
+| P3 config | Partial: typed `TrainConfig`; the TOML schema is not read yet | `training.rs` |
+| P4 training | Done: streaming, holdout, sweeps by derivation, run records | `corpus.rs`, `training.rs` |
+| P5 encode/decode | Done: artifact contract checked on load | `tokenizer.rs`, `contract.rs` |
+| P6 benchmark | Done: evaluation metrics and full-corpus statistics | `benchmark.rs`, `stats.rs` |
+| P7 parity | Done on fixtures; full-corpus report outstanding | `tests/`, `tests/fixtures/` |
+| P8 API/CLI | Done: library, CLI, and Python package | `crates/`, `bindings/python/` |
+| P9 HF interop | Partial: artifacts load in `transformers`; no Rust export command | `artifacts/releases/v2/` |
+| P10 release | In progress: CI builds wheels; nothing published | `.github/workflows/` |
 
 ---
 
@@ -24,7 +37,7 @@ tokenizer without guessing an architectural or research decision.
 
 **Tasks**
 
-- Define project scope and its boundary against SomNLP-Corpus and SomLTK
+- Define project scope and its boundary against Somali NLP Corpus and SomLTK
 - Record the reference tokenizer specification and the rationale behind each parameter
 - Record the reference benchmark baseline and the protocol that produced it
 - Specify the training pipeline, corpus handling, and evaluation-split rule
@@ -49,8 +62,8 @@ REPRODUCIBILITY, DEVELOPMENT, FINAL_REVIEW), `configs/bpe_48k.example.toml`.
 - Every claim is marked measured or planned, and every measured claim names its source
 - `docs/FINAL_REVIEW.md` reflects the true state of the phase
 
-**Dependencies.** Read access to the Python reference implementation in SomNLP-Corpus
-`tokenizer/` (`common.py`, `train.py`, `benchmark.py`, `prepare_corpus.py`, `export_hf.py`,
+**Dependencies.** Read access to the Python reference implementation, then in Somali NLP
+Corpus `tokenizer/` and now in `python-reference/` (`common.py`, `train.py`, `benchmark.py`, `prepare_corpus.py`, `export_hf.py`,
 `tests/`, `PAPER.md`, `benchmark_results.json`, `tokenizer_stats.json`).
 
 **Risks**
@@ -169,7 +182,7 @@ committed fixture.
 - Every run writes a complete run record as specified in
   [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md)
 
-**Dependencies.** Phase 3. A SomNLP-Corpus release for full-scale runs; the fixture
+**Dependencies.** Phase 3. A Somali NLP Corpus release for full-scale runs; the fixture
 suffices for tests.
 
 **Risks**
@@ -409,13 +422,18 @@ These apply to every phase from Phase 2 onward:
 
 ## Open questions carried into Phase 2
 
-Decisions deliberately not made in Phase 1, listed so they are not silently assumed:
+Decisions deliberately not made in Phase 1, and how they were settled:
 
-1. Crate and binary names, and whether the library and CLI are separate crates.
-2. Whether to depend on the `tokenizers` crate's trainer or only its model and pipeline
-   types.
-3. Exact minimum supported Rust version.
-4. Distribution channel for release artifacts.
-5. Whether the corpus preparation step (producing training text and the evaluation holdout
-   from a corpus release) lives here or stays in SomNLP-Corpus.
-6. Whether a `NOTICE` file is needed alongside the Apache 2.0 license.
+1. *Crate and binary names; one crate or two.* Settled: one crate, `somali-tokenizer`, with
+   the CLI behind the default `cli` feature. The PyPI package has the same name.
+2. *The `tokenizers` trainer or only its model types.* Settled: its trainer, pinned to
+   0.21.4, the version the reference used. Training parity follows from that.
+3. *Minimum supported Rust version.* Settled: 1.85, the floor set by `clap` 4.6; CI tests the
+   default features on it. The optional `http` feature needs 1.88 (its URL-parsing
+   dependencies require it).
+4. *Distribution channel for release artifacts.* Open. The v2 artifact is on the Hugging
+   Face Hub (`somast/somali-bpe-v2`) and in `artifacts/releases/`; crates.io and PyPI
+   publishing is not set up.
+5. *Corpus preparation here or upstream.* Settled: here, inside `train`; see
+   [docs/TRAINING.md](docs/TRAINING.md).
+6. *A `NOTICE` file alongside the Apache 2.0 license.* Open.

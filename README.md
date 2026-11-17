@@ -1,7 +1,7 @@
 <h1 align="center">Somali-Tokenizer</h1>
 
 <p align="center">
-  <strong>A research-grade subword tokenizer for the Somali language, to be implemented in Rust.</strong><br>
+  <strong>A research-grade subword tokenizer for the Somali language, implemented in Rust.</strong><br>
   <em>Qalab kala-jaridda qoraalka Soomaaliga oo loogu talagalay moodallada luqadda.</em>
 </p>
 
@@ -11,14 +11,63 @@
 
 ---
 
-> **Project status: Phase 1, specification and planning.**
-> This repository currently contains documentation only. There is no Rust source code,
-> no build target, and no tokenizer artifact here yet. Phase 1 exists so that the Rust
-> implementation in Phase 2 can be written without re-deciding the architecture,
-> the training procedure, or the evaluation protocol.
-> All measurements quoted below were produced by the Python reference implementation in
-> [SomNLP-Corpus](https://github.com/goobolabs/SomNLP-Corpus) under `tokenizer/`. No
-> figure in this repository was measured by Rust code, and no parity claim is made.
+> **Project status: implemented, not yet released.** The Rust library, CLI, and Python
+> package are built and tested against the Python reference (`python-reference/`): same
+> token ids, same trained vocabulary and merges, same benchmark metrics on the fixture
+> corpus. The full-corpus figures quoted below were measured by the Python reference; they
+> have not been re-measured by the Rust implementation yet. Nothing is published to
+> crates.io or PyPI yet. The v2 artifact is on the Hugging Face Hub as
+> [`somast/somali-bpe-v2`](https://huggingface.co/somast/somali-bpe-v2).
+
+## Quick start
+
+Python:
+
+```bash
+pip install somali-tokenizer        # once published; until then, see "Building" below
+```
+
+```python
+from somali_tokenizer import SomaliTokenizer
+
+tokenizer = SomaliTokenizer.v2()                     # bundled, works offline
+# tokenizer = SomaliTokenizer.from_pretrained()      # from the Hub: somast/somali-bpe-v2
+encoding = tokenizer.encode("Soomaaliya waa dal ku yaal Geeska Afrika.")
+encoding.ids       # [5446, 406, 785, 305, 1627, 4235, 1454, 29]
+encoding.tokens    # ['Soomaaliya', 'Ġwaa', 'Ġdal', 'Ġku', 'Ġyaal', 'ĠGeeska', 'ĠAfrika', '.']
+tokenizer.decode(encoding.ids)                       # the original text, exactly
+```
+
+The artifact is a standard `tokenizer.json`, so `transformers` loads it unchanged and gives
+the same ids:
+
+```python
+from transformers import AutoTokenizer
+AutoTokenizer.from_pretrained("somast/somali-bpe-v2")
+```
+
+Rust:
+
+```rust
+use somali_tokenizer::SomaliTokenizer;
+
+let tokenizer = SomaliTokenizer::v2()?;
+let ids = tokenizer.encode("Soomaaliya waa dal.")?.ids;   // [5446, 406, 785, 29]
+```
+
+Command line:
+
+```bash
+cargo install --path crates/somali-tokenizer
+somali-tokenizer encode "Soomaaliya waa dal."             # 5446 406 785 29
+somali-tokenizer decode 5446 406 785 29
+somali-tokenizer train --corpus data/final/final_so.jsonl   # streams a corpus release
+somali-tokenizer benchmark --eval data/final/final_so.jsonl
+somali-tokenizer stats --corpus data/final/final_so.jsonl
+```
+
+Details: [crates/somali-tokenizer/README.md](crates/somali-tokenizer/README.md) (Rust and
+CLI) and [bindings/python/README.md](bindings/python/README.md) (Python).
 
 ## What this project is
 
@@ -63,7 +112,7 @@ Two honest caveats, stated once here and repeated in the technical docs:
 ## Where this sits in the Goobo Labs Somali NLP ecosystem
 
 ```text
-SomNLP-Corpus
+Somali NLP Corpus (somastllc/somali-nlp-corpus)
       │
       │ training / evaluation text (versioned corpus releases)
       ▼
@@ -84,19 +133,19 @@ SomLTK
 
 | Repository | Owns |
 |------------|------|
-| [SomNLP-Corpus](https://github.com/goobolabs/SomNLP-Corpus) | Corpus collection, cleaning, deduplication, releases |
+| [Somali NLP Corpus](https://github.com/somastllc/somali-nlp-corpus) | Corpus collection, cleaning, deduplication, releases |
 | **Somali-Tokenizer** | Learned subword tokenization: training, encoding, decoding, benchmarking, release |
 | SomLTK | General Somali NLP: linguistic word/sentence tools, morphology, tagging |
 
 Rules of thumb for what belongs here: if it learns a vocabulary from a corpus, or encodes
 and decodes text for a model, it belongs in Somali-Tokenizer. If it is a rule-based or
 linguistic language tool, it belongs in SomLTK. If it produces or cleans text, it belongs
-in SomNLP-Corpus.
+in Somali NLP Corpus.
 
 ## Reference tokenizer
 
-The Rust implementation's first target is to reproduce the behaviour of the existing
-Python reference tokenizer, **Somali ByteLevel BPE v2**:
+The released tokenizer, **Somali ByteLevel BPE v2**, which the Rust implementation
+reproduces exactly:
 
 | Property | Value |
 |----------|-------|
@@ -135,23 +184,23 @@ Mean tokens per word (1.3528) and corpus-level tokens per word (1.3763) differ b
 first averages per-document ratios and the second divides total tokens by total words; the
 distinction is explained in [docs/BENCHMARKING.md](docs/BENCHMARKING.md).
 
-The Rust implementation is expected to land close to these figures, but **exact numeric
-reproduction is not the acceptance criterion**. What must hold is that the configuration is
-the same, the invariants hold, and any measured difference is explained rather than
-ignored. See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
+On the fixture corpus, the Rust benchmark and statistics commands reproduce the Python
+reference's numbers, and Rust training reproduces its vocabulary and merges exactly. A
+full-corpus re-run is still to be done. See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md).
 
-## Planned capabilities
+## Capabilities
 
-- Train ByteLevel BPE tokenizers on a versioned SomNLP-Corpus release, streaming, without
+- Train ByteLevel BPE tokenizers on a versioned Somali NLP Corpus release, streaming, without
   loading the corpus into memory
 - Encode and decode with an exact round-trip guarantee: `decode(encode(x)) == NFC(x)`
 - Benchmark tokenizers on a held-out split: tokens per word, bytes per token, round-trip
   fidelity, unknown-token rate, per-source breakdown
 - Run vocabulary-size sweeps and report the compression/parameter trade-off
-- Emit a Hugging Face-compatible `tokenizer.json` plus the companion files
-  `AutoTokenizer.from_pretrained` expects
-- Ship as both a Rust library and a CLI
-- Publish reproducible, immutable tokenizer releases with full run metadata
+- Use the standard Hugging Face `tokenizer.json`, so artifacts load in `transformers`
+  without a bespoke loader
+- Ship as a Rust library, a CLI, and a Python package
+- Planned: publish versioned releases to crates.io and PyPI, and a Rust export command for
+  the `transformers` companion files
 
 ## Architecture at a glance
 
@@ -167,9 +216,9 @@ Hugging Face `tokenizers` Rust crate
 filesystem / corpus
 ```
 
-The plan is to build on the `tokenizers` Rust crate rather than reimplement BPE from
-scratch, so that the first Rust release differs from the reference implementation in as few
-dimensions as possible. The reasoning, and the conditions under which that would change,
+It builds on the `tokenizers` Rust crate (pinned to 0.21.4, the version the reference used)
+rather than reimplementing BPE, so the Rust implementation differs from the reference in as
+few dimensions as possible. The reasoning, and the conditions under which that would change,
 are in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 ## Documentation
@@ -186,22 +235,40 @@ are in [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 | [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) | Rust conventions, toolchain, and dependency policy |
 | [docs/FINAL_REVIEW.md](docs/FINAL_REVIEW.md) | Phase 1 completion checklist and status |
 | [configs/bpe_48k.example.toml](configs/bpe_48k.example.toml) | Example experiment configuration |
+| [python-reference/](python-reference/) | The Python reference implementation and its technical note (`PAPER.md`) |
+
+## Repository layout
+
+```text
+crates/somali-tokenizer/   Rust library and CLI
+bindings/python/           Python package (PyO3 + maturin)
+artifacts/releases/        released tokenizer artifacts, with SHA256SUMS
+python-reference/          Python reference implementation, with its Git history
+tests/fixtures/            parity fixtures shared by the Rust and Python test suites
+configs/  docs/            experiment configuration and documentation
+```
+
+## Building
+
+```bash
+cargo test                                  # Rust library, CLI, parity suite
+cd bindings/python && uv venv && . .venv/bin/activate
+uv pip install maturin pytest transformers
+maturin develop && pytest                   # Python package
+```
 
 ## Development status
 
 | Area | Status |
 |------|--------|
-| Specification and documentation | Phase 1, this repository |
-| Rust project bootstrap | Planned (Phase 2) |
-| Training pipeline | Planned (Phase 4) |
-| Encoding / decoding API | Planned (Phase 5) |
-| Benchmarking | Planned (Phase 6) |
-| Reference parity validation | Planned (Phase 7) |
-| CLI and library API | Planned (Phase 8) |
-| Hugging Face export | Planned (Phase 9) |
-| First tagged release | Planned (Phase 10) |
+| Specification and documentation | Done |
+| Rust library, CLI, training, benchmarking | Done, tested against the reference |
+| Python package | Done, tested against the reference and `transformers` |
+| Full-corpus parity report | Not done yet |
+| Rust export of the `transformers` companion files | Not done yet |
+| Published releases (crates.io, PyPI) | Not done yet |
 
-There is nothing to build yet. `cargo` commands will start working in Phase 2.
+See [PLAN.md](PLAN.md) for the phase-by-phase status.
 
 ## Known limitations
 
@@ -220,14 +287,13 @@ Each is expanded in [docs/BENCHMARKING.md](docs/BENCHMARKING.md) and
 
 ## Contributing
 
-Phase 1 contributions are documentation and specification review: gaps, contradictions,
-and decisions that are still ambiguous enough to make Phase 2 guesswork. See
-[CONTRIBUTING.md](CONTRIBUTING.md).
+Bug reports, parity findings, and Somali-language evaluation data are especially welcome.
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
 Licensed under the Apache License, Version 2.0. See [LICENSE](LICENSE).
 
-Corpus data is **not** covered by this license. SomNLP-Corpus carries per-record upstream
+Corpus data is **not** covered by this license. Somali NLP Corpus carries per-record upstream
 licenses and no single corpus-wide license; anyone training on it is responsible for the
 terms of each source.

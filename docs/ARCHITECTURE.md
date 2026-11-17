@@ -2,9 +2,8 @@
 
 The intended software architecture for the Rust implementation.
 
-**Status.** Design document. No source code exists in this repository. The layout below is
-a proposal to be created in Phase 2 of [../PLAN.md](../PLAN.md); it is written here so the
-first implementation starts from a decided structure rather than an accreted one.
+**Status.** Implemented. `crates/somali-tokenizer` follows this design; §6 records how the
+proposed layout landed.
 
 ---
 
@@ -207,7 +206,7 @@ swallowed, and a failed invariant check is an error rather than a warning.
 
 ## 6. Proposed source layout
 
-**Not created in Phase 1.** Proposed for Phase 2:
+Proposed in Phase 1:
 
 ```text
 src/
@@ -229,22 +228,54 @@ configs/            # example experiment configurations
 docs/               # this documentation
 ```
 
-Open questions for Phase 2 (recorded in [../PLAN.md](../PLAN.md)): crate and binary names;
-whether library and CLI are one crate with a binary target or two crates; whether the
-export path is its own module or part of `tokenizer`; whether corpus preparation lives here
-or stays in SomNLP-Corpus.
+### As built
+
+```text
+crates/somali-tokenizer/
+├── assets/somali-bpe-v2.json   # bundled v2 release (byte-identical, test-enforced)
+├── src/
+│   ├── lib.rs                  # public API surface and re-exports
+│   ├── error.rs                # Error enum (thiserror); no printing, no exit
+│   ├── contract.rs             # the v2 artifact contract and its validation
+│   ├── tokenizer.rs            # SomaliTokenizer: load, validate, encode, decode
+│   ├── corpus.rs               # JSONL streaming, cleaning, holdout rule, fingerprint
+│   ├── training.rs             # trainer, file-driven runs with run records, derivation
+│   ├── benchmark.rs            # evaluation-split metrics
+│   ├── stats.rs                # full-corpus token statistics
+│   ├── metrics.rs              # Python-compatible rounding, ordered per-source counts
+│   └── bin/somali-tokenizer.rs # CLI (clap, anyhow): parsing and printing only
+└── tests/                      # parity, round-trip, contract, training, metrics, CLI
+bindings/python/                # PyO3 extension and the `somali_tokenizer` package
+python-reference/               # the Python reference, with its history
+tests/fixtures/                 # parity fixtures shared by the Rust and Python suites
+```
+
+How the Phase 2 open questions were settled:
+
+- **Names.** Crate, binary, and PyPI package are all `somali-tokenizer`; the Python import
+  is `somali_tokenizer`.
+- **One crate.** Library and CLI are one crate; the binary sits behind the default `cli`
+  feature, so `default-features = false` gives an encode-only dependency without `clap`.
+- **Configuration.** `config.rs` is not built yet. Training takes typed arguments
+  (`TrainConfig`); the TOML schema in `configs/` is still a specification.
+- **Export.** Not a module yet: the released `tokenizer.json` already loads in
+  `transformers` unchanged, and the Python reference's `export_hf.py` writes the companion
+  files.
+- **Corpus preparation.** No separate step. `train` reads a release JSONL directly and
+  applies the holdout and cleaning in a stream; `--text` still accepts a prepared file.
+  `prepare_corpus.py` remains in `python-reference/`.
 
 ---
 
 ## 7. Boundaries with other repositories
 
 ```text
-SomNLP-Corpus ──▶ Somali-Tokenizer ──▶ models / NLP systems
+Somali NLP Corpus ──▶ Somali-Tokenizer ──▶ models / NLP systems
 
 SomLTK ──▶ general Somali language processing (independent)
 ```
 
-- **Upstream (SomNLP-Corpus).** This project consumes corpus releases and never writes to
+- **Upstream (Somali NLP Corpus).** This project consumes corpus releases and never writes to
   them. It does no collection, cleaning, deduplication, or language identification. If a
   tokenizer problem traces to corpus quality, the fix belongs upstream.
 - **Sibling (SomLTK).** Linguistic word and sentence segmentation, stemming, morphology,

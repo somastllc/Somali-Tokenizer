@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this tokenizer, please cite it as below."
+title: "Somali-Tokenizer: a Somali ByteLevel BPE tokenizer"
+type: software
+authors:
+  - alias: omartood
+    email: omarjibrilabdulkhadir@gmail.com
+version: 0.1.0
+license: Apache-2.0
+repository-code: "https://github.com/somastllc/Somali-Tokenizer"
+url: "https://huggingface.co/somast/somali-bpe-v2"
+keywords:
+  - Somali
+  - tokenizer
+  - byte pair encoding
+  - natural language processing
+abstract: >-
+  A 48,000-token ByteLevel BPE tokenizer for Somali, trained on the Somali NLP Corpus,
+  with a Rust library, command-line tool, and Python package that load, train, and
+  benchmark it.
+references:
+  - type: data
+    title: "Somali NLP Corpus"
+    authors:
+      - name: SOMAST
+    repository-code: "https://github.com/somastllc/somali-nlp-corpus"
+    url: "https://huggingface.co/datasets/somast/somali-nlp-corpus"

@@ -4,9 +4,10 @@ This document owns the metric definitions and the evaluation protocol. It is wri
 reimplementable: an engineer should be able to produce comparable numbers from this
 specification alone.
 
-**Status.** Specification plus recorded reference results. The benchmark engine is Phase 6
-of [../PLAN.md](../PLAN.md) and does not exist in this repository. Every figure below was
-measured by the Python reference implementation in SomNLP-Corpus `tokenizer/`.
+**Status.** Implemented as `somali-tokenizer benchmark` and `somali-tokenizer stats`, which
+match `python-reference/benchmark.py` and `tokenize_corpus.py` on the fixture corpus. Every
+full-corpus figure below was measured by the Python reference; none has been re-measured
+by the Rust implementation yet.
 
 ---
 
@@ -133,7 +134,7 @@ output does not belong in a results table.
 ## 4. Reference results
 
 Measured by the Python reference implementation on the held-out split of the eleven-source
-SomNLP-Corpus release of 2026-08-31: **49,424 documents / 4,933,796 words**, excluded from
+Somali NLP Corpus release of 2026-08-31: **49,424 documents / 4,933,796 words**, excluded from
 v2 training.
 
 ### Somali ByteLevel BPE v2 (48k): the reference baseline
@@ -241,7 +242,7 @@ Sources with very few holdout documents (`wikipedia`, `quran`, `quran-tanzil`, `
 build conclusions on them.
 
 Note that sources are per corpus release: the eleven above are those in the reference
-release. Newer SomNLP-Corpus builds add further sources, and per-source tables from
+release. Newer Somali NLP Corpus builds add further sources, and per-source tables from
 different releases are not directly comparable.
 
 ---

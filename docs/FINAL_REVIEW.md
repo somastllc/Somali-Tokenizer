@@ -83,7 +83,7 @@ formality.
 - [x] No claim that Rust parity has been achieved
 - [x] No invented benchmark results: every figure traces to the reference implementation's
       recorded output
-- [x] SomNLP-Corpus and SomLTK unmodified
+- [x] Somali NLP Corpus and SomLTK unmodified
 
 Verified by inspection of the repository tree: 15 files, no `.rs`, no `.py`, no
 `Cargo.toml`.
@@ -132,7 +132,7 @@ Open decisions, recorded so they are decided rather than assumed. The full list 
 1. Crate and binary names; whether the library and CLI are one crate or two.
 2. Exact minimum supported Rust version, checked against the `tokenizers` crate.
 3. Whether to use the `tokenizers` crate's trainer or only its model and pipeline types.
-4. Whether corpus preparation lives here or stays in SomNLP-Corpus.
+4. Whether corpus preparation lives here or stays in Somali NLP Corpus.
 5. Resolution of the `mtime` component in the corpus fingerprint, which is machine-local
    ([TRAINING.md](TRAINING.md) §6).
 6. Distribution channel for release artifacts.
@@ -150,7 +150,7 @@ were read from the reference on 2026-09-02.
 
 Three things are easy to get wrong and are documented specifically because of it:
 
-1. **The reference tokenizer was trained on the eleven-source SomNLP-Corpus build of
+1. **The reference tokenizer was trained on the eleven-source Somali NLP Corpus build of
    2026-08-31, not the current thirteen-source build.** Parity work must pin that release
    or state plainly that it compares across releases. See [TRAINING.md](TRAINING.md) §1.
 2. **The pre-tokenizer's `add_prefix_space = false` is not mirrored by the decoder and

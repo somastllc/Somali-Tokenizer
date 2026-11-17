@@ -57,7 +57,7 @@ default that differed, not from a value someone typed.
 
 | Field | Notes |
 |-------|-------|
-| `corpus_release` | Release identifier of the SomNLP-Corpus build |
+| `corpus_release` | Release identifier of the Somali NLP Corpus build |
 | `corpus_fingerprint` | Fingerprint as specified in [TRAINING.md](TRAINING.md) |
 | `train_documents` / `train_words` | Training split size |
 | `split_rule` | Rule and parameters, e.g. `blake2b_8(id) mod 1000 < 8` |
@@ -214,7 +214,7 @@ so is more useful than reproducing the number by coincidence.
 
 Recorded so they are checked rather than rediscovered:
 
-1. **Corpus drift.** SomNLP-Corpus releases change. The eleven-source build the reference
+1. **Corpus drift.** Somali NLP Corpus releases change. The eleven-source build the reference
    tokenizer was trained on is not the current build. Pin and fingerprint the release; do
    not assume "the corpus" means one thing over time.
 2. **`mtime` in the fingerprint.** The reference fingerprint includes modification time,

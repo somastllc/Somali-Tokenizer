@@ -3,7 +3,7 @@
 **/*.rs.bk
 *.pdb
 
-# Corpus data is never tracked in Git. Build or download it from a SomNLP-Corpus
+# Corpus data is never tracked in Git. Build or download it from a Somali NLP Corpus
 # release; see docs/TRAINING.md.
 /data/
 *.jsonl

@@ -6,6 +6,7 @@ default-members = ["crates/somali-tokenizer"]
 
 [workspace.package]
 version = "0.1.0"
+authors = ["omartood <omarjibrilabdulkhadir@gmail.com>"]
 edition = "2021"
 rust-version = "1.85"
 license = "Apache-2.0"

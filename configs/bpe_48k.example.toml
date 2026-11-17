@@ -1,9 +1,9 @@
 # Example tokenizer experiment configuration: Somali ByteLevel BPE, 48k vocabulary.
 #
-# STATUS: specification only. No Rust code reads this file yet; the schema is a
-# Phase 3 deliverable (see PLAN.md). Values below mirror the Python reference
-# implementation in SomNLP-Corpus `tokenizer/` so the first Rust run has a
-# behavioural target. Field names are proposals and may change in Phase 3.
+# STATUS: specification only. No code reads this file yet; `somali-tokenizer train`
+# takes the same settings as flags (see PLAN.md, Phase 3). Values below mirror the
+# Python reference implementation in python-reference/. Field names are proposals and
+# may change when the schema is implemented.
 #
 # Paths are relative to the repository root. Do not commit machine-specific
 # absolute paths, credentials, or corpus files.

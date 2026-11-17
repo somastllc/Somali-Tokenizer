@@ -2,6 +2,7 @@
 name = "somali-tokenizer"
 description = "Somali ByteLevel BPE tokenizer: encode, decode, and validate the somali-bpe artifacts"
 version.workspace = true
+authors.workspace = true
 edition.workspace = true
 rust-version.workspace = true
 license.workspace = true

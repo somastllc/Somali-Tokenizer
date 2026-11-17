@@ -4,11 +4,13 @@ Direction and releases. For the phase-by-phase execution detail, see [PLAN.md](P
 
 ```text
 v0.1 parity ─▶ v0.2 measurement ─▶ v0.3 library API ─▶ v0.4 CLI ─▶ v0.5 interop ─▶ v1.0
- (next)          (planned)           (planned)          (planned)    (planned)     (planned)
+ (built)         (built)             (built)            (built)      (partial)     (planned)
 ```
 
-Nothing below is released. The project is in Phase 1 of [PLAN.md](PLAN.md): specification
-and documentation.
+Nothing below is released yet. v0.1 to v0.4 are implemented and tested on fixtures; what
+remains before tagging is a full-corpus parity report and the release engineering in
+[PLAN.md](PLAN.md) Phase 10. For v0.5, artifacts load in `transformers` unchanged, but the
+Rust export command is still open.
 
 ---
 
@@ -117,7 +119,7 @@ model training, and would be run with the consuming project rather than here.
 
 **Arabic-script Somali.** Currently out of distribution. ByteLevel coverage means such text
 encodes losslessly but inefficiently. Improving it requires corpus work upstream in
-SomNLP-Corpus before anything can be done here.
+Somali NLP Corpus before anything can be done here.
 
 ---
 
@@ -127,5 +129,5 @@ Permanently, not "not yet":
 
 - General Somali NLP tooling: linguistic word and sentence segmentation, stemming, POS
   tagging, morphological analysis. That is SomLTK's responsibility.
-- Corpus collection, cleaning, and deduplication. That is SomNLP-Corpus's responsibility.
+- Corpus collection, cleaning, and deduplication. That is Somali NLP Corpus's responsibility.
 - Model training, fine-tuning, or serving.

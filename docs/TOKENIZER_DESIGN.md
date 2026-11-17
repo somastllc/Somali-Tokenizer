@@ -4,10 +4,11 @@ This document owns the tokenizer specification. Other documents link here rather
 restating it.
 
 **Status.** The design below describes **Somali ByteLevel BPE v2**, the Python reference
-tokenizer maintained in [SomNLP-Corpus](https://github.com/goobolabs/SomNLP-Corpus) under
-`tokenizer/`. It is the behavioural target for the first Rust implementation. Every
-parameter here was read from the reference implementation and its shipped artifact; none
-was inferred.
+tokenizer, now in `python-reference/` (imported from
+[Somali NLP Corpus](https://github.com/somastllc/somali-nlp-corpus)). Every parameter here was
+read from the reference implementation and its shipped artifact; none was inferred. The
+Rust crate enforces this design on load (`crates/somali-tokenizer/src/contract.rs`) and
+trains with it (`training.rs`).
 
 ---
 

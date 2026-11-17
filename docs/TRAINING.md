@@ -4,15 +4,17 @@ How a Somali tokenizer is trained, and what a training run must record. This doc
 specifies the procedure; [TOKENIZER_DESIGN.md](TOKENIZER_DESIGN.md) owns the tokenizer
 parameters and [BENCHMARKING.md](BENCHMARKING.md) owns the metrics.
 
-**Status.** Specification. The pipeline described here is Phase 4 of [../PLAN.md](../PLAN.md)
-and does not exist in this repository yet. The procedure mirrors the Python reference
-implementation in SomNLP-Corpus `tokenizer/`.
+**Status.** Implemented as `somali-tokenizer train`. It mirrors the Python reference in
+`python-reference/` (`prepare_corpus.py` then `train.py`) in a single streaming pass: the
+same cleaning, the same holdout rule, the same line splitting, the same trainer settings.
+On the fixture corpus the Rust run produces the same vocabulary and merges as the
+reference (`crates/somali-tokenizer/tests/training.rs`).
 
 ---
 
 ## 1. Input: a versioned corpus release
 
-Training text comes from a **versioned SomNLP-Corpus release**. This repository never
+Training text comes from a **versioned Somali NLP Corpus release**. This repository never
 bundles, vendors, or commits corpus data: not the training text, not the evaluation
 holdout, not samples of either.
 
@@ -24,7 +26,7 @@ parameter is identical.
 ### The reference corpus release
 
 The reference tokenizer `somali-bpe-v2` (48k) was trained on the **eleven-source
-SomNLP-Corpus build of 2026-08-31**:
+Somali NLP Corpus build of 2026-08-31**:
 
 | | Documents | Words |
 |---|---:|---:|
@@ -35,7 +37,7 @@ SomNLP-Corpus build of 2026-08-31**:
 Sources: `mc4`, `hplt`, `nllb`, `madlad`, `cc100`, `xlsum`, `wikipedia`, `mt560`, `opus`,
 `quran`, `quran-tanzil`.
 
-**SomNLP-Corpus has since moved on.** Its current build (2026-09-02) has thirteen sources,
+**Somali NLP Corpus has since moved on.** Its current build (2026-09-02) has thirteen sources,
 7,352,961 documents, and 665,985,672 words. The reference tokenizer was *not* trained on
 that build, and its benchmark was *not* measured against it. Any parity work (Phase 7) must
 pin the eleven-source release, or state plainly that it is comparing across corpus
@@ -47,7 +49,7 @@ implementation bug and is not one.
 ## 2. Pipeline
 
 ```text
-SomNLP-Corpus release
+Somali NLP Corpus release
        │
        ▼
 verify corpus release identity and fingerprint
@@ -113,13 +115,14 @@ Corpus-level sentinels for masked URLs and emails are **preserved**, so the toke
 learn representations for them rather than being surprised by them at inference time.
 
 Preparation must not do cleaning, filtering, deduplication, or language identification.
-Those belong upstream in SomNLP-Corpus. If preparation is removing content, the corpus
+Those belong upstream in Somali NLP Corpus. If preparation is removing content, the corpus
 release is the wrong input.
 
-**Open decision (Phase 2/4).** Whether preparation lives in this repository or stays in
-SomNLP-Corpus is deliberately unresolved. It reads corpus internals, which argues for
-upstream; it defines the evaluation split that this repository's metrics depend on, which
-argues for here.
+**Decision.** Preparation lives here, inside `train`: it defines the evaluation split that
+this repository's metrics depend on, and the corpus fields it reads (`id`, `text`,
+`provenance.source`) are the release format, not corpus internals. Somali NLP Corpus keeps
+no tokenizer code; its dataset card reads `corpus_token_stats.json`, which
+`somali-tokenizer stats` produces.
 
 ---
 

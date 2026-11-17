@@ -3,9 +3,8 @@
 Thank you for helping build Somali language technology. This document describes how to
 propose changes and what a reviewable contribution looks like.
 
-The project is in **Phase 1**: specification and documentation only. Some rules below
-describe expectations for code that does not exist yet. They are written now so that the
-first implementation lands under them rather than being retrofitted.
+The Rust library, CLI, and Python package exist and are tested; see
+[PLAN.md](PLAN.md) for which phases are complete. Every rule below applies to them.
 
 ## Before you start
 
@@ -29,7 +28,7 @@ Out of scope, with the right home:
 
 | Proposal | Belongs in |
 |----------|-----------|
-| New corpus source, cleaning rule, deduplication change | SomNLP-Corpus |
+| New corpus source, cleaning rule, deduplication change | Somali NLP Corpus |
 | Linguistic word or sentence segmentation, stemming, POS tagging, morphology | SomLTK |
 | Model training, fine-tuning, evaluation of downstream accuracy | The consuming project |
 
@@ -164,7 +163,7 @@ checksum. A number without a run record is an anecdote.
 ## Data, artifacts, and repository hygiene
 
 - **No corpus files in Git.** Not the training text, not the evaluation holdout, not
-  samples of either, compressed or otherwise. Reference a SomNLP-Corpus release instead.
+  samples of either, compressed or otherwise. Reference a Somali NLP Corpus release instead.
 - **No generated tokenizer artifacts** unless the artifact is part of an approved release,
   in which case it is added deliberately, with its run record, under the release path.
 - **No secrets, tokens, or machine-specific absolute paths** in configs, docs, or code.
