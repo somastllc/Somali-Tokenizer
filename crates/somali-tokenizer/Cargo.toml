@@ -11,6 +11,8 @@ homepage.workspace = true
 readme = "README.md"
 keywords = ["tokenizer", "somali", "bpe", "nlp"]
 categories = ["text-processing"]
+# The integration tests read fixtures from the repository root, which are not packaged.
+exclude = ["tests/"]
 
 [features]
 default = ["cli"]
