@@ -28,7 +28,7 @@ pytest
 | `rustfmt` | Required. Configuration in `rustfmt.toml` |
 | `clippy` | Required, warnings denied in CI |
 
-Goobo Labs practice elsewhere is edition 2021, `max_width = 100`, and a pinned clippy MSRV.
+Somast practice elsewhere is edition 2021, `max_width = 100`, and a pinned clippy MSRV.
 Following it keeps contributors moving between repositories without surprises. Confirm and
 record the exact values in Phase 2 rather than assuming them here.
 

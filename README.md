@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  ByteLevel BPE · lossless round-trip · reproducible releases · Goobo Labs
+  ByteLevel BPE · lossless round-trip · reproducible releases · Somast
 </p>
 
 ---
@@ -109,7 +109,7 @@ Two honest caveats, stated once here and repeated in the technical docs:
    definition, not a linguistic claim about Somali morphology. Bytes-per-token is reported
    alongside as a definition-free compression measure.
 
-## Where this sits in the Goobo Labs Somali NLP ecosystem
+## Where this sits in the Somast Somali NLP ecosystem
 
 ```text
 Somali NLP Corpus (somastllc/somali-nlp-corpus)

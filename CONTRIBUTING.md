@@ -187,7 +187,7 @@ Types: `feat`, `fix`, `refactor`, `docs`, `test`, `chore`, `perf`, `ci`.
 
 ## Security
 
-Do not open a public issue for a security problem. Report it privately to the Goobo Labs
+Do not open a public issue for a security problem. Report it privately to the Somast
 maintainers and allow time for a fix before disclosure.
 
 Relevant classes of problem for this project: unbounded memory or disk consumption from

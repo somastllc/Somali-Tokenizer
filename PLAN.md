@@ -83,7 +83,7 @@ it yet.
 **Tasks**
 
 - Create the Cargo project: library crate plus a thin binary target
-- Pin edition, MSRV, `rustfmt.toml`, and `clippy.toml` consistently with Goobo Labs practice
+- Pin edition, MSRV, `rustfmt.toml`, and `clippy.toml` consistently with Somast practice
 - Add the minimum dependency set (see [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md))
 - Define the error type and the crate's public error contract
 - Set up CI: `cargo fmt --check`, `cargo clippy -- -D warnings`, `cargo test`

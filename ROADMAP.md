@@ -41,7 +41,7 @@ pinned corpus release, and every quoted number has a run record.
 
 ## v0.3: Stable library API
 
-Make the crate dependable for other Goobo Labs projects.
+Make the crate dependable for other Somast projects.
 
 - Public API frozen and documented, with compiling examples
 - Stability policy stated; breaking changes require a major bump

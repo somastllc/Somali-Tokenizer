@@ -11,7 +11,7 @@ formality.
 ## Repository
 
 - [x] `README.md` accurately explains the project, its scope, and its current status
-- [x] License exists (Apache 2.0, Goobo Labs, 2026)
+- [x] License exists (Apache 2.0, Somast, 2026)
 - [x] Contribution guide exists, including the required tokenizer-impact statement
 - [x] Roadmap exists and marks future research as exploratory
 - [x] Execution plan exists with per-phase goals, tasks, deliverables, acceptance criteria,
