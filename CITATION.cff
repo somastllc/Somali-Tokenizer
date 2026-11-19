@@ -5,6 +5,10 @@ type: software
 authors:
   - alias: omartood
     email: omarjibrilabdulkhadir@gmail.com
+  - alias: sharafdin
+    email: hello@sharafdin.com
+  - name: Somast
+    email: info@somast.so
 version: 0.1.0
 license: Apache-2.0
 repository-code: "https://github.com/somastllc/Somali-Tokenizer"
@@ -22,6 +26,6 @@ references:
   - type: data
     title: "Somali NLP Corpus"
     authors:
-      - name: SOMAST
+      - name: Somast
     repository-code: "https://github.com/somastllc/somali-nlp-corpus"
     url: "https://huggingface.co/datasets/somast/somali-nlp-corpus"
