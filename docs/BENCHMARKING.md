@@ -185,6 +185,72 @@ On this text the Somali tokenizer fragments about **1.35x less than XLM-RoBERTa-
 Round-trip fidelity is not reported for the baselines: they were scored for fragmentation
 only, and neither claims a lossless round-trip.
 
+### Against general-purpose tokenizers (FLORES-200, Somali Wikipedia)
+
+A separate comparison, run on 2026-11-18 against the tokenizers of widely used models, on
+two public test sets that are not part of the corpus holdout. The full report, with charts
+and per-word examples, is
+[benchmarks/somast-somali-tokenizer-benchmark.pdf](benchmarks/somast-somali-tokenizer-benchmark.pdf).
+
+**FLORES-200 Somali**, dev and devtest: 2,009 sentences, 45,375 words.
+
+| Tokenizer | Vocabulary | Tokens | Tokens/word | Chars/token | Single-token words | Round-trip | vs this |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **somast-bpe-v2 (this)** | **48,000** | **62,338** | **1.374** | **4.71** | **75.2%** | **100.0%** | **1.00×** |
+| nllb-200 | 256,204 | 82,483 | 1.818 | 3.56 | 50.8% | 92.4% | 1.32× |
+| xlm-roberta | 250,002 | 82,896 | 1.827 | 3.55 | 50.9% | 99.4% | 1.33× |
+| o200k_base (GPT-4o) | 200,019 | 89,593 | 1.975 | 3.28 | 45.3% | 100.0% | 1.44× |
+| gemma2 | 256,000 | 101,671 | 2.241 | 2.89 | 35.2% | 100.0% | 1.63× |
+| llama3-8b | 128,256 | 114,643 | 2.527 | 2.56 | 23.4% | 100.0% | 1.84× |
+| cl100k_base (GPT-4) | 100,277 | 115,789 | 2.552 | 2.54 | 22.9% | 100.0% | 1.86× |
+| qwen2.5 | 151,665 | 116,525 | 2.568 | 2.52 | 22.9% | 100.0% | 1.87× |
+
+**Somali Wikipedia sample**: 2,000 random paragraphs, 70,696 words.
+
+| Tokenizer | Vocabulary | Tokens | Tokens/word | Chars/token | Single-token words | Round-trip | vs this |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| **somast-bpe-v2 (this)** | **48,000** | **106,367** | **1.505** | **4.37** | **73.6%** | **100.0%** | **1.00×** |
+| xlm-roberta | 250,002 | 132,441 | 1.873 | 3.51 | 51.7% | 83.9% | 1.25× |
+| nllb-200 | 256,204 | 133,948 | 1.895 | 3.47 | 49.8% | 79.5% | 1.26× |
+| o200k_base (GPT-4o) | 200,019 | 145,655 | 2.060 | 3.19 | 44.6% | 100.0% | 1.37× |
+| gemma2 | 256,000 | 165,923 | 2.347 | 2.80 | 34.0% | 100.0% | 1.56× |
+| llama3-8b | 128,256 | 182,857 | 2.587 | 2.54 | 23.7% | 100.0% | 1.72× |
+| cl100k_base (GPT-4) | 100,277 | 186,066 | 2.632 | 2.50 | 23.1% | 100.0% | 1.75× |
+| qwen2.5 | 151,665 | 187,237 | 2.648 | 2.48 | 23.3% | 100.0% | 1.76× |
+
+*Tokens/word* counts whitespace-separated words, with no special tokens (such as BOS)
+added. *Single-token words* is the share of words encoded as one token. *Round-trip* is the
+share of texts that decode back exactly; NLLB and XLM-R lose exactness through their text
+normalization. *vs this* is the total-token ratio against the Somali tokenizer.
+
+On the parallel English FLORES sentences, Somali costs 0.85 tokens per English token with
+this tokenizer, against 1.71 with GPT-4o's `o200k_base` and 2.19 with GPT-4's
+`cl100k_base`.
+
+How common words split, in pieces per word:
+
+| Word | This tokenizer | GPT-4o | GPT-4 | Llama 3 | XLM-R |
+|------|---------------:|-------:|------:|--------:|------:|
+| `bilaabaan` | 1 | 3 | 4 | 4 | 3 |
+| `tobanaan` | 1 | 2 | 3 | 3 | 3 |
+| `marmarsoonaya` | 3 | 4 | 5 | 5 | 4 |
+| `Cimaaraadka` | 3 | 4 | 5 | 5 | 4 |
+
+**Method.** FLORES-200 from Meta's original release
+(`dl.fbaipublicfiles.com/nllb/flores200_dataset.tar.gz`); Wikipedia from
+`wikimedia/wikipedia`, config `20231101.so`. GPT-4 and GPT-4o were run with `tiktoken`;
+Llama 3 and Gemma 2 from ungated mirrors carrying the same tokenizers; NLLB with `som_Latn`
+as the source language. The script that produced these figures is not in this repository;
+the Somali tokenizer's example tokenizations in the report were re-checked against the
+released artifact.
+
+**Caveats.** The training corpus is a large Somali web crawl, so Wikipedia text is probably
+in it and FLORES could be. The FLORES figure (1.374) is close to the corpus-holdout figure
+(1.344 on the 1.0.0 holdout), so there is no sign of a large leak; Wikipedia is the less
+independent of the two tests. Only two domains were tested; news, social media, and chat,
+where spelling varies more, were not. As with every comparison here, fewer tokens is not a
+better model: a tokenizer helps only when a model is trained on it.
+
 ### Historical note: v1
 
 The earlier v1 tokenizer (32,000, whitespace pre-tokenizer, `BPEDecoder`) measured 1.3936

@@ -8,6 +8,13 @@ Built on the Hugging Face [`tokenizers`](https://crates.io/crates/tokenizers) cr
 artifacts stay in the standard `tokenizer.json` format and the same file loads in
 `transformers` from [`somast/somali-tokenizer`](https://huggingface.co/somast/somali-tokenizer).
 
+## Benchmark
+
+On FLORES-200 Somali, this tokenizer needs **1.374 tokens per word**. For the same text,
+GPT-4o's tokenizer needs 1.975 (1.44× as many tokens), GPT-4's 2.552 (1.86×), and Llama 3's
+2.527 (1.84×), all with vocabularies 2 to 5 times larger. Full results:
+[BENCHMARKING.md](https://github.com/somastllc/Somali-Tokenizer/blob/main/docs/BENCHMARKING.md).
+
 ## Library
 
 ```rust

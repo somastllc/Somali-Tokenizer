@@ -162,7 +162,39 @@ reproduces exactly:
 The design intent, and the reason for each choice, is in
 [docs/TOKENIZER_DESIGN.md](docs/TOKENIZER_DESIGN.md).
 
-## Benchmark baseline
+## Benchmark against general-purpose tokenizers
+
+On **FLORES-200 Somali** (2,009 sentences), the same text costs GPT-4o 1.44× as many
+tokens and GPT-4 1.86× as many, with a vocabulary 2 to 5 times smaller than theirs:
+
+| Tokenizer | Vocabulary | Tokens per word | Tokens vs this |
+|---|---:|---:|---:|
+| **somast-bpe-v2 (this)** | **48,000** | **1.374** | **1.00×** |
+| nllb-200 | 256,204 | 1.818 | 1.32× |
+| xlm-roberta | 250,002 | 1.827 | 1.33× |
+| o200k_base (GPT-4o) | 200,019 | 1.975 | 1.44× |
+| gemma2 | 256,000 | 2.241 | 1.63× |
+| llama3-8b | 128,256 | 2.527 | 1.84× |
+| cl100k_base (GPT-4) | 100,277 | 2.552 | 1.86× |
+| qwen2.5 | 151,665 | 2.568 | 1.87× |
+
+Three in four Somali words are a single token here (75.2%), against 23.4% on Llama 3. One
+sentence, *Caafimaadka carruurtu waa mudnaanteenna koowaad* ("Children's health is our
+first priority"):
+
+```text
+this tokenizer   7  Caafimaadka · carruurtu · waa · mudnaan · teenna · koowaad · .
+GPT-4o          16  Ca · afima · adka · carr · u · urt · u · waa · mud · na · ante · enna · ko · owa · ad · .
+GPT-4, Llama 3  19  Ca · af · ima · ad · ka · carr · u · urt · u · w · aa · mud · na · ante · enna · ko · owa · ad · .
+```
+
+A second test set, 2,000 Somali Wikipedia paragraphs, gives the same order (1.505 tokens
+per word, against 2.060 for GPT-4o and 2.632 for GPT-4). Full tables, method, and caveats:
+[docs/BENCHMARKING.md](docs/BENCHMARKING.md#against-general-purpose-tokenizers-flores-200-somali-wikipedia)
+and the report
+[docs/benchmarks/somast-somali-tokenizer-benchmark.pdf](docs/benchmarks/somast-somali-tokenizer-benchmark.pdf).
+
+## Benchmark baseline (corpus holdout)
 
 Measured by the Python reference implementation on a held-out evaluation set of
 **49,424 documents / 4,933,796 words**, excluded from training:
