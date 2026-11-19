@@ -25,7 +25,7 @@ test = ["pytest>=8", "transformers>=4.40"]
 
 [project.urls]
 Repository = "https://github.com/somastllc/Somali-Tokenizer"
-"Hugging Face" = "https://huggingface.co/somast/somali-bpe-v2"
+"Hugging Face" = "https://huggingface.co/somast/somali-tokenizer"
 
 [tool.maturin]
 python-source = "python"

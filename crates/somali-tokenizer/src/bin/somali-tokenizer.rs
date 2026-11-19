@@ -144,7 +144,7 @@ struct Source {
     /// Path to a tokenizer.json. Defaults to the bundled v2 release.
     #[arg(long, global = true)]
     tokenizer: Option<PathBuf>,
-    /// Load from a Hugging Face Hub repository instead, e.g. somast/somali-bpe-v2.
+    /// Load from a Hugging Face Hub repository instead, e.g. somast/somali-tokenizer.
     #[cfg(feature = "http")]
     #[arg(long, global = true, conflicts_with = "tokenizer")]
     hub: Option<String>,

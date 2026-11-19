@@ -6,7 +6,7 @@ artifacts: a 48,000-token ByteLevel BPE trained on the
 
 Built on the Hugging Face [`tokenizers`](https://crates.io/crates/tokenizers) crate, so
 artifacts stay in the standard `tokenizer.json` format and the same file loads in
-`transformers` from [`somast/somali-bpe-v2`](https://huggingface.co/somast/somali-bpe-v2).
+`transformers` from [`somast/somali-tokenizer`](https://huggingface.co/somast/somali-tokenizer).
 
 ## Library
 
@@ -22,7 +22,7 @@ let text = tokenizer.decode(&encoding.ids, false)?;
 Other constructors:
 
 - `SomaliTokenizer::from_file(path)` loads any `tokenizer.json`.
-- `SomaliTokenizer::from_pretrained("somast/somali-bpe-v2", None)` downloads from the
+- `SomaliTokenizer::from_pretrained("somast/somali-tokenizer", None)` downloads from the
   Hugging Face Hub (feature `http`; reads `HF_TOKEN` for private repositories).
 
 Every constructor validates the artifact against the v2 contract: model type, no unknown

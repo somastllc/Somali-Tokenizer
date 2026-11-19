@@ -11,7 +11,7 @@ edition = "2021"
 rust-version = "1.85"
 license = "Apache-2.0"
 repository = "https://github.com/somastllc/Somali-Tokenizer"
-homepage = "https://huggingface.co/somast/somali-bpe-v2"
+homepage = "https://huggingface.co/somast/somali-tokenizer"
 
 [workspace.dependencies]
 # Pinned exactly: merge tie-breaking and other unspecified details follow this version,

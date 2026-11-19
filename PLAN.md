@@ -432,7 +432,7 @@ Decisions deliberately not made in Phase 1, and how they were settled:
    default features on it. The optional `http` feature needs 1.88 (its URL-parsing
    dependencies require it).
 4. *Distribution channel for release artifacts.* Open. The v2 artifact is on the Hugging
-   Face Hub (`somast/somali-bpe-v2`) and in `artifacts/releases/`; crates.io and PyPI
+   Face Hub (`somast/somali-tokenizer`) and in `artifacts/releases/`; crates.io and PyPI
    publishing is not set up.
 5. *Corpus preparation here or upstream.* Settled: here, inside `train`; see
    [docs/TRAINING.md](docs/TRAINING.md).

@@ -18,6 +18,12 @@ Two version lines are tracked separately and must not be conflated:
 No release has been published yet. The Rust implementation, CLI, and Python package below
 are complete and tested but untagged.
 
+### Changed
+
+- The Hugging Face Hub repository is now `somast/somali-tokenizer`; `from_pretrained`
+  defaults to it. The former id `somast/somali-bpe-v2` redirects, so existing code keeps
+  working.
+
 ### Added
 
 - **Rust library** (`crates/somali-tokenizer`): loads and validates `tokenizer.json`
@@ -43,7 +49,7 @@ are complete and tested but untagged.
 
 - `artifacts/releases/v1/` and `artifacts/releases/v2/` hold the existing v1 and v2
   artifacts, unchanged, with `SHA256SUMS`. The v2 `tokenizer.json` is byte-identical to
-  [`somast/somali-bpe-v2`](https://huggingface.co/somast/somali-bpe-v2).
+  [`somast/somali-tokenizer`](https://huggingface.co/somast/somali-tokenizer) (renamed from `somast/somali-bpe-v2`, which redirects).
 
 ### Phase 1 documentation
 

@@ -63,7 +63,7 @@ def test_introspection(tokenizer) -> None:
     assert tokenizer.id_to_token(0) == "<|endoftext|>"
     assert tokenizer.token_to_id("<unk>") is None
     assert repr(tokenizer) == "SomaliTokenizer(vocab_size=48000)"
-    assert HUB_REPO_V2 == "somast/somali-bpe-v2"
+    assert HUB_REPO_V2 == "somast/somali-tokenizer"
     assert __version__
 
 

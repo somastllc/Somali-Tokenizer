@@ -12,11 +12,11 @@ use crate::error::{Error, Result};
 /// The released v2 artifact, compiled into the crate so it works offline.
 ///
 /// Byte-identical to `artifacts/releases/v2/tokenizer.json` and to `tokenizer.json` in the
-/// Hugging Face repository `somast/somali-bpe-v2`; a test enforces the first.
+/// Hugging Face repository `somast/somali-tokenizer`; a test enforces the first.
 const BUNDLED_V2: &str = include_str!("../assets/somali-bpe-v2.json");
 
 /// Hugging Face Hub repository holding the released v2 artifact.
-pub const HUB_REPO_V2: &str = "somast/somali-bpe-v2";
+pub const HUB_REPO_V2: &str = "somast/somali-tokenizer";
 
 /// The output of encoding one text.
 #[derive(Debug, Clone, PartialEq, Eq)]

@@ -3,7 +3,7 @@
 Somali ByteLevel BPE tokenizer for Python, implemented in Rust. It runs the released
 `somali-bpe-v2` tokenizer: 48,000 tokens, trained on the
 [Somali NLP Corpus](https://github.com/somastllc/somali-nlp-corpus), and published on the
-Hugging Face Hub as [`somast/somali-bpe-v2`](https://huggingface.co/somast/somali-bpe-v2).
+Hugging Face Hub as [`somast/somali-tokenizer`](https://huggingface.co/somast/somali-tokenizer).
 
 ```bash
 pip install somali-tokenizer
@@ -13,7 +13,7 @@ pip install somali-tokenizer
 from somali_tokenizer import SomaliTokenizer
 
 tokenizer = SomaliTokenizer.v2()  # bundled, works offline
-# tokenizer = SomaliTokenizer.from_pretrained()        # or from the Hub (somast/somali-bpe-v2)
+# tokenizer = SomaliTokenizer.from_pretrained()        # or from the Hub (somast/somali-tokenizer)
 # tokenizer = SomaliTokenizer.from_file("tokenizer.json")
 
 encoding = tokenizer.encode("Soomaaliya waa dal ku yaal Geeska Afrika.")
@@ -29,7 +29,7 @@ The ids are the same as those from `transformers`:
 ```python
 from transformers import AutoTokenizer
 
-hf = AutoTokenizer.from_pretrained("somast/somali-bpe-v2")
+hf = AutoTokenizer.from_pretrained("somast/somali-tokenizer")
 assert hf.encode(text) == SomaliTokenizer.v2().encode(text).ids
 ```
 

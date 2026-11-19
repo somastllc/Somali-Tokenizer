@@ -8,7 +8,7 @@ authors:
 version: 0.1.0
 license: Apache-2.0
 repository-code: "https://github.com/somastllc/Somali-Tokenizer"
-url: "https://huggingface.co/somast/somali-bpe-v2"
+url: "https://huggingface.co/somast/somali-tokenizer"
 keywords:
   - Somali
   - tokenizer

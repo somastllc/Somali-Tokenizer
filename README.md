@@ -17,7 +17,7 @@
 > corpus. The full-corpus figures quoted below were measured by the Python reference; they
 > have not been re-measured by the Rust implementation yet. Nothing is published to
 > crates.io or PyPI yet. The v2 artifact is on the Hugging Face Hub as
-> [`somast/somali-bpe-v2`](https://huggingface.co/somast/somali-bpe-v2).
+> [`somast/somali-tokenizer`](https://huggingface.co/somast/somali-tokenizer).
 
 ## Quick start
 
@@ -31,7 +31,7 @@ pip install somali-tokenizer        # once published; until then, see "Building"
 from somali_tokenizer import SomaliTokenizer
 
 tokenizer = SomaliTokenizer.v2()                     # bundled, works offline
-# tokenizer = SomaliTokenizer.from_pretrained()      # from the Hub: somast/somali-bpe-v2
+# tokenizer = SomaliTokenizer.from_pretrained()      # from the Hub: somast/somali-tokenizer
 encoding = tokenizer.encode("Soomaaliya waa dal ku yaal Geeska Afrika.")
 encoding.ids       # [5446, 406, 785, 305, 1627, 4235, 1454, 29]
 encoding.tokens    # ['Soomaaliya', 'Ġwaa', 'Ġdal', 'Ġku', 'Ġyaal', 'ĠGeeska', 'ĠAfrika', '.']
@@ -43,7 +43,7 @@ the same ids:
 
 ```python
 from transformers import AutoTokenizer
-AutoTokenizer.from_pretrained("somast/somali-bpe-v2")
+AutoTokenizer.from_pretrained("somast/somali-tokenizer")
 ```
 
 Rust:
